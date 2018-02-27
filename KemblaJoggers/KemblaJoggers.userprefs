@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{0985F0B3-47B0-4667-9BDA-EC005B2B46CB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/LaunchScreen.storyboard">
+    <Files>
+      <File FileName="KemblaJoggers/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="KemblaJoggers/LaunchScreen.storyboard" />
+      <File FileName="KemblaJoggers/ViewController.cs" Line="17" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.KemblaJoggers PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.163D714C-7565-435A-B45F-1B974278F300">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.KemblaJoggers>
+  <MultiItemStartupConfigurations />
+</Properties>

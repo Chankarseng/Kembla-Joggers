@@ -1,0 +1,20 @@
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/KemblaJoggers.exe
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/KemblaJoggers.pdb
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/optimized/Kembla_logo.png
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/optimized/
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.csproj.CoreCompileInputs.cache
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.exe
+D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.pdb
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/KemblaJoggers.exe
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/KemblaJoggers.pdb
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-11.2/ibtool/_BundleResourceWithLogicalName.items
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-11.2/actool/_PartialAppManifest.items
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-11.2/actool/_BundleResourceWithLogicalName.items
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-11.2/optimized/Kembla_logo.png
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/iphone6.1-11.2/optimized/
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.csproj.CoreCompileInputs.cache
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.exe
+/Volumes/Internal Storage/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.pdb
