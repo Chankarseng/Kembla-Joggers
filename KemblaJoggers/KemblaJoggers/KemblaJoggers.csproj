@@ -115,6 +115,10 @@
     <BundleResource Include="Resources\Kembla_logo.png" />
     <BundleResource Include="Resources\RUNNING BACKGROUND IMG.jpg" />
     <BundleResource Include="Resources\Kembla_logo_with_words.png" />
+    <BundleResource Include="Resources\Contacts.png" />
+    <BundleResource Include="Resources\Event.png" />
+    <BundleResource Include="Resources\Reports.png" />
+    <BundleResource Include="Resources\Settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
