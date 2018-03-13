@@ -119,6 +119,19 @@
     <BundleResource Include="Resources\Event.png" />
     <BundleResource Include="Resources\Reports.png" />
     <BundleResource Include="Resources\Settings.png" />
+    <BundleResource Include="Resources\Handicap.png" />
+    <BundleResource Include="Resources\Pointscores.png" />
+    <BundleResource Include="Resources\Race Results.png" />
+    <BundleResource Include="Resources\Participation Awards.png" />
+    <BundleResource Include="Resources\Race Records.png" />
+    <BundleResource Include="Resources\Location.png" />
+    <BundleResource Include="Resources\Logout.png" />
+    <BundleResource Include="Resources\Race Record Type.png" />
+    <BundleResource Include="Resources\Series Record Type.png" />
+    <BundleResource Include="Resources\User Management.png" />
+    <BundleResource Include="Resources\Scan Codes.png" />
+    <BundleResource Include="Resources\Time Event.png" />
+    <BundleResource Include="GoogleService-Info.plist" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

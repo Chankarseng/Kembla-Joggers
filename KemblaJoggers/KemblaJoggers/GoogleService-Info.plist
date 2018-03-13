@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>79260931475-ksg9b67cploojspf2vrmjqo56hptjcmg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.79260931475-ksg9b67cploojspf2vrmjqo56hptjcmg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBNOodpeczG2FDENTbMd5Pc_lkbWZAZIl0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>79260931475</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.karseng.Kembla-Joggers</string>
+	<key>PROJECT_ID</key>
+	<string>kembla-joggers-f790c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kembla-joggers-f790c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:79260931475:ios:9c3daafb1c3a02e1</string>
+	<key>DATABASE_URL</key>
+	<string>https://kembla-joggers-f790c.firebaseio.com</string>
+</dict>
+</plist>

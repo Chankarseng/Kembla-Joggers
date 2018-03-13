@@ -13,7 +13,7 @@
         <!--Login Sreen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login Sreen" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Login Sreen" providesPresentationContextTransitionStyle="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RUNNING BACKGROUND IMG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="250">
-                                <rect key="frame" x="-3" y="-2" width="1026" height="771"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="RUNNING BACKGROUND IMG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="250">
+                                <rect key="frame" x="-45" y="-3" width="1114" height="771"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -32,20 +32,18 @@
                                     <constraint firstAttribute="width" constant="1114" id="683"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kembla_logo_with_words.png" translatesAutoresizingMaskIntoConstraints="NO" id="236">
-                                <rect key="frame" x="392" y="193" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="591"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="697">
-                                <rect key="frame" x="392" y="369" width="231" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1321">
+                                <rect key="frame" x="392" y="470" width="225" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="username"/>
-                            </textField>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3119" kind="show" id="5381"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="815">
                                 <rect key="frame" x="392" y="419" width="231" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -59,18 +57,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1321">
-                                <rect key="frame" x="392" y="470" width="225" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="697">
+                                <rect key="frame" x="392" y="369" width="231" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3119" kind="show" id="5381"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kembla_logo_with_words.png" translatesAutoresizingMaskIntoConstraints="NO" id="236">
+                                <rect key="frame" x="392" y="193" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="591"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,6 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="3160"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backgroundImage" destination="250" id="name-outlet-250"/>
                         <outlet property="kemblaLogo" destination="236" id="name-outlet-236"/>
@@ -131,6 +132,9 @@
                                 <inset key="titleEdgeInsets" minX="-150" minY="150" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="150" minY="0.0" maxX="0.0" maxY="100"/>
                                 <state key="normal" title="EVENT" image="Event.png"/>
+                                <connections>
+                                    <segue destination="7026" kind="show" id="7676"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUL-Bo-Zic">
                                 <rect key="frame" x="-1" y="411" width="509" height="357"/>
@@ -150,6 +154,9 @@
                                 <inset key="titleEdgeInsets" minX="-160" minY="150" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="161" minY="0.0" maxX="12" maxY="100"/>
                                 <state key="normal" title="SETTINGS" image="Settings.png"/>
+                                <connections>
+                                    <segue destination="7040" kind="show" id="7720"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="397" y="946"/>
         </scene>
-        <!--Men-->
+        <!--Navigation Controller-->
         <scene sceneID="3118">
             <objects>
-                <navigationController title="Men" id="3119" sceneMemberID="viewController">
+                <navigationController id="3119" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3121">
                         <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -208,10 +215,10 @@
             </objects>
             <point key="canvasLocation" x="1" y="-18"/>
         </scene>
-        <!--View Controller-->
+        <!--Events-->
         <scene sceneID="7025">
             <objects>
-                <viewController id="7026" sceneMemberID="viewController">
+                <viewController title="Events" id="7026" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7023"/>
                         <viewControllerLayoutGuide type="bottom" id="7024"/>
@@ -219,17 +226,46 @@
                     <view key="view" contentMode="scaleToFill" id="7027">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8085">
+                                <rect key="frame" x="0.0" y="64" width="1024" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="170" maxX="130" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="265" minY="0.0" maxX="0.0" maxY="70"/>
+                                <state key="normal" title="TIME EVENT" image="Time Event.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8087">
+                                <rect key="frame" x="0.0" y="535" width="1024" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="150" maxX="150" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="350" minY="0.0" maxX="0.0" maxY="50"/>
+                                <state key="normal" title="CHECK RESULTS" image="Race Results.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8086">
+                                <rect key="frame" x="0.0" y="306" width="1024" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="120" maxX="170" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="280" minY="0.0" maxX="0.0" maxY="80"/>
+                                <state key="normal" title="SCAN CODES" image="Scan Codes.png"/>
+                                <connections>
+                                    <segue destination="11087" kind="show" id="11119"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7028" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="-841"/>
+            <point key="canvasLocation" x="2203.711" y="-841.4063"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="7039">
             <objects>
-                <viewController id="7040" sceneMemberID="viewController">
+                <viewController title="Settings" id="7040" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7037"/>
                         <viewControllerLayoutGuide type="bottom" id="7038"/>
@@ -237,6 +273,43 @@
                     <view key="view" contentMode="scaleToFill" id="7041">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWp-Zl-Vpi">
+                                <rect key="frame" x="-1" y="64" width="508" height="347"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <inset key="titleEdgeInsets" minX="-200" minY="150" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="160" minY="0.0" maxX="0.0" maxY="100"/>
+                                <state key="normal" title="USER MANAGEMENT" image="User Management.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfQ-bP-Cdc">
+                                <rect key="frame" x="506" y="64" width="517" height="347"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="200" minY="0.0" maxX="0.0" maxY="100"/>
+                                <state key="normal" title="LOCATION" image="Location.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fa7-2P-nX2">
+                                <rect key="frame" x="-2" y="411" width="509" height="357"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <inset key="titleEdgeInsets" minX="-130" minY="190" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="160" minY="0.0" maxX="0.0" maxY="130"/>
+                                <state key="normal" title="COURSE MANAGEMENT" image="Race Record Type.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOc-vM-ZBH">
+                                <rect key="frame" x="506" y="411" width="518" height="357"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <inset key="titleEdgeInsets" minX="-160" minY="150" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="161" minY="0.0" maxX="12" maxY="100"/>
+                                <state key="normal" title="LOG OUT" image="Logout.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="fai-IF-nZf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -263,7 +336,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1116"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHb-AO-CLe">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1116"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJX-vu-VoF">
@@ -277,17 +350,17 @@
                                                         <rect key="frame" x="-1" y="-2" width="508" height="347"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                                        <inset key="titleEdgeInsets" minX="-200" minY="150" maxX="0.0" maxY="0.0"/>
-                                                        <inset key="imageEdgeInsets" minX="150" minY="0.0" maxX="0.0" maxY="100"/>
-                                                        <state key="normal" title="CONTACTS" image="Contacts.png"/>
+                                                        <inset key="titleEdgeInsets" minX="-145" minY="150" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="195" minY="0.0" maxX="0.0" maxY="100"/>
+                                                        <state key="normal" title="HANDICAPS" image="Handicap.png"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whV-bK-mZx">
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whV-bK-mZx">
                                                         <rect key="frame" x="507" y="-2" width="517" height="347"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                                         <inset key="titleEdgeInsets" minX="-150" minY="150" maxX="0.0" maxY="0.0"/>
-                                                        <inset key="imageEdgeInsets" minX="150" minY="0.0" maxX="0.0" maxY="100"/>
-                                                        <state key="normal" title="EVENT" image="Event.png"/>
+                                                        <inset key="imageEdgeInsets" minX="160" minY="0.0" maxX="0.0" maxY="100"/>
+                                                        <state key="normal" title="POINT SCORES" image="Pointscores.png"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6O-gQ-8JH">
                                                         <rect key="frame" x="0.0" y="345" width="509" height="357"/>
@@ -295,7 +368,7 @@
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                                         <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="180" minY="0.0" maxX="0.0" maxY="100"/>
-                                                        <state key="normal" title="REPORTS" image="Reports.png"/>
+                                                        <state key="normal" title="RACE RECORDS" image="Race Records.png"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-dG-2n6">
                                                         <rect key="frame" x="507" y="345" width="518" height="357"/>
@@ -303,18 +376,21 @@
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                                         <inset key="titleEdgeInsets" minX="-160" minY="150" maxX="0.0" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="161" minY="0.0" maxX="12" maxY="100"/>
-                                                        <state key="normal" title="SETTINGS" image="Settings.png"/>
+                                                        <state key="normal" title="RACE RESULTS" image="Race Results.png"/>
+                                                        <connections>
+                                                            <segue destination="7725" kind="show" id="7777"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ak-Qk-QUy">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1Ak-Qk-QUy">
                                                 <rect key="frame" x="0.0" y="700" width="509" height="350"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                                <inset key="titleEdgeInsets" minX="-130" minY="150" maxX="0.0" maxY="0.0"/>
-                                                <inset key="imageEdgeInsets" minX="180" minY="0.0" maxX="0.0" maxY="100"/>
-                                                <state key="normal" title="REPORTS" image="Reports.png"/>
+                                                <inset key="titleEdgeInsets" minX="-130" minY="190" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="180" minY="0.0" maxX="0.0" maxY="130"/>
+                                                <state key="normal" title="PARTICIPATION AWARDS" image="Participation Awards.png"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -345,14 +421,132 @@
             </objects>
             <point key="canvasLocation" x="2279.883" y="17.96875"/>
         </scene>
+        <!--Select Record Type-->
+        <scene sceneID="7724">
+            <objects>
+                <viewController title="Select Record Type" id="7725" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7722"/>
+                        <viewControllerLayoutGuide type="bottom" id="7723"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7726">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8365">
+                                <rect key="frame" x="0.0" y="64" width="516" height="704"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.039215686274509803" green="0.31764705882352939" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="titleEdgeInsets" minX="-80" minY="200" maxX="60" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="180" minY="0.0" maxX="0.0" maxY="70"/>
+                                <state key="normal" title="RACE RECORD" image="Race Record Type.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8367">
+                                <rect key="frame" x="511" y="64" width="513" height="704"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.12549019607843137" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="titleEdgeInsets" minX="-300" minY="200" maxX="100" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="80"/>
+                                <state key="normal" title="SERIES RECORD" image="Series Record Type.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7727" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3500.977" y="1.5625"/>
+        </scene>
+        <!--Scan Codes-->
+        <scene sceneID="11086">
+            <objects>
+                <viewController title="Scan Codes" id="11087" sceneMemberID="viewController" customClass="scanButton">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="11084"/>
+                        <viewControllerLayoutGuide type="bottom" id="11085"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="11088">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11121" image="Kembla_logo_with_words.png">
+                                <rect key="frame" x="392" y="172" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsl-E0-d0l">
+                                <rect key="frame" x="459" y="346" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Code" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UfA-hu-cJr">
+                                <rect key="frame" x="392" y="417" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PA1-hT-BeX">
+                                <rect key="frame" x="459" y="476" width="109" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rc-j8-hOl">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Code" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rve-cH-3WN">
+                                <rect key="frame" x="392" y="547" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D0-7q-Ivn">
+                                <rect key="frame" x="392" y="639" width="240" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.45178571428571429" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11089" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3346.875" y="-884.375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Contacts.png" width="191" height="171"/>
         <image name="Event.png" width="172" height="171"/>
+        <image name="Handicap.png" width="149" height="170"/>
         <image name="Kembla_logo_with_words.png" width="152" height="85"/>
+        <image name="Location.png" width="114" height="170"/>
+        <image name="Logout.png" width="169" height="171"/>
+        <image name="Participation Awards.png" width="130" height="174"/>
+        <image name="Pointscores.png" width="178" height="171"/>
         <image name="RUNNING BACKGROUND IMG.jpg" width="1920" height="1440"/>
+        <image name="Race Record Type.png" width="177" height="171"/>
+        <image name="Race Records.png" width="129" height="170"/>
+        <image name="Race Results.png" width="191" height="134"/>
         <image name="Reports.png" width="130" height="170"/>
+        <image name="Scan Codes.png" width="191" height="108"/>
+        <image name="Series Record Type.png" width="374" height="181"/>
         <image name="Settings.png" width="172" height="171"/>
+        <image name="Time Event.png" width="136" height="171"/>
+        <image name="User Management.png" width="189" height="139"/>
         <image name="Kembla_logo.png" width="387" height="421"/>
     </resources>
 </document>

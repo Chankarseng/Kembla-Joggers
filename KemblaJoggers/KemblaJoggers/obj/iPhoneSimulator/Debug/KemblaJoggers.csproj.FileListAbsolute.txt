@@ -26,10 +26,25 @@ D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJogger
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/ibtool/_BundleResourceWithLogicalName.items
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/actool/_PartialAppManifest.items
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/actool/_BundleResourceWithLogicalName.items
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/coremlc/_PartialAppManifest.items
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/coremlc/_BundleResourceWithLogicalName.items
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Kembla_logo.png
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Kembla_logo_with_words.png
-/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Contacts.png
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Event.png
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Reports.png
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Settings.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Handicap.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Pointscores.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Race Results.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Participation Awards.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Race Records.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Location.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Logout.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Race Record Type.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Series Record Type.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/User Management.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Scan Codes.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/Time Event.png
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/GoogleService-Info.plist
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.2/optimized/
