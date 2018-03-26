@@ -464,12 +464,12 @@
         <!--Scan Codes-->
         <scene sceneID="11086">
             <objects>
-                <viewController title="Scan Codes" id="11087" sceneMemberID="viewController" customClass="scanButton">
+                <viewController id="11087" sceneMemberID="viewController" title="Scan Code" customClass="scanCode">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="11084"/>
                         <viewControllerLayoutGuide type="bottom" id="11085"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="11088">
+                    <view key="view" contentMode="scaleToFill" id="11088" customClass="scanView">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -513,15 +513,25 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D0-7q-Ivn">
                                 <rect key="frame" x="392" y="639" width="240" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.45178571428571429" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0.52156862745098043" blue="1" alpha="1"/>
                                 <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" customColorSpace="genericGamma22GrayColorSpace" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="11402" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="580" y="417" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections/>
+                    <connections>
+                        <outlet property="buttonScan" destination="11402" id="name-outlet-11402"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11089" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -536,11 +546,9 @@
         <image name="Location.png" width="114" height="170"/>
         <image name="Logout.png" width="169" height="171"/>
         <image name="Participation Awards.png" width="130" height="174"/>
-        <image name="Pointscores.png" width="178" height="171"/>
         <image name="RUNNING BACKGROUND IMG.jpg" width="1920" height="1440"/>
         <image name="Race Record Type.png" width="177" height="171"/>
         <image name="Race Records.png" width="129" height="170"/>
-        <image name="Race Results.png" width="191" height="134"/>
         <image name="Reports.png" width="130" height="170"/>
         <image name="Scan Codes.png" width="191" height="108"/>
         <image name="Series Record Type.png" width="374" height="181"/>
@@ -548,5 +556,11 @@
         <image name="Time Event.png" width="136" height="171"/>
         <image name="User Management.png" width="189" height="139"/>
         <image name="Kembla_logo.png" width="387" height="421"/>
+        <image name="Pointscores.png" width="178" height="171"/>
+        <image name="Race Results.png" width="191" height="134"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="iPad"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+    </simulatedMetricsContainer>
 </document>
