@@ -112,10 +112,13 @@
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\Running_background_img.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Classes\" />
+    <Folder Include="Assets.xcassets\Background.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -147,10 +150,27 @@
     <Compile Include="Classes\CoursesClass.cs" />
     <Compile Include="Classes\ContactDataSource.cs" />
     <Compile Include="Classes\PrepareContactFirstList.cs" />
+    <Compile Include="menuViewController.cs" />
+    <Compile Include="menuViewController.designer.cs">
+      <DependentUpon>menuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\UIImageEffects.cs" />
+    <Compile Include="reportController.cs" />
+    <Compile Include="reportController.designer.cs">
+      <DependentUpon>reportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settingController.cs" />
+    <Compile Include="settingController.designer.cs">
+      <DependentUpon>settingController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eventController.cs" />
+    <Compile Include="eventController.designer.cs">
+      <DependentUpon>eventController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />
-    <BundleResource Include="Resources\RUNNING BACKGROUND IMG.jpg" />
+    <BundleResource Include="Resources\Running_background_img.jpg" />
     <BundleResource Include="Resources\Kembla_logo_with_words.png" />
     <BundleResource Include="Resources\Contacts.png" />
     <BundleResource Include="Resources\Event.png" />

@@ -1,6 +1,8 @@
 ﻿using System;
 using Foundation;
 using UIKit;
+using Firebase.Core;
+using System.Security.Policy;
 namespace KemblaJoggers
 {
     public class ContactDataSource : UITableViewSource
@@ -33,5 +35,12 @@ namespace KemblaJoggers
             return AppData.offlineContactList.Count;
             //throw new NotImplementedException();
         }
-    }
+
+		public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+		{
+            ContactClass thisContact = AppData.offlineContactList[indexPath.Row];
+            tableView.ReloadData();
+		}
+
+	}
 }

@@ -1,13 +1,15 @@
 using Foundation;
 using System;
 using UIKit;
+using System.Resources;
 
 namespace KemblaJoggers
 {
-    public partial class loginController : UIViewController
+    public partial class menuViewController : UIViewController
     {
         UIImage image;
-        public loginController (IntPtr handle) : base (handle)
+
+        public menuViewController (IntPtr handle) : base (handle)
         {
         }
 		public override void ViewDidLoad()
@@ -19,8 +21,8 @@ namespace KemblaJoggers
         void updateImage()
         {
             UIImage effectImage = null;
-            effectImage = image.ApplyLightEffect();
-            loginBackgroundImage.Image = effectImage;
+            effectImage = image.ApplyDarkEffect();
+            menuBackgroundImage.Image = effectImage;
         }
 	}
 }
