@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>79260931475-ksg9b67cploojspf2vrmjqo56hptjcmg.apps.googleusercontent.com</string>
+	<string>8962899995-4pc8ulv86dnceb8os4ldmc0c9ptnd4t7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.79260931475-ksg9b67cploojspf2vrmjqo56hptjcmg</string>
+	<string>com.googleusercontent.apps.8962899995-4pc8ulv86dnceb8os4ldmc0c9ptnd4t7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBNOodpeczG2FDENTbMd5Pc_lkbWZAZIl0</string>
+	<string>AIzaSyBKYj5t0sc5r0Rb9EOsc1U7HgIo3b6R6Po</string>
 	<key>GCM_SENDER_ID</key>
-	<string>79260931475</string>
+	<string>8962899995</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.karseng.Kembla-Joggers</string>
 	<key>PROJECT_ID</key>
-	<string>kembla-joggers-f790c</string>
+	<string>kembla-joggers-15751</string>
 	<key>STORAGE_BUCKET</key>
-	<string>kembla-joggers-f790c.appspot.com</string>
+	<string>kembla-joggers-15751.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:79260931475:ios:9c3daafb1c3a02e1</string>
+	<string>1:8962899995:ios:9c3daafb1c3a02e1</string>
 	<key>DATABASE_URL</key>
-	<string>https://kembla-joggers-f790c.firebaseio.com</string>
+	<string>https://kembla-joggers-15751.firebaseio.com</string>
 </dict>
 </plist>

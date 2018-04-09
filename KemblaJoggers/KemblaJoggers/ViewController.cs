@@ -1,5 +1,7 @@
 ﻿using System;
+
 using UIKit;
+
 namespace KemblaJoggers
 {
     public partial class ViewController : UIViewController
@@ -20,6 +22,5 @@ namespace KemblaJoggers
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
-
     }
 }
