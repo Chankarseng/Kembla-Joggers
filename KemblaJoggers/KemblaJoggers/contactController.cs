@@ -2,6 +2,8 @@ using Foundation;
 using System;
 using UIKit;
 using KemblaJoggers.Classes;
+using GameKit;
+using ContactsUI;
 
 namespace KemblaJoggers
 {
@@ -12,7 +14,6 @@ namespace KemblaJoggers
         }
 
         ContactDataSource contactDs; // Contacts Data source
-
 
 		public override void ViewDidLoad()
         {

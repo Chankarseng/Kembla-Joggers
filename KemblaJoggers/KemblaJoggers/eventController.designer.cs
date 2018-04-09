@@ -11,27 +11,27 @@ using UIKit;
 
 namespace KemblaJoggers
 {
-    [Register ("loginController")]
-    partial class loginController
+    [Register ("eventController")]
+    partial class eventController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView kemblaLogo { get; set; }
+        UIKit.UIImageView eventBackgroundImage { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView loginBackgroundImage { get; set; }
+        UIKit.UIView eventView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (kemblaLogo != null) {
-                kemblaLogo.Dispose ();
-                kemblaLogo = null;
+            if (eventBackgroundImage != null) {
+                eventBackgroundImage.Dispose ();
+                eventBackgroundImage = null;
             }
 
-            if (loginBackgroundImage != null) {
-                loginBackgroundImage.Dispose ();
-                loginBackgroundImage = null;
+            if (eventView != null) {
+                eventView.Dispose ();
+                eventView = null;
             }
         }
     }
