@@ -13,6 +13,10 @@ namespace KemblaJoggers
 		public override void ViewDidLoad()
 		{
             base.ViewDidLoad();
+            if (NavigationController != null)
+            {
+				this.NavigationController.SetNavigationBarHidden(true, true);
+            }
             image = UIImage.FromBundle("Background");
             updateImage();
 		}

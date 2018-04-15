@@ -16,6 +16,14 @@ namespace KemblaJoggers
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton contactEditButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISearchBar contactSearchBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView contactsTableView { get; set; }
 
         [Outlet]
@@ -24,11 +32,23 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField contactVBirthday { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField contactVCity { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField contactVCountry { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField contactVEContact { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField contactVEContactNum { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -44,7 +64,11 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField contactVId { get; set; }
+        UIKit.UITextField contactVID { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView contactView { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -58,8 +82,22 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField contactVState { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISearchDisplayController searchDisplayController { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (contactEditButton != null) {
+                contactEditButton.Dispose ();
+                contactEditButton = null;
+            }
+
+            if (contactSearchBar != null) {
+                contactSearchBar.Dispose ();
+                contactSearchBar = null;
+            }
+
             if (contactsTableView != null) {
                 contactsTableView.Dispose ();
                 contactsTableView = null;
@@ -70,6 +108,11 @@ namespace KemblaJoggers
                 contactVAddress = null;
             }
 
+            if (contactVBirthday != null) {
+                contactVBirthday.Dispose ();
+                contactVBirthday = null;
+            }
+
             if (contactVCity != null) {
                 contactVCity.Dispose ();
                 contactVCity = null;
@@ -78,6 +121,16 @@ namespace KemblaJoggers
             if (contactVCountry != null) {
                 contactVCountry.Dispose ();
                 contactVCountry = null;
+            }
+
+            if (contactVEContact != null) {
+                contactVEContact.Dispose ();
+                contactVEContact = null;
+            }
+
+            if (contactVEContactNum != null) {
+                contactVEContactNum.Dispose ();
+                contactVEContactNum = null;
             }
 
             if (contactVEmail != null) {
@@ -95,9 +148,14 @@ namespace KemblaJoggers
                 contactVGender = null;
             }
 
-            if (contactVId != null) {
-                contactVId.Dispose ();
-                contactVId = null;
+            if (contactVID != null) {
+                contactVID.Dispose ();
+                contactVID = null;
+            }
+
+            if (contactView != null) {
+                contactView.Dispose ();
+                contactView = null;
             }
 
             if (contactVLast != null) {
@@ -113,6 +171,11 @@ namespace KemblaJoggers
             if (contactVState != null) {
                 contactVState.Dispose ();
                 contactVState = null;
+            }
+
+            if (searchDisplayController != null) {
+                searchDisplayController.Dispose ();
+                searchDisplayController = null;
             }
         }
     }
