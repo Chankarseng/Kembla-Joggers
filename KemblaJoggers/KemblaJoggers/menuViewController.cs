@@ -16,6 +16,7 @@ namespace KemblaJoggers
 		public override void ViewDidLoad()
 		{
             base.ViewDidLoad();
+            this.NavigationController.NavigationBar.Translucent = true;
             image = UIImage.FromBundle("Background");
             updateImage();
 
