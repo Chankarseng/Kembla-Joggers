@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using UIKit;
 using System.Resources;
+using Xamarin.Auth;
 
 namespace KemblaJoggers
 {
@@ -17,12 +18,23 @@ namespace KemblaJoggers
             base.ViewDidLoad();
             image = UIImage.FromBundle("Background");
             updateImage();
+
+             
+
 		}
+
+
+
         void updateImage()
         {
             UIImage effectImage = null;
             effectImage = image.ApplyDarkEffect();
             menuBackgroundImage.Image = effectImage;
         }
-	}
+
+        partial void UIButton2250_TouchUpInside(UIButton sender)
+        {
+            // Transfer
+        }
+    }
 }
