@@ -105,3 +105,4 @@ D:/Dropbox/Degree Stuff/Semester 7/CSIT 321 - PROJECT/KemblaJoggers/KemblaJogger
 /Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.csproj.CoreCompileInputs.cache
 /Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.exe
 /Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.pdb
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Xamarin.Auth.dll

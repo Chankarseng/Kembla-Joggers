@@ -171,14 +171,13 @@
     <Compile Include="eventController.designer.cs">
       <DependentUpon>eventController.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="scanButton.cs" />
     <Compile Include="scanButton.designer.cs">
       <DependentUpon>scanButton.cs</DependentUpon>
     </Compile>
     <Compile Include="AuthenticationState.cs" />
     <Compile Include="Classes\User.cs" />
-=======
     <Compile Include="filterRaceViewController.cs" />
     <Compile Include="filterRaceViewController.designer.cs">
       <DependentUpon>filterRaceViewController.cs</DependentUpon>
@@ -188,7 +187,14 @@
     <Compile Include="filterParticipationViewController.designer.cs">
       <DependentUpon>filterParticipationViewController.cs</DependentUpon>
     </Compile>
->>>>>>> f260de086e41bc1f1f0325197a736b0a57bca30f
+    <Compile Include="checkResultViewController.cs" />
+    <Compile Include="checkResultViewController.designer.cs">
+      <DependentUpon>checkResultViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaceResultsCell.cs" />
+    <Compile Include="RaceResultsCell.designer.cs" />
+    <Compile Include="RaceResultViewController.cs" />
+    <Compile Include="RaceResultViewController.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />
