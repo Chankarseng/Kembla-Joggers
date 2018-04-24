@@ -176,6 +176,14 @@
     <Compile Include="filterParticipationViewController.designer.cs">
       <DependentUpon>filterParticipationViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="RaceResultsCell.cs" />
+    <Compile Include="RaceResultsCell.designer.cs">
+      <DependentUpon>RaceResultsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaceResultViewController.cs" />
+    <Compile Include="RaceResultViewController.designer.cs">
+      <DependentUpon>RaceResultViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />

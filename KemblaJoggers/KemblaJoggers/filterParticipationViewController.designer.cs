@@ -14,5 +14,8 @@ namespace KemblaJoggers
     [Register ("filterParticipationViewController")]
     partial class filterParticipationViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }
