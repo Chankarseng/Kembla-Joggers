@@ -22,6 +22,7 @@ namespace KemblaJoggers
             {
 				this.NavigationController.SetNavigationBarHidden(true, true);
             }
+
             image = UIImage.FromBundle("Background");
             updateImage();
             //accounts = AccountStore.Create().FindAccountsForService("TidyHq");
@@ -36,7 +37,6 @@ namespace KemblaJoggers
             auth.Completed += Auth_Completed;
             var ui = auth.GetUI();
             PresentViewController(ui, true, null);
-
         }
 
         private async void Auth_Completed(object sender, AuthenticatorCompletedEventArgs e) {
@@ -63,9 +63,20 @@ namespace KemblaJoggers
                 // create new login authorization details (meaning new token and session time)
                // store.Save(e.Account, "TidyHq");
 
-            }  
-            DismissViewController(true, null);  
+            }
+            this.DismissViewController(true, null);
+            this.PerformSegue("loginSegue", this);
+
         }  
+
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            if (segue.Identifier == "loginSegue")
+            {
+                base.PrepareForSegue(segue, sender);
+
+            }
+        }
 
         public override void DidReceiveMemoryWarning() {  
             base.DidReceiveMemoryWarning();  
