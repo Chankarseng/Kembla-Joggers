@@ -22,7 +22,6 @@ namespace KemblaJoggers
             {
 				this.NavigationController.SetNavigationBarHidden(true, true);
             }
-
             image = UIImage.FromBundle("Background");
             updateImage();
             //accounts = AccountStore.Create().FindAccountsForService("TidyHq");
@@ -30,13 +29,14 @@ namespace KemblaJoggers
 
         partial void LoginButton_TouchUpInside(UIButton sender)
         {
-            var auth = new OAuth2Authenticator(clientId: "750aa6d449c1c1d58dafb00eacc374f169793c26345ed56794d51dfb2da4f61f",
+            /*var auth = new OAuth2Authenticator(clientId: "750aa6d449c1c1d58dafb00eacc374f169793c26345ed56794d51dfb2da4f61f",
                                                scope: "",
                                                authorizeUrl: new Uri("https://accounts.tidyhq.com/oauth/authorize"),
                                                redirectUrl: new Uri("https://dart.tidyhq.com/"));
             auth.Completed += Auth_Completed;
             var ui = auth.GetUI();
             PresentViewController(ui, true, null);
+*/
         }
 
         private async void Auth_Completed(object sender, AuthenticatorCompletedEventArgs e) {
@@ -63,20 +63,9 @@ namespace KemblaJoggers
                 // create new login authorization details (meaning new token and session time)
                // store.Save(e.Account, "TidyHq");
 
-            }
-            this.DismissViewController(true, null);
-            this.PerformSegue("loginSegue", this);
-
+            }  
+            DismissViewController(true, null);  
         }  
-
-        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
-        {
-            if (segue.Identifier == "loginSegue")
-            {
-                base.PrepareForSegue(segue, sender);
-
-            }
-        }
 
         public override void DidReceiveMemoryWarning() {  
             base.DidReceiveMemoryWarning();  
