@@ -322,18 +322,13 @@
 @class AppDelegate;
 @class ViewController;
 @class contactController;
-@class loginController;
+@class KemblaJoggers_ContactDataSource;
 @class menuViewController;
 @class reportController;
 @class settingController;
 @class eventController;
-@class filterRaceViewController;
-@class KemblaJoggers_filterRaceDataSource;
-@class filterParticipationViewController;
-@class RaceResultsCell;
-@class RaceResultViewController;
-@class KemblaJoggers_employeeTVS;
-@class KemblaJoggers_ContactDataSource;
+@class scanButton;
+@class loginController;
 @class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
 @class UIKit_UIControl_UIControlAppearance;
@@ -506,6 +501,19 @@
 @class UIKit_UICollectionReusableView_UICollectionReusableViewAppearance;
 @class UIKit_UICollisionBehavior__UICollisionBehaviorDelegate;
 @class UIKit_UICollectionViewCell_UICollectionViewCellAppearance;
+@class Xamarin_Controls_ProgressLabel;
+@class Xamarin_Auth_NativeAuthSafariViewControllerDelegate;
+@class Xamarin_Auth_FormAuthenticatorController_FormDelegate;
+@class Xamarin_Auth_FormAuthenticatorController;
+@class Xamarin_Auth_WebAuthenticatorController_UIWebViewDelegate;
+@class Xamarin_Auth_WebAuthenticatorController_WKWebViewUIDelegate;
+@class Xamarin_Auth_WebAuthenticatorController_WKWebViewNavigationDelegate;
+@class Xamarin_Auth_WebAuthenticatorController_WKWebViewJacascriptMessageHandler;
+@class Xamarin_Auth_WebAuthenticatorController;
+@class Xamarin_Auth_FormAuthenticatorController_FieldCell;
+@class Xamarin_Auth_FormAuthenticatorController_FormDataSource;
+@class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
+@class System_Net_Http_NSUrlSessionHandler_NSUrlSessionHandlerDelegate;
 @class FIRDatabaseQuery;
 @class FIRDatabaseReference;
 @class FIRDataSnapshot;
@@ -538,6 +546,8 @@
 @class FIRPhoneAuthProvider;
 @class FIRUser;
 @class FIRUserProfileChangeRequest;
+@class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
+@class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 
 @protocol UIPickerViewModel<UIPickerViewDataSource, UIPickerViewDelegate>
 @end
@@ -2427,81 +2437,56 @@
 
 @interface contactController : UIViewController {
 }
-	@property (nonatomic, assign) UIButton * contactEditButton;
-	@property (nonatomic, assign) UISearchBar * contactSearchBar;
 	@property (nonatomic, assign) UITableView * contactsTableView;
 	@property (nonatomic, assign) UITextField * contactVAddress;
-	@property (nonatomic, assign) UITextField * contactVBirthday;
 	@property (nonatomic, assign) UITextField * contactVCity;
 	@property (nonatomic, assign) UITextField * contactVCountry;
-	@property (nonatomic, assign) UITextField * contactVEContact;
-	@property (nonatomic, assign) UITextField * contactVEContactNum;
 	@property (nonatomic, assign) UITextField * contactVEmail;
 	@property (nonatomic, assign) UITextField * contactVFirst;
 	@property (nonatomic, assign) UITextField * contactVGender;
-	@property (nonatomic, assign) UITextField * contactVID;
-	@property (nonatomic, assign) UIView * contactView;
+	@property (nonatomic, assign) UITextField * contactVId;
 	@property (nonatomic, assign) UITextField * contactVLast;
 	@property (nonatomic, assign) UITextField * contactVPost;
 	@property (nonatomic, assign) UITextField * contactVState;
-	@property (nonatomic, assign) UISearchDisplayController * searchDisplayController;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UIButton *) contactEditButton;
-	-(void) setContactEditButton:(UIButton *)p0;
-	-(UISearchBar *) contactSearchBar;
-	-(void) setContactSearchBar:(UISearchBar *)p0;
 	-(UITableView *) contactsTableView;
 	-(void) setContactsTableView:(UITableView *)p0;
 	-(UITextField *) contactVAddress;
 	-(void) setContactVAddress:(UITextField *)p0;
-	-(UITextField *) contactVBirthday;
-	-(void) setContactVBirthday:(UITextField *)p0;
 	-(UITextField *) contactVCity;
 	-(void) setContactVCity:(UITextField *)p0;
 	-(UITextField *) contactVCountry;
 	-(void) setContactVCountry:(UITextField *)p0;
-	-(UITextField *) contactVEContact;
-	-(void) setContactVEContact:(UITextField *)p0;
-	-(UITextField *) contactVEContactNum;
-	-(void) setContactVEContactNum:(UITextField *)p0;
 	-(UITextField *) contactVEmail;
 	-(void) setContactVEmail:(UITextField *)p0;
 	-(UITextField *) contactVFirst;
 	-(void) setContactVFirst:(UITextField *)p0;
 	-(UITextField *) contactVGender;
 	-(void) setContactVGender:(UITextField *)p0;
-	-(UITextField *) contactVID;
-	-(void) setContactVID:(UITextField *)p0;
-	-(UIView *) contactView;
-	-(void) setContactView:(UIView *)p0;
+	-(UITextField *) contactVId;
+	-(void) setContactVId:(UITextField *)p0;
 	-(UITextField *) contactVLast;
 	-(void) setContactVLast:(UITextField *)p0;
 	-(UITextField *) contactVPost;
 	-(void) setContactVPost:(UITextField *)p0;
 	-(UITextField *) contactVState;
 	-(void) setContactVState:(UITextField *)p0;
-	-(UISearchDisplayController *) searchDisplayController;
-	-(void) setSearchDisplayController:(UISearchDisplayController *)p0;
 	-(void) viewDidLoad;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface loginController : UIViewController {
+@interface KemblaJoggers_ContactDataSource : NSObject<UIScrollViewDelegate> {
 }
-	@property (nonatomic, assign) UIImageView * kemblaLogo;
-	@property (nonatomic, assign) UIImageView * loginBackgroundImage;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UIImageView *) kemblaLogo;
-	-(void) setKemblaLogo:(UIImageView *)p0;
-	-(UIImageView *) loginBackgroundImage;
-	-(void) setLoginBackgroundImage:(UIImageView *)p0;
-	-(void) viewDidLoad;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2515,6 +2500,7 @@
 	-(UIImageView *) menuBackgroundImage;
 	-(void) setMenuBackgroundImage:(UIImageView *)p0;
 	-(void) viewDidLoad;
+	-(void) UIButton2250_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2566,108 +2552,33 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface filterRaceViewController : UIViewController {
+@interface scanButton : UIViewController {
 }
-	@property (nonatomic, assign) UITextField * filterCourseTextField;
-	@property (nonatomic, assign) UITextField * filterDateTextField;
-	@property (nonatomic, assign) UITextField * filterLocationTextField;
-	@property (nonatomic, assign) UIView * filterRaceController;
-	@property (nonatomic, assign) UITableView * filterRaceTableView;
-	@property (nonatomic, assign) UILabel * testlabel;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITextField *) filterCourseTextField;
-	-(void) setFilterCourseTextField:(UITextField *)p0;
-	-(UITextField *) filterDateTextField;
-	-(void) setFilterDateTextField:(UITextField *)p0;
-	-(UITextField *) filterLocationTextField;
-	-(void) setFilterLocationTextField:(UITextField *)p0;
-	-(UIView *) filterRaceController;
-	-(void) setFilterRaceController:(UIView *)p0;
-	-(UITableView *) filterRaceTableView;
-	-(void) setFilterRaceTableView:(UITableView *)p0;
-	-(UILabel *) testlabel;
-	-(void) setTestlabel:(UILabel *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface loginController : UIViewController {
+}
+	@property (nonatomic, assign) UIImageView * kemblaLogo;
+	@property (nonatomic, assign) UIImageView * loginBackgroundImage;
+	@property (nonatomic, assign) UIButton * loginButton;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIImageView *) kemblaLogo;
+	-(void) setKemblaLogo:(UIImageView *)p0;
+	-(UIImageView *) loginBackgroundImage;
+	-(void) setLoginBackgroundImage:(UIImageView *)p0;
+	-(UIButton *) loginButton;
+	-(void) setLoginButton:(UIButton *)p0;
 	-(void) viewDidLoad;
-	-(void) DoneAction;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface KemblaJoggers_filterRaceDataSource : NSObject<UIScrollViewDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
-	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
-	-(void) tableView:(UITableView *)p0 didDeselectRowAtIndexPath:(NSIndexPath *)p1;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface filterParticipationViewController : UIViewController {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface RaceResultsCell : UITableViewCell {
-}
-	@property (nonatomic, assign) UILabel * dateLabel;
-	@property (nonatomic, assign) UILabel * memberIDLabel;
-	@property (nonatomic, assign) UILabel * nameLabel;
-	@property (nonatomic, assign) UILabel * positionLabel;
-	@property (nonatomic, assign) UILabel * timeLabel;
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UILabel *) dateLabel;
-	-(void) setDateLabel:(UILabel *)p0;
-	-(UILabel *) memberIDLabel;
-	-(void) setMemberIDLabel:(UILabel *)p0;
-	-(UILabel *) nameLabel;
-	-(void) setNameLabel:(UILabel *)p0;
-	-(UILabel *) positionLabel;
-	-(void) setPositionLabel:(UILabel *)p0;
-	-(UILabel *) timeLabel;
-	-(void) setTimeLabel:(UILabel *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface RaceResultViewController : UIViewController {
-}
-	@property (nonatomic, assign) UITableView * RaceResultsTableView;
-	@property (nonatomic, assign) UIView * RaceResultView;
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITableView *) RaceResultsTableView;
-	-(void) setRaceResultsTableView:(UITableView *)p0;
-	-(UIView *) RaceResultView;
-	-(void) setRaceResultView:(UIView *)p0;
-	-(void) viewDidLoad;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface KemblaJoggers_ContactDataSource : NSObject<UIScrollViewDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(NSArray *) sectionIndexTitlesForTableView:(UITableView *)p0;
-	-(NSString *) tableView:(UITableView *)p0 titleForHeaderInSection:(NSInteger)p1;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(void) didReceiveMemoryWarning;
+	-(void) LoginButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3263,6 +3174,28 @@
 }
 @end
 
+@interface Xamarin_Auth_NativeAuthSafariViewControllerDelegate : NSObject<SFSafariViewControllerDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) safariViewController:(SFSafariViewController *)p0 didCompleteInitialLoad:(BOOL)p1;
+	-(void) safariViewControllerDidFinish:(SFSafariViewController *)p0;
+	-(NSArray *) safariViewController:(SFSafariViewController *)p0 activityItemsForURL:(NSURL *)p1 title:(NSString *)p2;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface Xamarin_Auth_WebAuthenticatorController_WKWebViewJacascriptMessageHandler : NSObject<WKScriptMessageHandler> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) userContentController:(WKUserContentController *)p0 didReceiveScriptMessage:(WKScriptMessage *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
 @interface FIRDatabaseQuery : NSObject {
 }
 	-(id) queryEndingAtValue:(NSObject *)p0;
@@ -3646,6 +3579,20 @@
 	-(void) setDisplayName:(NSString *)p0;
 	-(NSURL *) photoURL;
 	-(void) setPhotoURL:(NSURL *)p0;
+@end
+
+@interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	+(Class) layerClass;
+	-(void) layoutSubviews;
+	-(void) willMoveToWindow:(UIWindow *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) initWithCoder:(NSCoder *)p0;
+	-(id) initWithFrame:(CGRect)p0;
 @end
 
 

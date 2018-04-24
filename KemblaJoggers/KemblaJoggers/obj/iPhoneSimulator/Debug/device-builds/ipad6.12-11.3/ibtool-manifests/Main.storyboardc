@@ -8,22 +8,6 @@
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
 	<dict>
-		<key>28497</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>26569</string>
-					<string>28497</string>
-				</array>
-				<key>message</key>
-				<string>Plain Style unsupported in a Navigation Item</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>6778</key>
 		<array>
 			<dict>

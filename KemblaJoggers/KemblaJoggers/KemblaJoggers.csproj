@@ -102,6 +102,10 @@
     <Reference Include="Firebase.Database">
       <HintPath>..\packages\Xamarin.Firebase.iOS.Database.4.1.3\lib\Xamarin.iOS10\Firebase.Database.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Auth">
+      <HintPath>..\packages\Xamarin.Auth.1.6.0.1\lib\Xamarin.iOS10\Xamarin.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Json" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -167,6 +171,14 @@
     <Compile Include="eventController.designer.cs">
       <DependentUpon>eventController.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="scanButton.cs" />
+    <Compile Include="scanButton.designer.cs">
+      <DependentUpon>scanButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationState.cs" />
+    <Compile Include="Classes\User.cs" />
+=======
     <Compile Include="filterRaceViewController.cs" />
     <Compile Include="filterRaceViewController.designer.cs">
       <DependentUpon>filterRaceViewController.cs</DependentUpon>
@@ -176,14 +188,7 @@
     <Compile Include="filterParticipationViewController.designer.cs">
       <DependentUpon>filterParticipationViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="RaceResultsCell.cs" />
-    <Compile Include="RaceResultsCell.designer.cs">
-      <DependentUpon>RaceResultsCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RaceResultViewController.cs" />
-    <Compile Include="RaceResultViewController.designer.cs">
-      <DependentUpon>RaceResultViewController.cs</DependentUpon>
-    </Compile>
+>>>>>>> f260de086e41bc1f1f0325197a736b0a57bca30f
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />

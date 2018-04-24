@@ -22,6 +22,14 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView loginBackgroundImage { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton loginButton { get; set; }
+
+        [Action ("LoginButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void LoginButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (kemblaLogo != null) {
@@ -32,6 +40,11 @@ namespace KemblaJoggers
             if (loginBackgroundImage != null) {
                 loginBackgroundImage.Dispose ();
                 loginBackgroundImage = null;
+            }
+
+            if (loginButton != null) {
+                loginButton.Dispose ();
+                loginButton = null;
             }
         }
     }
