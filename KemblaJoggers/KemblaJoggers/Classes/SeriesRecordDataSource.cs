@@ -1,9 +1,9 @@
 ﻿using System;
 namespace KemblaJoggers.Classes
 {
-    public class RecordsDataSource
+    public class SeriesRecordDataSource
     {
-        public RecordsDataSource()
+        public SeriesRecordDataSource()
         {
         }
     }
