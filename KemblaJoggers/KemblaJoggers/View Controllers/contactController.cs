@@ -54,6 +54,15 @@ namespace KemblaJoggers
             contactVBirthday.Text = contact.Birthday.ToString();
             contactVEContact.Text = contact.EmergencyContact;
             contactVEContactNum.Text = contact.EmergencyNumber;
+            contactVMarshallID.Text = contact.MarshalingPreferenceID.ToString();
+            contactVMedicalCondition.Text = contact.MedicalCondition;
+            contactVDietaryCondition.Text = contact.DietaryCondition;
+            contactVFirstAid.Text = contact.FirstAid.ToString();
+            contactVAsterID.Text = contact.AsterGroupID.ToString();
+            contactVMemberID.Text = contact.MemberID.ToString();
+            contactVANSWNumber.Text = contact.ANSWNumber.ToString();
+            contactVLifeMember.Text = contact.LifeMember.ToString();
+            contactVClubName.Text = contact.ClubName;
 
         }
 
