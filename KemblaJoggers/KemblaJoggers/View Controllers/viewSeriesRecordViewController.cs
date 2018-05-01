@@ -2,22 +2,21 @@ using Foundation;
 using System;
 using UIKit;
 using KemblaJoggers.Classes;
-
 namespace KemblaJoggers
 {
-    public partial class viewRaceRecordViewController : UIViewController
+    public partial class viewSeriesRecordViewController : UIViewController
     {
-        public viewRaceRecordViewController (IntPtr handle) : base (handle)
+        public viewSeriesRecordViewController (IntPtr handle) : base (handle)
         {
         }
-        RaceRecordsDataSource RecordDs; // Contacts Data source
+        SeriesRecordDataSource RecordDs; // Contacts Data source
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             PrepareRaceRecordFirstList.Prepare();
-            RecordDs = new RaceRecordsDataSource(this);
+            RecordDs = new SeriesRecordDataSource(this);
             //contactDs = new ContactDataSource(AppData.offlineContactList);
-            RaceRecordTableView.Source = RecordDs;
+            seriesRecordTableView.Source = RecordDs;
 
         }
 

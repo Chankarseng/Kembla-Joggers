@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -123,6 +122,8 @@
     <Folder Include="Resources\" />
     <Folder Include="Classes\" />
     <Folder Include="Assets.xcassets\Background.imageset\" />
+    <Folder Include="Authentication\" />
+    <Folder Include="View Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -136,65 +137,88 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="contactController.cs" />
-    <Compile Include="contactController.designer.cs">
-      <DependentUpon>contactController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="loginController.cs" />
-    <Compile Include="loginController.designer.cs">
-      <DependentUpon>loginController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classes\AppData.cs" />
     <Compile Include="Classes\ReadWriteDisk.cs" />
     <Compile Include="Classes\ContactClass.cs" />
     <Compile Include="Classes\CoursesClass.cs" />
     <Compile Include="Classes\ContactDataSource.cs" />
     <Compile Include="Classes\PrepareContactFirstList.cs" />
-    <Compile Include="menuViewController.cs" />
-    <Compile Include="menuViewController.designer.cs">
-      <DependentUpon>menuViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classes\UIImageEffects.cs" />
-    <Compile Include="reportController.cs" />
-    <Compile Include="reportController.designer.cs">
-      <DependentUpon>reportController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="settingController.cs" />
-    <Compile Include="settingController.designer.cs">
-      <DependentUpon>settingController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="eventController.cs" />
-    <Compile Include="eventController.designer.cs">
-      <DependentUpon>eventController.cs</DependentUpon>
-    </Compile>
-
     <Compile Include="scanButton.cs" />
     <Compile Include="scanButton.designer.cs">
       <DependentUpon>scanButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthenticationState.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="filterRaceViewController.cs" />
-    <Compile Include="filterRaceViewController.designer.cs">
-      <DependentUpon>filterRaceViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classes\filterRaceDataSource.cs" />
-    <Compile Include="filterParticipationViewController.cs" />
-    <Compile Include="filterParticipationViewController.designer.cs">
-      <DependentUpon>filterParticipationViewController.cs</DependentUpon>
+    <Compile Include="Authentication\AuthenticationState.cs" />
+    <Compile Include="Classes\PrepareRaceRecordFirstList.cs" />
+    <Compile Include="Classes\RecordClass.cs" />
+    <Compile Include="Classes\RaceRecordsDataSource.cs" />
+    <Compile Include="Classes\RaceRecordCell.cs" />
+    <Compile Include="Classes\RaceRecordCell.designer.cs">
+      <DependentUpon>RaceRecordCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="checkResultViewController.cs" />
-    <Compile Include="checkResultViewController.designer.cs">
+    <Compile Include="Classes\RaceResultsCell.cs" />
+    <Compile Include="Classes\RaceResultsCell.designer.cs" />
+    <Compile Include="View Controllers\checkResultViewController.cs" />
+    <Compile Include="View Controllers\checkResultViewController.designer.cs">
       <DependentUpon>checkResultViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="RaceResultsCell.cs" />
-    <Compile Include="RaceResultsCell.designer.cs" />
-    <Compile Include="RaceResultViewController.cs" />
-    <Compile Include="RaceResultViewController.designer.cs" />
+    <Compile Include="View Controllers\contactController.cs" />
+    <Compile Include="View Controllers\contactController.designer.cs">
+      <DependentUpon>contactController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\eventController.cs" />
+    <Compile Include="View Controllers\eventController.designer.cs">
+      <DependentUpon>eventController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\filterParticipationViewController.cs" />
+    <Compile Include="View Controllers\filterParticipationViewController.designer.cs">
+      <DependentUpon>filterParticipationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\filterRaceViewController.cs" />
+    <Compile Include="View Controllers\filterRaceViewController.designer.cs">
+      <DependentUpon>filterRaceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\loginController.cs" />
+    <Compile Include="View Controllers\loginController.designer.cs">
+      <DependentUpon>loginController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\menuViewController.cs" />
+    <Compile Include="View Controllers\menuViewController.designer.cs">
+      <DependentUpon>menuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\RaceResultViewController.cs" />
+    <Compile Include="View Controllers\RaceResultViewController.designer.cs" />
+    <Compile Include="View Controllers\reportController.cs" />
+    <Compile Include="View Controllers\reportController.designer.cs">
+      <DependentUpon>reportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\settingController.cs" />
+    <Compile Include="View Controllers\settingController.designer.cs">
+      <DependentUpon>settingController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\ViewController.cs" />
+    <Compile Include="View Controllers\ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\viewRaceRecordViewController.cs" />
+    <Compile Include="View Controllers\viewRaceRecordViewController.designer.cs">
+      <DependentUpon>viewRaceRecordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\viewSeriesRecordViewController.cs" />
+    <Compile Include="View Controllers\viewSeriesRecordViewController.designer.cs">
+      <DependentUpon>viewSeriesRecordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\SeriesRecordDataSource.cs" />
+    <Compile Include="Classes\SeriesRecordCell.cs" />
+    <Compile Include="Classes\SeriesRecordCell.designer.cs">
+      <DependentUpon>SeriesRecordCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\handicapViewController.cs" />
+    <Compile Include="View Controllers\handicapViewController.designer.cs">
+      <DependentUpon>handicapViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />
