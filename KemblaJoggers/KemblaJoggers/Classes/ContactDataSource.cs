@@ -47,7 +47,7 @@ namespace KemblaJoggers
         {
             UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
             //ContactClass contactClass = AppData.offlineContactList[indexPath.Row];
-            
+            cell.TextLabel.Text = searchItems[indexPath.Row].FirstName;
             //throw new NotImplementedException();
             return cell;
         } 

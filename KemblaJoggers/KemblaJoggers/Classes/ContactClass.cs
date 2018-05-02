@@ -17,14 +17,14 @@ namespace KemblaJoggers
         public DateTime Birthday { get; set; }
         public string EmergencyContact { get; set; }
         public string EmergencyNumber { get; set; }
-        public int MarshalingPreferenceID { get; set; }
-        public string MedicalCondition { get; set; }
-        public string DietaryCondition { get; set; }
-        public bool FirstAid { get; set; }
-        public int AsterGroupID { get; set; }
-        public int MemberID { get; set; }
-        public int ANSWNumber { get; set; }
-        public bool LifeMember { get; set; }
-        public string ClubName { get; set; }
+        public int MarshalingPreferenceID { get; set; } // contactVMarshallID
+        public string MedicalCondition { get; set; } // contactVMedicalCondition
+        public string DietaryCondition { get; set; } // contactVDietaryCondition
+        public bool FirstAid { get; set; } // contactVFirstAid
+        public int AsterGroupID { get; set; } // contactVAsterID
+        public int MemberID { get; set; } // contactVMemberID
+        public int ANSWNumber { get; set; } // contactVANSWNumber
+        public bool LifeMember { get; set; } // contactVLifeMember
+        public string ClubName { get; set; } // contactVClubName
     }
 }

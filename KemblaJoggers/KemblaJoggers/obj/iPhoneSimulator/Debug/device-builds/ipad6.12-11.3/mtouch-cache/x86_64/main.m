@@ -9,8 +9,6 @@ void xamarin_register_modules_impl ()
 void xamarin_register_assemblies_impl ()
 {
 	guint32 exception_gchandle = 0;
-	xamarin_open_and_register ("Xamarin.Auth.dll", &exception_gchandle);
-	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Firebase.Database.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Firebase.Core.dll", &exception_gchandle);
@@ -20,6 +18,8 @@ void xamarin_register_assemblies_impl ()
 	xamarin_open_and_register ("Firebase.Analytics.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Firebase.Auth.dll", &exception_gchandle);
+	xamarin_process_managed_exception_gchandle (exception_gchandle);
+	xamarin_open_and_register ("Xamarin.Auth.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 
 }

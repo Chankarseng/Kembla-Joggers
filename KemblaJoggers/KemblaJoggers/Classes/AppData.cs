@@ -11,6 +11,7 @@ namespace KemblaJoggers
 
         public static List<CoursesClass> offlineCourseList;
         public static List<ContactClass> offlineContactList;
+        public static List<RecordClass> offlineRecordList;
 
         #region firebaseandonline
         public static List<CoursesClass> onlineCourseList;
@@ -26,6 +27,9 @@ namespace KemblaJoggers
         private AppData()
         {
             offlineCourseList = new List<CoursesClass>();
+            offlineContactList = new List<ContactClass>();
+            offlineRecordList = new List<RecordClass>();
+
 
             App.Configure(); // Goes through the Googleservices plist and connects to firebase
 

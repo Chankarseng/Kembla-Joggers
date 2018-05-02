@@ -39,6 +39,114 @@
 				<integer>9</integer>
 			</dict>
 		</array>
+		<key>41725</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>41725</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>41752</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>41752</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>42425</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>42424</string>
+					<string>42425</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>42602</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>42602</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>42836</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>42834</string>
+					<string>42836</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>42841</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>42841</string>
+				</array>
+				<key>message</key>
+				<string>Automatically Adjusts Font requires using a Dynamic Type text style</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>43147</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>43146</string>
+					<string>43147</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>6778</key>
 		<array>
 			<dict>

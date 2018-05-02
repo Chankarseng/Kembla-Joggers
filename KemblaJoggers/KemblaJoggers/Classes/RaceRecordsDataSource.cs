@@ -4,11 +4,11 @@ using Foundation;
 using UIKit;
 namespace KemblaJoggers
 {
-    public class RecordsDataSource : UITableViewSource
+    public class RaceRecordsDataSource : UITableViewSource
     {
         List<RecordClass> tableItems = new List<RecordClass>();
         protected string cellIdentifier = "raceRecordCellID";
-        public RecordsDataSource(UIViewController inputControl)
+        public RaceRecordsDataSource(UIViewController inputControl)
         {
             this.tableItems = AppData.offlineRecordList;
         }
