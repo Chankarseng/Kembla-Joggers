@@ -19,6 +19,11 @@ namespace KemblaJoggers
             seriesRecordTableView.Source = RecordDs;
 
         }
+        public void SetTask(viewSeriesRecordViewController d, RecordClass record)
+        {
+            yearLabel.Text = record.Date.Year.ToString();
+            seriesLabel.Text = "Summer";
+        }
 
     }
 }

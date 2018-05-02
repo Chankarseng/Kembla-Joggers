@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using Foundation;
 using UIKit;
+using KemblaJoggers.Classes;
 namespace KemblaJoggers
 {
     public class RaceRecordsDataSource : UITableViewSource
     {
+        readonly UIViewController raceDataSourceController;
         List<RecordClass> tableItems = new List<RecordClass>();
         protected string cellIdentifier = "raceRecordCellID";
         public RaceRecordsDataSource(UIViewController inputControl)
         {
+            raceDataSourceController = inputControl;
             this.tableItems = AppData.offlineRecordList;
         }
 
@@ -24,6 +27,8 @@ namespace KemblaJoggers
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {
+            var raceC = raceDataSourceController as viewRaceRecordViewController;
+            raceC.SetTask(raceC, tableItems[0]);
             return tableItems.Count;
         }
     }

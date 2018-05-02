@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{0985F0B3-47B0-4667-9BDA-EC005B2B46CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/View Controllers/contactController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/View Controllers/loginController.cs">
     <Files>
-      <File FileName="KemblaJoggers/View Controllers/viewRaceRecordViewController.cs" Line="4" Column="1" />
-      <File FileName="KemblaJoggers/Classes/SeriesRecordCell.cs" Line="16" Column="38" />
-      <File FileName="KemblaJoggers/View Controllers/viewSeriesRecordViewController.cs" Line="17" Column="50" />
-      <File FileName="KemblaJoggers/Classes/SeriesRecordDataSource.cs" Line="8" Column="6" />
+      <File FileName="KemblaJoggers/Classes/RecordClass.cs" Line="16" Column="27" />
+      <File FileName="KemblaJoggers/Classes/ContactDataSource.cs" Line="77" Column="9" />
+      <File FileName="KemblaJoggers/Classes/SeriesRecordCell.cs" Line="19" Column="13" />
+      <File FileName="KemblaJoggers/Classes/SeriesRecordDataSource.cs" Line="33" Column="13" />
+      <File FileName="KemblaJoggers/View Controllers/viewSeriesRecordViewController.cs" Line="26" Column="10" />
+      <File FileName="KemblaJoggers/Classes/PrepareRaceRecordFirstList.cs" Line="23" Column="39" />
+      <File FileName="KemblaJoggers/Classes/RaceRecordsDataSource.cs" Line="30" Column="81" />
+      <File FileName="KemblaJoggers/View Controllers/RaceResultViewController.cs" Line="1" Column="1" />
+      <File FileName="KemblaJoggers/View Controllers/loginController.cs" Line="38" Column="15" />
       <File FileName="KemblaJoggers/Main.storyboard" />
-      <File FileName="KemblaJoggers/View Controllers/handicapViewController.cs" Line="14" Column="32" />
-      <File FileName="KemblaJoggers/View Controllers/contactController.cs" Line="58" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -15,6 +18,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.KemblaJoggers PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DE202D0C-3EAF-4440-B70C-2BCBC79BD9ED" />
+  <MonoDevelop.Ide.ItemProperties.KemblaJoggers PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.690F4B28-9C11-447B-83CC-1602E049B70C" />
   <MultiItemStartupConfigurations />
 </Properties>

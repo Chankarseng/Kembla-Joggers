@@ -25,11 +25,11 @@ namespace KemblaJoggers.Classes
 
             AppData.offlineRecordList.Add(new RecordClass
             {
-                AgeGroup = ">30",
+                AgeGroup = "<30",
                 CourseID = 1002,
                 Date = DateTime.UtcNow,
                 FirstName = "Simon",
-                LastName = "David",
+                LastName = "Mars",
                 Gender = "Male",
                 Line = 2,
                 Location = "Kerry McCann Athletics Track",
@@ -37,6 +37,6 @@ namespace KemblaJoggers.Classes
                 OpenRecord = false,
                 Time = DateTime.UtcNow
             });
-        }    
+        }
     }
 }

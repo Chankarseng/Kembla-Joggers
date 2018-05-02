@@ -322,7 +322,7 @@
 @class AppDelegate;
 @class scanButton;
 @class KemblaJoggers_filterRaceDataSource;
-@class KemblaJoggers_RaceRecordsDataSource;
+@class KemblaJoggers_RecordsDataSource;
 @class RaceRecordCell;
 @class RaceResultsCell;
 @class checkResultViewController;
@@ -2454,7 +2454,7 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface KemblaJoggers_RaceRecordsDataSource : NSObject<UIScrollViewDelegate> {
+@interface KemblaJoggers_RecordsDataSource : NSObject<UIScrollViewDelegate> {
 }
 	-(void) release;
 	-(id) retain;
@@ -2685,6 +2685,7 @@
 	-(void) viewDidLoad;
 	-(void) UIButton2250_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface RaceResultViewController : UIViewController {
@@ -2805,6 +2806,7 @@
 	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface SeriesRecordCell : UITableViewCell {

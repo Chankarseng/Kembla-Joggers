@@ -13,6 +13,11 @@ namespace KemblaJoggers
         public menuViewController (IntPtr handle) : base (handle)
         {
         }
+
+		public menuViewController()
+		{
+		}
+
 		public override void ViewDidLoad()
 		{
             base.ViewDidLoad();

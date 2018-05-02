@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Firebase.Database;
 using Firebase.Auth;
 using Firebase.Core;
+using KemblaJoggers.Classes;
+
 namespace KemblaJoggers
 {
     public class AppData

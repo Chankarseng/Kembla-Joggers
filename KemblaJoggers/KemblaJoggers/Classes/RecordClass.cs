@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
-namespace KemblaJoggers
+namespace KemblaJoggers.Classes
 {
     public class RecordClass
     {
@@ -15,7 +14,5 @@ namespace KemblaJoggers
         public int MemberNo { get; set; }
         public bool OpenRecord { get; set; }
         public DateTime Time { get; set; }
-
-
     }
 }
