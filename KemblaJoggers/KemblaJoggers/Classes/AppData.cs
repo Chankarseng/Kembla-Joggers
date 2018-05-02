@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Firebase.Database;
 using Firebase.Auth;
 using Firebase.Core;
+using KemblaJoggers.Classes;
+
 namespace KemblaJoggers
 {
     public class AppData
@@ -11,6 +13,7 @@ namespace KemblaJoggers
 
         public static List<CoursesClass> offlineCourseList;
         public static List<ContactClass> offlineContactList;
+        public static List<RecordClass> offlineRecordList;
 
         #region firebaseandonline
         public static List<CoursesClass> onlineCourseList;
