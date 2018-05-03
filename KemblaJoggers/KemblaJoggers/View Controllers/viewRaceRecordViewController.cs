@@ -10,12 +10,12 @@ namespace KemblaJoggers
         public viewRaceRecordViewController (IntPtr handle) : base (handle)
         {
         }
-        RecordsDataSource RecordDs; // Contacts Data source
+        RaceRecordsDataSource RecordDs; // Contacts Data source
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             PrepareRaceRecordFirstList.Prepare();
-            RecordDs = new RecordsDataSource(this);
+            RecordDs = new RaceRecordsDataSource(this);
             //contactDs = new ContactDataSource(AppData.offlineContactList);
             RaceRecordTableView.Source = RecordDs;
 

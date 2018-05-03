@@ -39,36 +39,6 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>41725</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>41725</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
-		<key>41752</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>41752</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>42425</key>
 		<array>
 			<dict>
@@ -79,21 +49,6 @@
 				</array>
 				<key>message</key>
 				<string>Plain Style unsupported in a Navigation Item</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
-		<key>42602</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>42602</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
 				<key>type</key>
 				<string>IBIssueTypeUnsupportedConfiguration</string>
 				<key>type-value</key>

@@ -24,6 +24,8 @@ namespace KemblaJoggers
             this.NavigationController.NavigationBar.Translucent = true;
             image = UIImage.FromBundle("Background");
             updateImage();
+            this.NavigationController.SetNavigationBarHidden(false, false);
+            this.NavigationItem.HidesBackButton = true;
 
              
 

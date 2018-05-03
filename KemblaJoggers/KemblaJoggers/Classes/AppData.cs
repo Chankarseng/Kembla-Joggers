@@ -14,7 +14,7 @@ namespace KemblaJoggers
         public static List<CoursesClass> offlineCourseList;
         public static List<ContactClass> offlineContactList;
         public static List<RecordClass> offlineRecordList;
-
+        public static List<RaceResult> offlineRaceResultList;
         #region firebaseandonline
         public static List<CoursesClass> onlineCourseList;
         public static List<ContactClass> onlineContactList;

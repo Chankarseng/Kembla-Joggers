@@ -4,6 +4,7 @@ using UIKit;
 using Xamarin.Auth;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace KemblaJoggers
 {
@@ -17,6 +18,8 @@ namespace KemblaJoggers
         }
 		public override void ViewDidLoad()
 		{
+            CultureInfo cultureInfo = new CultureInfo("en-AU");
+            CultureInfo.CurrentCulture = cultureInfo;
             base.ViewDidLoad();
             if (NavigationController != null)
             {
@@ -35,7 +38,7 @@ namespace KemblaJoggers
                                                redirectUrl: new Uri("https://dart.tidyhq.com/"));
             auth.Completed += Auth_Completed;
             var ui = auth.GetUI();
-            //PresentViewController(ui, true, null);
+            PresentViewController(ui, true, null);
         }
 
         private async void Auth_Completed(object sender, AuthenticatorCompletedEventArgs e) {
@@ -65,9 +68,19 @@ namespace KemblaJoggers
 
             }  
             DismissViewController(true, null);
-        }  
+            //var controller = Storyboard.InstantiateViewController("menuViewController") as menuViewController;
+            //this.NavigationController.PresentViewController(controller, true, null);
+            //var controller = Storyboard.InstantiateViewController("menu_id") as menuViewController;
+            //this.NavigationController.PresentViewController(controller, true, null);
+            //PerformSegue("segue_id", (Foundation.NSObject)sender);
+        }
 
-        public override void DidReceiveMemoryWarning() {  
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+		{
+            base.PrepareForSegue(segue, sender);
+		}
+
+		public override void DidReceiveMemoryWarning() {  
             base.DidReceiveMemoryWarning();  
             // Release any cached data, images, etc that aren't in use.  
         }  

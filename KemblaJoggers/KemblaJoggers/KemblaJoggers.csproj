@@ -219,6 +219,23 @@
     <Compile Include="View Controllers\handicapViewController.designer.cs">
       <DependentUpon>handicapViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\LocationClass.cs" />
+    <Compile Include="Classes\RaceResult.cs" />
+    <Compile Include="Classes\PrepareRaceResultFirstList.cs" />
+    <Compile Include="Classes\RaceResultDataSource.cs" />
+    <Compile Include="Classes\PrepareHandicapFirstList.cs" />
+    <Compile Include="Classes\HandicapDataSource.cs" />
+    <Compile Include="Classes\HandicapCell.cs" />
+    <Compile Include="Classes\HandicapCell.designer.cs">
+      <DependentUpon>HandicapCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ParticipationCell.cs" />
+    <Compile Include="Classes\ParticipationCell.designer.cs">
+      <DependentUpon>ParticipationCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ParticipationDataSource.cs" />
+    <Compile Include="ParticipationViewController.cs" />
+    <Compile Include="ParticipationViewController.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />
