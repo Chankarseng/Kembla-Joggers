@@ -6,7 +6,8 @@ namespace KemblaJoggers
         public string Uid { get; set; }
         public string CourseName { get; set; }
         public string LocationID { get; set; }
-        public string SurfaceID { get; set; }
+        public string LocationName { get; set; }
+        public string SurfaceType { get; set; }
         public int Distance { get; set; }
         public string Units { get; set; }
         public bool Handicap { get; set; }
@@ -18,5 +19,6 @@ namespace KemblaJoggers
         public int MinAge { get; set; }
         public bool TrophyAwards { get; set; }
         public int TrophyID { get; set; }
+        public int NumberOfLegs { get; set; }
     }
 }

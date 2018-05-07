@@ -7,14 +7,12 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace KemblaJoggers
 {
-    [Register ("scanButton")]
-    partial class scanButton
+    [Register ("addNewRecordViewController")]
+    partial class addNewRecordViewController
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }

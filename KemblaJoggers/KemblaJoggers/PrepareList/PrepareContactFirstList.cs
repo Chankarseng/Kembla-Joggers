@@ -11,7 +11,7 @@ namespace KemblaJoggers.Classes
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "1232131",
-                FirstName = "Johnt",
+                FirstName = "John",
                 LastName = "Malone",
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
@@ -25,6 +25,7 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
+                ActiveStatus = true
             });
             AppData.offlineContactList.Add(new ContactClass
             {
@@ -43,12 +44,13 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
+                ActiveStatus = false
             });
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "41515123",
                 FirstName = "Rick",
-                LastName = "Garfunkel",
+                LastName = "Marshall",
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -61,12 +63,13 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
+                ActiveStatus = true
             });
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "41515123",
                 FirstName = "Tina",
-                LastName = "Garfunkel",
+                LastName = "Fergoson",
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -79,12 +82,13 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
+                ActiveStatus = true
             });
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "41515123",
                 FirstName = "David",
-                LastName = "Garfunkel",
+                LastName = "William",
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -97,7 +101,9 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
+                ActiveStatus = false
             });
+
 
         }
     }

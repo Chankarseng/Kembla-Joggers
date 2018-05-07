@@ -11,27 +11,27 @@ using UIKit;
 
 namespace KemblaJoggers
 {
-    [Register ("eventController")]
-    partial class eventController
+    [Register ("LapCell")]
+    partial class LapCell
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView eventBackgroundImage { get; set; }
+        UIKit.UILabel positionLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIView eventView { get; set; }
+        UIKit.UILabel timeLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (eventBackgroundImage != null) {
-                eventBackgroundImage.Dispose ();
-                eventBackgroundImage = null;
+            if (positionLabel != null) {
+                positionLabel.Dispose ();
+                positionLabel = null;
             }
 
-            if (eventView != null) {
-                eventView.Dispose ();
-                eventView = null;
+            if (timeLabel != null) {
+                timeLabel.Dispose ();
+                timeLabel = null;
             }
         }
     }

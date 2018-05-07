@@ -20,6 +20,7 @@ namespace KemblaJoggers
         private List<ContactClass> tableItems = new List<ContactClass>();
         string[] alphabet = new string[]{ "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 
+        // Display index at the side
         public override string[] SectionIndexTitles(UITableView tableView)
         {
             return alphabet;
@@ -69,10 +70,23 @@ namespace KemblaJoggers
             tableView.ReloadData();
 		}
 
-        public void PerformSearch(string searchText)  
+        public void PerformSearch(int activeStatus,string searchText)  
         {  
-            searchText = searchText.ToLower();  
-            this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText)).ToList();  
+			searchText = searchText.ToLower();  
+            if (activeStatus == 0) // All members
+            {
+                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText)).ToList();    
+            }
+            else if (activeStatus == 1) // Active members
+            {
+                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText) &&
+                                                    x.ActiveStatus == true).ToList();
+            }
+            else if (activeStatus == 2) // Non-Active members
+            {
+                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText) &&
+                                                    x.ActiveStatus == false).ToList();   
+            }
         }  
 
         /*public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)

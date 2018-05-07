@@ -320,35 +320,41 @@
 @protocol UIAccessibilityContainer;
 @protocol UICollectionViewSource;
 @class AppDelegate;
-@class scanButton;
-@class KemblaJoggers_filterRaceDataSource;
-@class KemblaJoggers_RaceRecordsDataSource;
-@class RaceRecordCell;
-@class RaceResultsCell;
 @class checkResultViewController;
 @class contactController;
-@class eventController;
 @class filterParticipationViewController;
 @class filterRaceViewController;
 @class menuViewController;
 @class RaceResultViewController;
 @class KemblaJoggers_employeeTVS;
+@class RaceResultsCell;
 @class reportController;
 @class settingController;
 @class ViewController;
 @class viewRaceRecordViewController;
 @class viewSeriesRecordViewController;
-@class KemblaJoggers_SeriesRecordDataSource;
-@class SeriesRecordCell;
 @class handicapViewController;
 @class KemblaJoggers_TableSource;
-@class KemblaJoggers_HandicapDataSource;
+@class timeEventViewController;
+@class ParticipationViewController;
+@class addNewRecordViewController;
+@class CheckResultCell;
+@class KemblaJoggers_checkResultDataSource;
+@class KemblaJoggers_CoursesDataSource;
+@class KemblaJoggers_filterRaceDataSource;
 @class HandicapCell;
+@class LapCell;
+@class KemblaJoggers_LapDataSource;
 @class ParticipationCell;
 @class KemblaJoggers_ParticipationDataSource;
-@class ParticipationViewController;
-@class KemblaJoggers_ContactDataSource;
+@class RaceRecordCell;
+@class KemblaJoggers_RaceRecordsDataSource;
+@class SeriesRecordCell;
+@class KemblaJoggers_SeriesRecordDataSource;
+@class eventViewController;
 @class loginController;
+@class KemblaJoggers_ContactDataSource;
+@class KemblaJoggers_HandicapDataSource;
 @class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
 @class UIKit_UIControl_UIControlAppearance;
@@ -2438,102 +2444,56 @@
 	-(id) init;
 @end
 
-@interface scanButton : UIViewController {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface KemblaJoggers_filterRaceDataSource : NSObject<UIScrollViewDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
-	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
-	-(void) tableView:(UITableView *)p0 didDeselectRowAtIndexPath:(NSIndexPath *)p1;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface KemblaJoggers_RaceRecordsDataSource : NSObject<UIScrollViewDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface RaceRecordCell : UITableViewCell {
-}
-	@property (nonatomic, assign) UILabel * ageGroupLabel;
-	@property (nonatomic, assign) UILabel * dateLabel;
-	@property (nonatomic, assign) UILabel * nameLabel;
-	@property (nonatomic, assign) UILabel * positionLabel;
-	@property (nonatomic, assign) UILabel * timeLabel;
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UILabel *) ageGroupLabel;
-	-(void) setAgeGroupLabel:(UILabel *)p0;
-	-(UILabel *) dateLabel;
-	-(void) setDateLabel:(UILabel *)p0;
-	-(UILabel *) nameLabel;
-	-(void) setNameLabel:(UILabel *)p0;
-	-(UILabel *) positionLabel;
-	-(void) setPositionLabel:(UILabel *)p0;
-	-(UILabel *) timeLabel;
-	-(void) setTimeLabel:(UILabel *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface RaceResultsCell : UITableViewCell {
-}
-	@property (nonatomic, assign) UILabel * dateLabel;
-	@property (nonatomic, assign) UILabel * memberIDLabel;
-	@property (nonatomic, assign) UILabel * nameLabel;
-	@property (nonatomic, assign) UILabel * positionLabel;
-	@property (nonatomic, assign) UILabel * timeLabel;
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UILabel *) dateLabel;
-	-(void) setDateLabel:(UILabel *)p0;
-	-(UILabel *) memberIDLabel;
-	-(void) setMemberIDLabel:(UILabel *)p0;
-	-(UILabel *) nameLabel;
-	-(void) setNameLabel:(UILabel *)p0;
-	-(UILabel *) positionLabel;
-	-(void) setPositionLabel:(UILabel *)p0;
-	-(UILabel *) timeLabel;
-	-(void) setTimeLabel:(UILabel *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
 @interface checkResultViewController : UIViewController {
 }
+	@property (nonatomic, assign) UITextField * categoryTextField;
 	@property (nonatomic, assign) UITableView * checkResultTableView;
 	@property (nonatomic, assign) UIView * checkResultView;
 	@property (nonatomic, assign) UIButton * commitButton;
+	@property (nonatomic, assign) UITextField * dateTextField;
+	@property (nonatomic, assign) UITextField * distanceTextField;
+	@property (nonatomic, assign) UITextField * handicapBufTextField;
+	@property (nonatomic, assign) UITextField * handicapDetTextField;
+	@property (nonatomic, assign) UITextField * handicapFacTextField;
+	@property (nonatomic, assign) UITextField * locationTextField;
+	@property (nonatomic, assign) UITextField * numLegsTextField;
+	@property (nonatomic, assign) UITextField * relayTextField;
+	@property (nonatomic, assign) UITextField * surfaceTypeTextField;
+	@property (nonatomic, assign) UITextField * unitTextField;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITextField *) categoryTextField;
+	-(void) setCategoryTextField:(UITextField *)p0;
 	-(UITableView *) checkResultTableView;
 	-(void) setCheckResultTableView:(UITableView *)p0;
 	-(UIView *) checkResultView;
 	-(void) setCheckResultView:(UIView *)p0;
 	-(UIButton *) commitButton;
 	-(void) setCommitButton:(UIButton *)p0;
+	-(UITextField *) dateTextField;
+	-(void) setDateTextField:(UITextField *)p0;
+	-(UITextField *) distanceTextField;
+	-(void) setDistanceTextField:(UITextField *)p0;
+	-(UITextField *) handicapBufTextField;
+	-(void) setHandicapBufTextField:(UITextField *)p0;
+	-(UITextField *) handicapDetTextField;
+	-(void) setHandicapDetTextField:(UITextField *)p0;
+	-(UITextField *) handicapFacTextField;
+	-(void) setHandicapFacTextField:(UITextField *)p0;
+	-(UITextField *) locationTextField;
+	-(void) setLocationTextField:(UITextField *)p0;
+	-(UITextField *) numLegsTextField;
+	-(void) setNumLegsTextField:(UITextField *)p0;
+	-(UITextField *) relayTextField;
+	-(void) setRelayTextField:(UITextField *)p0;
+	-(UITextField *) surfaceTypeTextField;
+	-(void) setSurfaceTypeTextField:(UITextField *)p0;
+	-(UITextField *) unitTextField;
+	-(void) setUnitTextField:(UITextField *)p0;
+	-(void) viewDidLoad;
+	-(void) CommitButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2621,23 +2581,9 @@
 	-(void) setContactVPost:(UITextField *)p0;
 	-(UISearchDisplayController *) searchDisplayController;
 	-(void) setSearchDisplayController:(UISearchDisplayController *)p0;
+	-(void) viewDidLayoutSubviews;
 	-(void) viewDidLoad;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface eventController : UIViewController {
-}
-	@property (nonatomic, assign) UIImageView * eventBackgroundImage;
-	@property (nonatomic, assign) UIView * eventView;
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UIImageView *) eventBackgroundImage;
-	-(void) setEventBackgroundImage:(UIImageView *)p0;
-	-(UIView *) eventView;
-	-(void) setEventView:(UIView *)p0;
-	-(void) viewDidLoad;
+	-(void) ContactEditButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2708,6 +2654,30 @@
 	-(UIView *) RaceResultView;
 	-(void) setRaceResultView:(UIView *)p0;
 	-(void) viewDidLoad;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface RaceResultsCell : UITableViewCell {
+}
+	@property (nonatomic, assign) UILabel * dateLabel;
+	@property (nonatomic, assign) UILabel * memberIDLabel;
+	@property (nonatomic, assign) UILabel * nameLabel;
+	@property (nonatomic, assign) UILabel * positionLabel;
+	@property (nonatomic, assign) UILabel * timeLabel;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UILabel *) dateLabel;
+	-(void) setDateLabel:(UILabel *)p0;
+	-(UILabel *) memberIDLabel;
+	-(void) setMemberIDLabel:(UILabel *)p0;
+	-(UILabel *) nameLabel;
+	-(void) setNameLabel:(UILabel *)p0;
+	-(UILabel *) positionLabel;
+	-(void) setPositionLabel:(UILabel *)p0;
+	-(UILabel *) timeLabel;
+	-(void) setTimeLabel:(UILabel *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2804,42 +2774,6 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface KemblaJoggers_SeriesRecordDataSource : NSObject<UIScrollViewDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-@end
-
-@interface SeriesRecordCell : UITableViewCell {
-}
-	@property (nonatomic, assign) UILabel * ageGroupLabel;
-	@property (nonatomic, assign) UILabel * dateLabel;
-	@property (nonatomic, assign) UILabel * nameLabel;
-	@property (nonatomic, assign) UILabel * positionLabel;
-	@property (nonatomic, assign) UILabel * timeLabel;
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UILabel *) ageGroupLabel;
-	-(void) setAgeGroupLabel:(UILabel *)p0;
-	-(UILabel *) dateLabel;
-	-(void) setDateLabel:(UILabel *)p0;
-	-(UILabel *) nameLabel;
-	-(void) setNameLabel:(UILabel *)p0;
-	-(UILabel *) positionLabel;
-	-(void) setPositionLabel:(UILabel *)p0;
-	-(UILabel *) timeLabel;
-	-(void) setTimeLabel:(UILabel *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
 @interface handicapViewController : UIViewController {
 }
 	@property (nonatomic, assign) UITableView * handicapDateTableView;
@@ -2873,7 +2807,70 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface KemblaJoggers_HandicapDataSource : NSObject<UIScrollViewDelegate> {
+@interface timeEventViewController : UIViewController {
+}
+	@property (nonatomic, assign) UIButton * lapButton;
+	@property (nonatomic, assign) UITableView * lapTimings;
+	@property (nonatomic, assign) UIButton * startButton;
+	@property (nonatomic, assign) UILabel * timerLabel;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) lapButton;
+	-(void) setLapButton:(UIButton *)p0;
+	-(UITableView *) lapTimings;
+	-(void) setLapTimings:(UITableView *)p0;
+	-(UIButton *) startButton;
+	-(void) setStartButton:(UIButton *)p0;
+	-(UILabel *) timerLabel;
+	-(void) setTimerLabel:(UILabel *)p0;
+	-(void) viewDidLoad;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ParticipationViewController : UIViewController {
+}
+	@property (nonatomic, assign) UITableView * participationTableView;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableView *) participationTableView;
+	-(void) setParticipationTableView:(UITableView *)p0;
+	-(void) viewDidLoad;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface addNewRecordViewController : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) viewDidLoad;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface CheckResultCell : UITableViewCell {
+}
+	@property (nonatomic, assign) UILabel * nameLabel;
+	@property (nonatomic, assign) UILabel * positionLabel;
+	@property (nonatomic, assign) UILabel * timeLabel;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UILabel *) nameLabel;
+	-(void) setNameLabel:(UILabel *)p0;
+	-(UILabel *) positionLabel;
+	-(void) setPositionLabel:(UILabel *)p0;
+	-(UILabel *) timeLabel;
+	-(void) setTimeLabel:(UILabel *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_checkResultDataSource : NSObject<UIScrollViewDelegate> {
 }
 	-(void) release;
 	-(id) retain;
@@ -2883,6 +2880,30 @@
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
+@end
+
+@interface KemblaJoggers_CoursesDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_filterRaceDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(void) tableView:(UITableView *)p0 didDeselectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface HandicapCell : UITableViewCell {
@@ -2900,6 +2921,32 @@
 	-(void) setMemberLabel:(UILabel *)p0;
 	-(UILabel *) nameLabel;
 	-(void) setNameLabel:(UILabel *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface LapCell : UITableViewCell {
+}
+	@property (nonatomic, assign) UILabel * positionLabel;
+	@property (nonatomic, assign) UILabel * timeLabel;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UILabel *) positionLabel;
+	-(void) setPositionLabel:(UILabel *)p0;
+	-(UILabel *) timeLabel;
+	-(void) setTimeLabel:(UILabel *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_LapDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2936,30 +2983,90 @@
 	-(id) init;
 @end
 
-@interface ParticipationViewController : UIViewController {
+@interface RaceRecordCell : UITableViewCell {
 }
-	@property (nonatomic, assign) UITableView * participationTableView;
+	@property (nonatomic, assign) UILabel * ageGroupLabel;
+	@property (nonatomic, assign) UILabel * dateLabel;
+	@property (nonatomic, assign) UILabel * nameLabel;
+	@property (nonatomic, assign) UILabel * positionLabel;
+	@property (nonatomic, assign) UILabel * timeLabel;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITableView *) participationTableView;
-	-(void) setParticipationTableView:(UITableView *)p0;
-	-(void) viewDidLoad;
+	-(UILabel *) ageGroupLabel;
+	-(void) setAgeGroupLabel:(UILabel *)p0;
+	-(UILabel *) dateLabel;
+	-(void) setDateLabel:(UILabel *)p0;
+	-(UILabel *) nameLabel;
+	-(void) setNameLabel:(UILabel *)p0;
+	-(UILabel *) positionLabel;
+	-(void) setPositionLabel:(UILabel *)p0;
+	-(UILabel *) timeLabel;
+	-(void) setTimeLabel:(UILabel *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface KemblaJoggers_ContactDataSource : NSObject<UIScrollViewDelegate> {
+@interface KemblaJoggers_RaceRecordsDataSource : NSObject<UIScrollViewDelegate> {
 }
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(NSArray *) sectionIndexTitlesForTableView:(UITableView *)p0;
-	-(NSString *) tableView:(UITableView *)p0 titleForHeaderInSection:(NSInteger)p1;
 	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface SeriesRecordCell : UITableViewCell {
+}
+	@property (nonatomic, assign) UILabel * ageGroupLabel;
+	@property (nonatomic, assign) UILabel * dateLabel;
+	@property (nonatomic, assign) UILabel * nameLabel;
+	@property (nonatomic, assign) UILabel * positionLabel;
+	@property (nonatomic, assign) UILabel * timeLabel;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UILabel *) ageGroupLabel;
+	-(void) setAgeGroupLabel:(UILabel *)p0;
+	-(UILabel *) dateLabel;
+	-(void) setDateLabel:(UILabel *)p0;
+	-(UILabel *) nameLabel;
+	-(void) setNameLabel:(UILabel *)p0;
+	-(UILabel *) positionLabel;
+	-(void) setPositionLabel:(UILabel *)p0;
+	-(UILabel *) timeLabel;
+	-(void) setTimeLabel:(UILabel *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_SeriesRecordDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface eventViewController : UIViewController {
+}
+	@property (nonatomic, assign) UIImageView * eventBackgroundImage;
+	@property (nonatomic, assign) UIView * eventView;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIImageView *) eventBackgroundImage;
+	-(void) setEventBackgroundImage:(UIImageView *)p0;
+	-(UIView *) eventView;
+	-(void) setEventView:(UIView *)p0;
+	-(void) viewDidLoad;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2983,6 +3090,32 @@
 	-(void) didReceiveMemoryWarning;
 	-(void) LoginButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_ContactDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSArray *) sectionIndexTitlesForTableView:(UITableView *)p0;
+	-(NSString *) tableView:(UITableView *)p0 titleForHeaderInSection:(NSInteger)p1;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_HandicapDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface BCChatAction : NSObject {

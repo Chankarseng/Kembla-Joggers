@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using KemblaJoggers.Classes;
 namespace KemblaJoggers
 {
-    public class RaceResult
+    public class RaceResultClass
     {
         public string raceid { get; set; }
         public DateTime date { get; set; }
