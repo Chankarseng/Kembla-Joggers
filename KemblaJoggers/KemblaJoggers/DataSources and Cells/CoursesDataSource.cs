@@ -4,7 +4,7 @@ using KemblaJoggers.Classes;
 using Foundation;
 using System.Collections.Generic;
 
-namespace KemblaJoggers
+/*namespace KemblaJoggers
 {
     public class CoursesDataSource : UITableViewSource
     {
@@ -19,7 +19,7 @@ namespace KemblaJoggers
         {
             var cell = (CheckResultCell)tableView.DequeueReusableCell(cellIdentifier, indexPath);
             var record = tableItems[indexPath.Row];
-            cell.UpdateCell(record);
+            cell.UpdateCell(indexPath.Row,record);
             return cell;
         }
 
@@ -30,3 +30,4 @@ namespace KemblaJoggers
         }
     }
 }
+*/

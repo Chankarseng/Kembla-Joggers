@@ -340,7 +340,6 @@
 @class addNewRecordViewController;
 @class CheckResultCell;
 @class KemblaJoggers_checkResultDataSource;
-@class KemblaJoggers_CoursesDataSource;
 @class KemblaJoggers_filterRaceDataSource;
 @class HandicapCell;
 @class LapCell;
@@ -353,10 +352,12 @@
 @class KemblaJoggers_SeriesRecordDataSource;
 @class eventViewController;
 @class courseManagementViewController;
+@class pointScoresViewController;
 @class loginController;
 @class KemblaJoggers_ContactDataSource;
 @class KemblaJoggers_HandicapDataSource;
 @class chooseLocationViewController;
+@class selectRecordTypeViewController;
 @class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
 @class UIKit_UIControl_UIControlAppearance;
@@ -2890,17 +2891,6 @@
 	-(id) init;
 @end
 
-@interface KemblaJoggers_CoursesDataSource : NSObject<UIScrollViewDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
 @interface KemblaJoggers_filterRaceDataSource : NSObject<UIScrollViewDelegate> {
 }
 	-(void) release;
@@ -3087,6 +3077,22 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
+@interface pointScoresViewController : UIViewController {
+}
+	@property (nonatomic, assign) UIView * leftView;
+	@property (nonatomic, assign) UIView * rightView;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIView *) leftView;
+	-(void) setLeftView:(UIView *)p0;
+	-(UIView *) rightView;
+	-(void) setRightView:(UIView *)p0;
+	-(void) viewDidLoad;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
 @interface loginController : UIViewController {
 }
 	@property (nonatomic, assign) UIImageView * kemblaLogo;
@@ -3160,6 +3166,24 @@
 	-(void) didReceiveMemoryWarning;
 	-(void) SetLocationButton_TouchUpInside:(UIButton *)p0;
 	-(void) ZoomToUserButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface selectRecordTypeViewController : UIViewController {
+}
+	@property (nonatomic, assign) UIButton * viewRaceRecordButton;
+	@property (nonatomic, assign) UIButton * viewSeriesRecordButton;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) viewRaceRecordButton;
+	-(void) setViewRaceRecordButton:(UIButton *)p0;
+	-(UIButton *) viewSeriesRecordButton;
+	-(void) setViewSeriesRecordButton:(UIButton *)p0;
+	-(void) viewDidLoad;
+	-(void) ViewRaceRecordButton_TouchUpInside:(UIButton *)p0;
+	-(void) ViewSeriesRecordButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 

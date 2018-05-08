@@ -4,18 +4,22 @@ using Firebase.Database;
 using Firebase.Auth;
 using Firebase.Core;
 using KemblaJoggers.Classes;
-
+using Intents;
 namespace KemblaJoggers
 {
     public class AppData
     {
         private static AppData instance;
 
-        public static List<CoursesClass> offlineCourseList;
-        public static List<ContactClass> offlineContactList;
-        public static List<RecordClass> offlineRecordList;
+        public static List<CoursesClass> offlineCourseList; // For a list of courses (containing location name and id)
+        public static List<ContactClass> offlineContactList; // For a list of contacts
+        public static List<RecordClass> offlineRecordList; 
+        public static List<LocationClass> offlineLocationList; // For a list of locations
         public static List<RaceResultClass> offlineRaceResultList;
-        //public static List<>
+        #region race event
+        public static int index = 0;
+        public static string[] currentRaceLapTime; // For inserting and displaying at the event screen
+        #endregion
 
 
         #region firebaseandonline
@@ -41,7 +45,7 @@ namespace KemblaJoggers
             auth = Auth.DefaultInstance;
         }
 
-        public static AppData GetInstnace()
+        public static AppData GetInstance()
         {
             if (instance == null)
             {

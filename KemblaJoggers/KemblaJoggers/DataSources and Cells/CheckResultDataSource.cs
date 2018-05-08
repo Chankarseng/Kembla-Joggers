@@ -11,19 +11,30 @@ namespace KemblaJoggers
         public checkResultDataSource()
         {
         }
+        string[] lapTime;
         string cellIdentifier = "result_id";
         private List<ContactClass> tableItems = new List<ContactClass>();
+        public checkResultDataSource(UIViewController inputControl)
+        {
+            this.lapTime = AppData.currentRaceLapTime;
+            tableItems = AppData.offlineContactList;
+        }
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = (CheckResultCell)tableView.DequeueReusableCell(cellIdentifier, indexPath);
-            var record = tableItems[indexPath.Row];
-            cell.UpdateCell(record);
+            var record = new ContactClass();
+            if (indexPath.Row < tableItems.Count)
+            {
+                record = tableItems[indexPath.Row];
+			}
+            string time = lapTime[indexPath.Row];
+            cell.UpdateCell(indexPath.Row + 1,record,time);
             return cell;
         }
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {
-            return tableItems.Count;
+            return AppData.index;
             //throw new NotImplementedException();
         }
     }

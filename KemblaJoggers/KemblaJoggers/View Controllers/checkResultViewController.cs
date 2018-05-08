@@ -13,15 +13,15 @@ namespace KemblaJoggers
         public checkResultViewController (IntPtr handle) : base (handle)
         {
         }
-        CoursesDataSource CoursesDs;
+        checkResultDataSource resultDs;
         private List<CoursesClass> courses = new List<CoursesClass>();
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             PrepareCourseFirstList.Prepare();
             PrepareContactFirstList.Prepare();
-            CoursesDs = new CoursesDataSource(this);
-            checkResultTableView.Source = CoursesDs;
+            resultDs = new checkResultDataSource(this);
+            checkResultTableView.Source = resultDs;
             // For testing purporses
             dateTextField.Text = DateTime.UtcNow.ToShortDateString();
             categoryTextField.Text = AppData.offlineCourseList[0].CourseName;

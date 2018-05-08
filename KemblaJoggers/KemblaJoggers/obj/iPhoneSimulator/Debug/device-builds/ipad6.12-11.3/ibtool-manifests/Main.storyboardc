@@ -148,21 +148,6 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>79041</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>79041</string>
-				</array>
-				<key>message</key>
-				<string>“Course Management“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>80058</key>
 		<array>
 			<dict>

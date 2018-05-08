@@ -17,10 +17,11 @@ namespace KemblaJoggers
         Stopwatch stopwatch = new Stopwatch();
         Timer stopTimer = new Timer();
         string[] lapTime = new string[1000];
-        int index = 0;
+
 		public override void ViewDidLoad()
 		{
             base.ViewDidLoad();
+            AppData.index = 0;
             startButton.Layer.CornerRadius = 75;
             startButton.Layer.BorderWidth = 2;
             startButton.Layer.BorderColor = UIColor.White.CGColor;
@@ -57,12 +58,15 @@ namespace KemblaJoggers
 
             lapButton.TouchUpInside += (sender, e) =>
             {
+                // lap button title is set to "Lap"
                 if (startButton.TitleLabel.Text == "Stop")
                 {
-                    lapTime[index] = stopwatch.Elapsed.ToString(@"hh\:mm\:ss\:ff");
-                    index++; 
-                    lapTimings.Source = new LapDataSource(lapTime,index);
+                    lapTime[AppData.index] = stopwatch.Elapsed.ToString(@"hh\:mm\:ss\:ff");
+                    AppData.currentRaceLapTime = lapTime;
+                    AppData.index++;
+                    lapTimings.Source = new LapDataSource(AppData.currentRaceLapTime,AppData.index);
                 }
+                // lap button title is set to "Reset"
                 else if (startButton.TitleLabel.Text == "Start")
                 {
                     lapButton.SetTitle("Lap", UIControlState.Normal);
@@ -76,8 +80,7 @@ namespace KemblaJoggers
                     stopwatch.Reset();
                     stopwatch.Stop();
                     lapTimings.Source = null;
-                    index = 0;
-                 
+                    AppData.index = 0;
                 }
                 lapTimings.ReloadData();
                 // Take the elapsed time.

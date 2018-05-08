@@ -271,6 +271,14 @@
     <Compile Include="View Controllers\chooseLocationViewController.designer.cs">
       <DependentUpon>chooseLocationViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Controllers\pointScoresViewController.cs" />
+    <Compile Include="View Controllers\pointScoresViewController.designer.cs">
+      <DependentUpon>pointScoresViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\selectRecordTypeViewController_.cs" />
+    <Compile Include="View Controllers\selectRecordTypeViewController_.designer.cs">
+      <DependentUpon>selectRecordTypeViewController_.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />

@@ -7,13 +7,13 @@ namespace KemblaJoggers
 {
     public partial class LapDataSource : UITableViewSource
     {
-       string[] Laps;
+        string[] Laps;
         string CellIdentifier = "TableCell";
-        int index;
+        int _index;
         public LapDataSource(string[] lapTimes,int i)
         {
             Laps = lapTimes;
-            index = i;
+            _index = i; // to count how many time the lap button has been pressed
         }
 
 
@@ -36,7 +36,7 @@ namespace KemblaJoggers
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {
-            return index;
+            return _index;
         }
     }
 }

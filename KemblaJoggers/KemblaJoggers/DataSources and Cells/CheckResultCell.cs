@@ -9,12 +9,11 @@ namespace KemblaJoggers
         public CheckResultCell (IntPtr handle) : base (handle)
         {
         }
-        internal void UpdateCell (ContactClass contact)
+        internal void UpdateCell (int standings,ContactClass contact,string time)
         {
-            DateTime _time1 = new DateTime(2018, 1, 13, 0, 47, 20, 11);
-            positionLabel.Text = "1";
+            positionLabel.Text = standings.ToString();
             nameLabel.Text = contact.FirstName + " " + contact.LastName;
-            timeLabel.Text = _time1.Hour + ":" + _time1.Minute + ":" + _time1.Second;
+            timeLabel.Text = time;
         }
     }
 }
