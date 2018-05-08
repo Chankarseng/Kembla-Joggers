@@ -117,6 +117,11 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Artboard 1%402x.png" />
     <ImageAsset Include="Assets.xcassets\Background.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Background.imageset\Running_background_img.jpg" />
+    <ImageAsset Include="Assets.xcassets\CentreLocation.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\CentreLocation.imageset\icons8-hunt-48.png" />
+    <ImageAsset Include="Assets.xcassets\CentreLocation.imageset\icons8-hunt-96.png" />
+    <ImageAsset Include="Assets.xcassets\mapLocation.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\mapLocation.imageset\icons8-marker.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -126,6 +131,9 @@
     <Folder Include="View Controllers\" />
     <Folder Include="PrepareList\" />
     <Folder Include="DataSources and Cells\" />
+    <Folder Include="Assets.xcassets\CentreLocation.imageset\" />
+    <Folder Include="Assets.xcassets\mapLocation.imageset\" />
+    <Folder Include="Assets.xcassets\mapLocation.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -253,6 +261,15 @@
     <Compile Include="View Controllers\eventViewController.cs" />
     <Compile Include="View Controllers\eventViewController.designer.cs">
       <DependentUpon>eventViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrepareList\PrepareLocationFirstList.cs" />
+    <Compile Include="View Controllers\courseManagementViewController.cs" />
+    <Compile Include="View Controllers\courseManagementViewController.designer.cs">
+      <DependentUpon>courseManagementViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\chooseLocationViewController.cs" />
+    <Compile Include="View Controllers\chooseLocationViewController.designer.cs">
+      <DependentUpon>chooseLocationViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

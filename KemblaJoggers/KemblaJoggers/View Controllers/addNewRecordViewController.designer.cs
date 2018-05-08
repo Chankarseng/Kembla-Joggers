@@ -14,5 +14,25 @@ namespace KemblaJoggers
     [Register ("addNewRecordViewController")]
     partial class addNewRecordViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView leftView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView rightView { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (leftView != null) {
+                leftView.Dispose ();
+                leftView = null;
+            }
+
+            if (rightView != null) {
+                rightView.Dispose ();
+                rightView = null;
+            }
+        }
     }
 }

@@ -352,9 +352,11 @@
 @class SeriesRecordCell;
 @class KemblaJoggers_SeriesRecordDataSource;
 @class eventViewController;
+@class courseManagementViewController;
 @class loginController;
 @class KemblaJoggers_ContactDataSource;
 @class KemblaJoggers_HandicapDataSource;
+@class chooseLocationViewController;
 @class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
 @class UIKit_UIControl_UIControlAppearance;
@@ -2844,10 +2846,16 @@
 
 @interface addNewRecordViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIView * leftView;
+	@property (nonatomic, assign) UIView * rightView;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIView *) leftView;
+	-(void) setLeftView:(UIView *)p0;
+	-(UIView *) rightView;
+	-(void) setRightView:(UIView *)p0;
 	-(void) viewDidLoad;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
@@ -3070,6 +3078,15 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
+@interface courseManagementViewController : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
 @interface loginController : UIViewController {
 }
 	@property (nonatomic, assign) UIImageView * kemblaLogo;
@@ -3116,6 +3133,34 @@
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
+@end
+
+@interface chooseLocationViewController : UIViewController {
+}
+	@property (nonatomic, assign) UITextField * addressTextField;
+	@property (nonatomic, assign) UIImageView * locationImage;
+	@property (nonatomic, assign) MKMapView * locationMap;
+	@property (nonatomic, assign) UIButton * setLocationButton;
+	@property (nonatomic, assign) UIButton * zoomToUserButton;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITextField *) addressTextField;
+	-(void) setAddressTextField:(UITextField *)p0;
+	-(UIImageView *) locationImage;
+	-(void) setLocationImage:(UIImageView *)p0;
+	-(MKMapView *) locationMap;
+	-(void) setLocationMap:(MKMapView *)p0;
+	-(UIButton *) setLocationButton;
+	-(void) setSetLocationButton:(UIButton *)p0;
+	-(UIButton *) zoomToUserButton;
+	-(void) setZoomToUserButton:(UIButton *)p0;
+	-(void) viewDidLoad;
+	-(void) didReceiveMemoryWarning;
+	-(void) SetLocationButton_TouchUpInside:(UIButton *)p0;
+	-(void) ZoomToUserButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface BCChatAction : NSObject {

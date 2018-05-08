@@ -148,21 +148,6 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>78786</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>78786</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>79041</key>
 		<array>
 			<dict>
@@ -184,6 +169,21 @@
 				<key>affected-objects</key>
 				<array>
 					<string>80058</string>
+				</array>
+				<key>message</key>
+				<string>Prototype table cells must have reuse identifiers</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>98970</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>98970</string>
 				</array>
 				<key>message</key>
 				<string>Prototype table cells must have reuse identifiers</string>

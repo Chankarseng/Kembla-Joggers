@@ -2835,7 +2835,7 @@
         </scene>
         <scene sceneID="79040">
             <objects>
-                <viewController id="79041" sceneMemberID="viewController" title="Course Management">
+                <viewController id="79041" sceneMemberID="viewController" title="Course Management" customClass="courseManagementViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="79038"/>
                         <viewControllerLayoutGuide type="bottom" id="79039"/>
@@ -2967,7 +2967,7 @@
         </scene>
         <scene sceneID="80821">
             <objects>
-                <viewController id="80822" sceneMemberID="viewController" title="Choose Location">
+                <viewController id="80822" sceneMemberID="viewController" title="Choose Location" customClass="chooseLocationViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="80819"/>
                         <viewControllerLayoutGuide type="bottom" id="80820"/>
@@ -2981,8 +2981,56 @@
                                 <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="100215" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="904" y="648" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ZoomToUserButton_TouchUpInside:" destination="80822" id="100216" eventType="touchUpInside"/>
+                                </connections>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="CentreLocation"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Address" minimumFontSize="17" id="100217" translatesAutoresizingMaskIntoConstraints="NO" borderStyle="roundedRect" textAlignment="center" placeholder="Enter Address Here">
+                                <rect key="frame" x="205" y="82" width="614" height="50"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="101265" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="205" y="664" width="614" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.0392156862745098" green="0.31764705882352939" blue="0.53725490196078429" alpha="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Set Location">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="SetLocationButton_TouchUpInside:" destination="80822" id="107716" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="100748" translatesAutoresizingMaskIntoConstraints="NO" opaque="NO" clearsContextBeforeDrawing="NO" image="mapLocation" hidden="YES">
+                                <rect key="frame" x="462" y="334" width="100" height="100"/>
+                            </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint id="100226" firstItem="100217" firstAttribute="top" secondItem="80823" secondAttribute="top" constant="82"/>
+                            <constraint id="100229" firstItem="100217" firstAttribute="leading" secondItem="80823" secondAttribute="leadingMargin" constant="185"/>
+                            <constraint id="100230" firstItem="80823" firstAttribute="trailingMargin" secondItem="100217" secondAttribute="trailing" constant="185"/>
+                            <constraint id="100231" firstItem="80820" firstAttribute="top" secondItem="100217" secondAttribute="bottom" constant="636"/>
+                            <constraint id="105300" firstItem="100748" firstAttribute="leading" secondItem="80823" secondAttribute="leadingMargin" constant="442"/>
+                            <constraint id="105301" firstItem="80823" firstAttribute="trailingMargin" secondItem="100748" secondAttribute="trailing" constant="442"/>
+                            <constraint id="105304" firstItem="80820" firstAttribute="top" secondItem="100748" secondAttribute="bottom" constant="334"/>
+                            <constraint id="105305" firstItem="100748" firstAttribute="top" secondItem="80819" secondAttribute="bottom" constant="270"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationMap" destination="80826" id="name-outlet-80826"/>
+                        <outlet property="zoomToUserButton" destination="100215" id="name-outlet-100215"/>
+                        <outlet property="addressTextField" destination="100217" id="name-outlet-100217"/>
+                        <outlet property="setLocationButton" destination="101265" id="name-outlet-101265"/>
+                        <outlet property="locationImage" destination="100748" id="name-outlet-100748"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80824" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3010,5 +3058,7 @@
         <image name="Background" width="1920" height="1440"/>
         <image name="Kembla_logo.png" width="387" height="421"/>
         <image name="Running_background_img.jpg" width="1920" height="1440"/>
+        <image name="CentreLocation" width="48" height="48"/>
+        <image name="mapLocation" width="96" height="96"/>
     </resources>
 </document>
