@@ -26,5 +26,6 @@ namespace KemblaJoggers
         public int ANSWNumber { get; set; } // contactVANSWNumber
         public bool LifeMember { get; set; } // contactVLifeMember
         public string ClubName { get; set; } // contactVClubName
+        public bool ActiveStatus { get; set; }
     }
 }

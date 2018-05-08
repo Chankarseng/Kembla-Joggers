@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using UIKit;
 using Accelerate;
 using System.Diagnostics;

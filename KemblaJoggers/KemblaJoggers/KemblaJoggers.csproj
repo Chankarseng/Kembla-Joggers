@@ -124,6 +124,8 @@
     <Folder Include="Assets.xcassets\Background.imageset\" />
     <Folder Include="Authentication\" />
     <Folder Include="View Controllers\" />
+    <Folder Include="PrepareList\" />
+    <Folder Include="DataSources and Cells\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -141,25 +143,10 @@
     <Compile Include="Classes\ReadWriteDisk.cs" />
     <Compile Include="Classes\ContactClass.cs" />
     <Compile Include="Classes\CoursesClass.cs" />
-    <Compile Include="Classes\ContactDataSource.cs" />
-    <Compile Include="Classes\PrepareContactFirstList.cs" />
     <Compile Include="Classes\UIImageEffects.cs" />
-    <Compile Include="scanButton.cs" />
-    <Compile Include="scanButton.designer.cs">
-      <DependentUpon>scanButton.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Classes\filterRaceDataSource.cs" />
     <Compile Include="Authentication\AuthenticationState.cs" />
-    <Compile Include="Classes\PrepareRaceRecordFirstList.cs" />
     <Compile Include="Classes\RecordClass.cs" />
-    <Compile Include="Classes\RaceRecordsDataSource.cs" />
-    <Compile Include="Classes\RaceRecordCell.cs" />
-    <Compile Include="Classes\RaceRecordCell.designer.cs">
-      <DependentUpon>RaceRecordCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\RaceResultsCell.cs" />
-    <Compile Include="Classes\RaceResultsCell.designer.cs" />
     <Compile Include="View Controllers\checkResultViewController.cs" />
     <Compile Include="View Controllers\checkResultViewController.designer.cs">
       <DependentUpon>checkResultViewController.cs</DependentUpon>
@@ -167,10 +154,6 @@
     <Compile Include="View Controllers\contactController.cs" />
     <Compile Include="View Controllers\contactController.designer.cs">
       <DependentUpon>contactController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View Controllers\eventController.cs" />
-    <Compile Include="View Controllers\eventController.designer.cs">
-      <DependentUpon>eventController.cs</DependentUpon>
     </Compile>
     <Compile Include="View Controllers\filterParticipationViewController.cs" />
     <Compile Include="View Controllers\filterParticipationViewController.designer.cs">
@@ -210,32 +193,67 @@
     <Compile Include="View Controllers\viewSeriesRecordViewController.designer.cs">
       <DependentUpon>viewSeriesRecordViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\SeriesRecordDataSource.cs" />
-    <Compile Include="Classes\SeriesRecordCell.cs" />
-    <Compile Include="Classes\SeriesRecordCell.designer.cs">
-      <DependentUpon>SeriesRecordCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="View Controllers\handicapViewController.cs" />
     <Compile Include="View Controllers\handicapViewController.designer.cs">
       <DependentUpon>handicapViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\LocationClass.cs" />
-    <Compile Include="Classes\RaceResult.cs" />
-    <Compile Include="Classes\PrepareRaceResultFirstList.cs" />
-    <Compile Include="Classes\RaceResultDataSource.cs" />
-    <Compile Include="Classes\PrepareHandicapFirstList.cs" />
-    <Compile Include="Classes\HandicapDataSource.cs" />
-    <Compile Include="Classes\HandicapCell.cs" />
-    <Compile Include="Classes\HandicapCell.designer.cs">
+    <Compile Include="Classes\RaceResultClass.cs" />
+    <Compile Include="PrepareList\PrepareContactFirstList.cs" />
+    <Compile Include="PrepareList\PrepareCourseFirstList.cs" />
+    <Compile Include="PrepareList\PrepareHandicapFirstList.cs" />
+    <Compile Include="PrepareList\PrepareRaceRecordFirstList.cs" />
+    <Compile Include="PrepareList\PrepareRaceResultFirstList.cs" />
+    <Compile Include="View Controllers\timeEventViewController.cs" />
+    <Compile Include="View Controllers\timeEventViewController.designer.cs">
+      <DependentUpon>timeEventViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\ParticipationViewController.cs" />
+    <Compile Include="View Controllers\ParticipationViewController.designer.cs" />
+    <Compile Include="View Controllers\addNewRecordViewController.cs" />
+    <Compile Include="View Controllers\addNewRecordViewController.designer.cs">
+      <DependentUpon>addNewRecordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources and Cells\CheckResultCell.cs" />
+    <Compile Include="DataSources and Cells\CheckResultCell.designer.cs">
+      <DependentUpon>CheckResultCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources and Cells\CheckResultDataSource.cs" />
+    <Compile Include="DataSources and Cells\ContactDataSource.cs" />
+    <Compile Include="DataSources and Cells\CoursesDataSource.cs" />
+    <Compile Include="DataSources and Cells\filterRaceDataSource.cs" />
+    <Compile Include="DataSources and Cells\HandicapCell.cs" />
+    <Compile Include="DataSources and Cells\HandicapCell.designer.cs">
       <DependentUpon>HandicapCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ParticipationCell.cs" />
-    <Compile Include="Classes\ParticipationCell.designer.cs">
+    <Compile Include="DataSources and Cells\HandicapDataSource.cs" />
+    <Compile Include="DataSources and Cells\LapCell.cs" />
+    <Compile Include="DataSources and Cells\LapCell.designer.cs">
+      <DependentUpon>LapCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources and Cells\LapDataSource.cs" />
+    <Compile Include="DataSources and Cells\ParticipationCell.cs" />
+    <Compile Include="DataSources and Cells\ParticipationCell.designer.cs">
       <DependentUpon>ParticipationCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ParticipationDataSource.cs" />
-    <Compile Include="ParticipationViewController.cs" />
-    <Compile Include="ParticipationViewController.designer.cs" />
+    <Compile Include="DataSources and Cells\ParticipationDataSource.cs" />
+    <Compile Include="DataSources and Cells\RaceRecordCell.cs" />
+    <Compile Include="DataSources and Cells\RaceRecordCell.designer.cs">
+      <DependentUpon>RaceRecordCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources and Cells\RaceRecordsDataSource.cs" />
+    <Compile Include="DataSources and Cells\RaceResultDataSource.cs" />
+    <Compile Include="DataSources and Cells\RaceResultsCell.cs" />
+    <Compile Include="DataSources and Cells\RaceResultsCell.designer.cs" />
+    <Compile Include="DataSources and Cells\SeriesRecordCell.cs" />
+    <Compile Include="DataSources and Cells\SeriesRecordCell.designer.cs">
+      <DependentUpon>SeriesRecordCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources and Cells\SeriesRecordDataSource.cs" />
+    <Compile Include="View Controllers\eventViewController.cs" />
+    <Compile Include="View Controllers\eventViewController.designer.cs">
+      <DependentUpon>eventViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />

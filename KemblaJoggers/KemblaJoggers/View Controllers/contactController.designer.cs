@@ -118,6 +118,10 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISearchDisplayController searchDisplayController { get; set; }
 
+        [Action ("ContactEditButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ContactEditButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (contactEditButton != null) {
