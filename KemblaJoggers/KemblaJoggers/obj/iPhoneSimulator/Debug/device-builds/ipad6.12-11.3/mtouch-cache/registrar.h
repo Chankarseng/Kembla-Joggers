@@ -353,11 +353,13 @@
 @class eventViewController;
 @class courseManagementViewController;
 @class pointScoresViewController;
+@class KemblaJoggers_chooseLocationResultViewController;
 @class loginController;
 @class KemblaJoggers_ContactDataSource;
 @class KemblaJoggers_HandicapDataSource;
 @class chooseLocationViewController;
 @class selectRecordTypeViewController;
+@class KemblaJoggers_chooseLocationViewController_SearchResultsUpdator;
 @class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
 @class UIKit_UIControl_UIControlAppearance;
@@ -2812,6 +2814,7 @@
 
 @interface timeEventViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * doneButton;
 	@property (nonatomic, assign) UIButton * lapButton;
 	@property (nonatomic, assign) UITableView * lapTimings;
 	@property (nonatomic, assign) UIButton * startButton;
@@ -2820,6 +2823,8 @@
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) doneButton;
+	-(void) setDoneButton:(UIButton *)p0;
 	-(UIButton *) lapButton;
 	-(void) setLapButton:(UIButton *)p0;
 	-(UITableView *) lapTimings;
@@ -2829,6 +2834,7 @@
 	-(UILabel *) timerLabel;
 	-(void) setTimerLabel:(UILabel *)p0;
 	-(void) viewDidLoad;
+	-(void) DoneButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2847,17 +2853,21 @@
 
 @interface addNewRecordViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * checkButton;
 	@property (nonatomic, assign) UIView * leftView;
 	@property (nonatomic, assign) UIView * rightView;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) checkButton;
+	-(void) setCheckButton:(UIButton *)p0;
 	-(UIView *) leftView;
 	-(void) setLeftView:(UIView *)p0;
 	-(UIView *) rightView;
 	-(void) setRightView:(UIView *)p0;
 	-(void) viewDidLoad;
+	-(void) CheckButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3081,6 +3091,7 @@
 }
 	@property (nonatomic, assign) UIView * leftView;
 	@property (nonatomic, assign) UIView * rightView;
+	@property (nonatomic, assign) UIButton * viewButton;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
@@ -3089,7 +3100,22 @@
 	-(void) setLeftView:(UIView *)p0;
 	-(UIView *) rightView;
 	-(void) setRightView:(UIView *)p0;
+	-(UIButton *) viewButton;
+	-(void) setViewButton:(UIButton *)p0;
 	-(void) viewDidLoad;
+	-(void) ViewButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_chooseLocationResultViewController : UITableViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3143,7 +3169,6 @@
 
 @interface chooseLocationViewController : UIViewController {
 }
-	@property (nonatomic, assign) UITextField * addressTextField;
 	@property (nonatomic, assign) UIImageView * locationImage;
 	@property (nonatomic, assign) MKMapView * locationMap;
 	@property (nonatomic, assign) UIButton * setLocationButton;
@@ -3152,8 +3177,6 @@
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITextField *) addressTextField;
-	-(void) setAddressTextField:(UITextField *)p0;
 	-(UIImageView *) locationImage;
 	-(void) setLocationImage:(UIImageView *)p0;
 	-(MKMapView *) locationMap;
@@ -3171,20 +3194,35 @@
 
 @interface selectRecordTypeViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * addNewRecordButton;
 	@property (nonatomic, assign) UIButton * viewRaceRecordButton;
 	@property (nonatomic, assign) UIButton * viewSeriesRecordButton;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) addNewRecordButton;
+	-(void) setAddNewRecordButton:(UIButton *)p0;
 	-(UIButton *) viewRaceRecordButton;
 	-(void) setViewRaceRecordButton:(UIButton *)p0;
 	-(UIButton *) viewSeriesRecordButton;
 	-(void) setViewSeriesRecordButton:(UIButton *)p0;
 	-(void) viewDidLoad;
+	-(void) AddNewRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewRaceRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewSeriesRecordButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_chooseLocationViewController_SearchResultsUpdator : NSObject<UISearchResultsUpdating> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) updateSearchResultsForSearchController:(UISearchController *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface BCChatAction : NSObject {

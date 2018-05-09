@@ -16,10 +16,6 @@ namespace KemblaJoggers
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField addressTextField { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView locationImage { get; set; }
 
         [Outlet]
@@ -44,11 +40,6 @@ namespace KemblaJoggers
 
         void ReleaseDesignerOutlets ()
         {
-            if (addressTextField != null) {
-                addressTextField.Dispose ();
-                addressTextField = null;
-            }
-
             if (locationImage != null) {
                 locationImage.Dispose ();
                 locationImage = null;

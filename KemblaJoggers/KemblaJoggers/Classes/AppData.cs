@@ -5,6 +5,8 @@ using Firebase.Auth;
 using Firebase.Core;
 using KemblaJoggers.Classes;
 using Intents;
+using System.Diagnostics;
+
 namespace KemblaJoggers
 {
     public class AppData
@@ -17,6 +19,10 @@ namespace KemblaJoggers
         public static List<LocationClass> offlineLocationList; // For a list of locations
         public static List<RaceResultClass> offlineRaceResultList;
         #region race event
+        public static int i = 0;
+        public static Stopwatch stopwatch = new Stopwatch();
+        public static string[] lapTime = new string[1000];
+        public static string currentTime = "00:00:00:00";
         public static int index = 0;
         public static string[] currentRaceLapTime; // For inserting and displaying at the event screen
         #endregion

@@ -22,6 +22,14 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView rightView { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton viewButton { get; set; }
+
+        [Action ("ViewButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ViewButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (leftView != null) {
@@ -32,6 +40,11 @@ namespace KemblaJoggers
             if (rightView != null) {
                 rightView.Dispose ();
                 rightView = null;
+            }
+
+            if (viewButton != null) {
+                viewButton.Dispose ();
+                viewButton = null;
             }
         }
     }

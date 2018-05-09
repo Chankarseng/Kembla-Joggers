@@ -8,6 +8,38 @@
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
 	<dict>
+		<key>113252</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>113250</string>
+					<string>113252</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>116977</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>116975</string>
+					<string>116977</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>28497</key>
 		<array>
 			<dict>
@@ -112,21 +144,6 @@
 				</array>
 				<key>message</key>
 				<string>Plain Style unsupported in a Navigation Item</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
-		<key>76758</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>76758</string>
-				</array>
-				<key>message</key>
-				<string>“Add New Race Record“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
 				<key>type</key>
 				<string>IBIssueTypeUnsupportedConfiguration</string>
 				<key>type-value</key>
