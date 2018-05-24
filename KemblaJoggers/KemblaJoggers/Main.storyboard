@@ -233,7 +233,7 @@
                                 <inset key="imageEdgeInsets" minX="265" minY="0.0" maxX="0.0" maxY="70"/>
                                 <state key="normal" title="TIME EVENT" image="Time Event.png"/>
                                 <connections>
-                                    <segue id="124354" destination="124294" kind="show"/>
+                                    <segue id="126722" destination="60516" kind="show"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8087">
@@ -514,7 +514,7 @@
                         <outlet property="addNewRecordButton" destination="113251" id="name-outlet-113251"/>
                     </connections>
                     <toolbarItems/>
-                    <navigationItem id="113250" key="navigationItem">
+                    <navigationItem id="113250" key="navigationItem" title="Select Record Type">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="113252">
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="113251" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
                                 <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -535,7 +535,7 @@
         <!--Scan Codes-->
         <scene sceneID="11086">
             <objects>
-                <viewController title="Scan Codes" id="11087" customClass="scanButton" sceneMemberID="viewController">
+                <viewController title="Scan Codes" id="11087" customClass="scanButtonVewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="11084"/>
                         <viewControllerLayoutGuide type="bottom" id="11085"/>
@@ -556,7 +556,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Code" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UfA-hu-cJr">
-                                <rect key="frame" x="392" y="417" width="240" height="30"/>
+                                <rect key="frame" x="364" y="416" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -575,7 +575,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Code" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rve-cH-3WN">
-                                <rect key="frame" x="392" y="547" width="240" height="30"/>
+                                <rect key="frame" x="364" y="546" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -588,14 +588,46 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue id="129962" destination="39753" kind="show"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="127502" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="618" y="416" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="127503" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="618" y="546" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="127499" title="Scan Barcode">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="127500">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="127501">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Details"/>
+                                <connections>
+                                    <action selector="DetailsButton_TouchUpInside:" destination="11087" id="136187" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="posScanButton" destination="127502" id="name-outlet-127502"/>
+                        <outlet property="memScanButton" destination="127503" id="name-outlet-127503"/>
+                        <outlet property="doneButton" destination="6D0-7q-Ivn" id="name-outlet-6D0-7q-Ivn"/>
+                        <outlet property="detailsButton" destination="127501" id="name-outlet-127501"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11089" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3346.875" y="-884.375"/>
+            <point key="canvasLocation" x="3363.875" y="-1975.375"/>
         </scene>
         <!--Filter Race Results-->
         <scene sceneID="13458">
@@ -679,6 +711,7 @@
                         <outlet property="filterRaceController" destination="13460" id="name-outlet-13460"/>
                         <outlet property="filterRaceTableView" destination="13501" id="name-outlet-13501"/>
                         <outlet property="testlabel" destination="13499" id="name-outlet-13499"/>
+                        <outlet property="filterNameTextField" destination="13500" id="name-outlet-13500"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13461" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1666,77 +1699,77 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42150">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42150" enabled="NO">
                                 <rect key="frame" x="848" y="134" width="164" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42151">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42151" enabled="NO">
                                 <rect key="frame" x="883" y="168" width="129" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42152">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42152" enabled="NO">
                                 <rect key="frame" x="883" y="209" width="129" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42153">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42153" enabled="NO">
                                 <rect key="frame" x="918" y="242" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42154">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42154" enabled="NO">
                                 <rect key="frame" x="883" y="280" width="129" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42155">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42155" enabled="NO">
                                 <rect key="frame" x="842" y="318" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42157">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42157" enabled="NO">
                                 <rect key="frame" x="939" y="356" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42158">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42158" enabled="NO">
                                 <rect key="frame" x="934" y="394" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42159">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42159" enabled="NO">
                                 <rect key="frame" x="934" y="431" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42160">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42160" enabled="NO">
                                 <rect key="frame" x="906" y="464" width="106" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42161">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="-" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42161" enabled="NO">
                                 <rect key="frame" x="934" y="502" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -1754,6 +1787,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="ResultEditButton_TouchUpInside:" destination="39753" id="128557" eventType="touchUpInside"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -1772,6 +1808,7 @@
                         <outlet property="handicapBufTextField" destination="42159" id="name-outlet-42159"/>
                         <outlet property="relayTextField" destination="42160" id="name-outlet-42160"/>
                         <outlet property="numLegsTextField" destination="42161" id="name-outlet-42161"/>
+                        <outlet property="resultEditButton" destination="42426" id="name-outlet-42426"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39755" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1911,6 +1948,7 @@
                         <outlet property="searchDisplayController" destination="41745" id="41744"/>
                         <outlet property="handicapView" destination="41675" id="name-outlet-41675"/>
                         <outlet property="handicapTimeTableView" destination="41751" id="name-outlet-41751"/>
+                        <outlet property="handicapSearchBar" destination="48564" id="name-outlet-48564"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41676" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2216,6 +2254,7 @@
                         <outlet property="courseLabel" destination="42776" id="name-outlet-42776"/>
                         <outlet property="locationLabel" destination="42775" id="name-outlet-42775"/>
                         <outlet property="viewRaceRecordView" destination="42770" id="name-outlet-42770"/>
+                        <outlet property="raceRecordChangeButton" destination="42835" id="name-outlet-42835"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42771" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2385,6 +2424,7 @@
                         <outlet property="seriesLabel" destination="43116" id="name-outlet-43116"/>
                         <outlet property="viewSeriesRecordView" destination="43018" id="name-outlet-43018"/>
                         <outlet property="seriesRecordTableView" destination="43118" id="name-outlet-43118"/>
+                        <outlet property="seriesRecordChangeButton" destination="43148" id="name-outlet-43148"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43019" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2528,6 +2568,10 @@
                         <outlet property="rightView" destination="79807" id="name-outlet-79807"/>
                         <outlet property="leftView" destination="79806" id="name-outlet-79806"/>
                         <outlet property="viewButton" destination="80568" id="name-outlet-80568"/>
+                        <outlet property="yearTextField" destination="80563" id="name-outlet-80563"/>
+                        <outlet property="seriesTextField" destination="80565" id="name-outlet-80565"/>
+                        <outlet property="pointScoreTextField" destination="80567" id="name-outlet-80567"/>
+                        <outlet property="pointScoreSearchBar" destination="80056" id="name-outlet-80056"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43154" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2797,6 +2841,14 @@
                         <outlet property="leftView" destination="77495" id="name-outlet-77495"/>
                         <outlet property="rightView" destination="77497" id="name-outlet-77497"/>
                         <outlet property="checkButton" destination="78251" id="name-outlet-78251"/>
+                        <outlet property="memberIDSearch" destination="77999" id="name-outlet-77999"/>
+                        <outlet property="dateSearch" destination="78248" id="name-outlet-78248"/>
+                        <outlet property="timeSearch" destination="78250" id="name-outlet-78250"/>
+                        <outlet property="locationSearch" destination="78501" id="name-outlet-78501"/>
+                        <outlet property="courseSearch" destination="78503" id="name-outlet-78503"/>
+                        <outlet property="seriesSearch" destination="78505" id="name-outlet-78505"/>
+                        <outlet property="addButton" destination="78499" id="name-outlet-78499"/>
+                        <outlet property="surfaceTypeSeg" destination="77995" id="name-outlet-77995"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76760" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2820,7 +2872,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="78783" style="IBUITableViewCellStyleDefault" textLabel="112447">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="78783" style="IBUITableViewCellStyleDefault" textLabel="112447" reuseIdentifier="location_id">
                                         <rect key="frame" x="0.0" y="28" width="510" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="78783" id="78784">
@@ -2863,7 +2915,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="98970" style="IBUITableViewCellStyleDefault" textLabel="112448">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="98970" style="IBUITableViewCellStyleDefault" textLabel="112448" reuseIdentifier="course_id">
                                                 <rect key="frame" x="0.0" y="28" width="514" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="98970" id="98971">
@@ -2889,6 +2941,10 @@
                             </view>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="locationTableView" destination="78782" id="name-outlet-78782"/>
+                        <outlet property="courseTableView" destination="98969" id="name-outlet-98969"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78758" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3088,7 +3144,7 @@
         </scene>
         <scene sceneID="124293">
             <objects>
-                <viewController id="124294" sceneMemberID="viewController" title="Choose Event">
+                <viewController id="124294" sceneMemberID="viewController" title="Choose Event" customClass="chooseEventViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="124291"/>
                         <viewControllerLayoutGuide type="bottom" id="124292"/>
@@ -3103,7 +3159,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="124357" style="IBUITableViewCellStyleDefault" textLabel="124361">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="124357" style="IBUITableViewCellStyleDefault" textLabel="124361" reuseIdentifier="course_id">
                                         <rect key="frame" x="0.0" y="28" width="514" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="124357" id="124358">
@@ -3158,7 +3214,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="124632" style="IBUITableViewCellStyleDefault" textLabel="124634">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="124632" style="IBUITableViewCellStyleDefault" textLabel="124634" reuseIdentifier="location_id">
                                         <rect key="frame" x="0.0" y="28" width="510" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="124632" id="124633">
@@ -3179,6 +3235,11 @@
                             </tableView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="locationTableView" destination="124631" id="name-outlet-124631"/>
+                        <outlet property="courseTableView" destination="124356" id="name-outlet-124356"/>
+                        <outlet property="dateTextField" destination="124362" id="name-outlet-124362"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="124296" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

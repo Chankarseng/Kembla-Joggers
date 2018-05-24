@@ -354,11 +354,13 @@
 @class courseManagementViewController;
 @class pointScoresViewController;
 @class KemblaJoggers_chooseLocationResultViewController;
+@class chooseEventViewController;
 @class loginController;
 @class KemblaJoggers_ContactDataSource;
 @class KemblaJoggers_HandicapDataSource;
 @class chooseLocationViewController;
 @class selectRecordTypeViewController;
+@class scanButtonVewController;
 @class KemblaJoggers_chooseLocationViewController_SearchResultsUpdator;
 @class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
@@ -577,6 +579,13 @@
 @class Xamarin_Auth_FormAuthenticatorController_FormDataSource;
 @class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
 @class System_Net_Http_NSUrlSessionHandler_NSUrlSessionHandlerDelegate;
+@class ZXing_Mobile_CaptureDelegate;
+@class ZXing_Mobile_AVCaptureScannerViewController;
+@class ZXing_Mobile_ZXingScannerViewController;
+@class ZXing_Mobile_AVCaptureScannerView;
+@class ZXing_Mobile_ZXingDefaultOverlayView;
+@class ZXing_Mobile_ZXingScannerView_OutputRecorder;
+@class ZXing_Mobile_ZXingScannerView;
 @class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
 @class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 
@@ -2463,6 +2472,7 @@
 	@property (nonatomic, assign) UITextField * locationTextField;
 	@property (nonatomic, assign) UITextField * numLegsTextField;
 	@property (nonatomic, assign) UITextField * relayTextField;
+	@property (nonatomic, assign) UIButton * resultEditButton;
 	@property (nonatomic, assign) UITextField * surfaceTypeTextField;
 	@property (nonatomic, assign) UITextField * unitTextField;
 	-(void) release;
@@ -2493,12 +2503,15 @@
 	-(void) setNumLegsTextField:(UITextField *)p0;
 	-(UITextField *) relayTextField;
 	-(void) setRelayTextField:(UITextField *)p0;
+	-(UIButton *) resultEditButton;
+	-(void) setResultEditButton:(UIButton *)p0;
 	-(UITextField *) surfaceTypeTextField;
 	-(void) setSurfaceTypeTextField:(UITextField *)p0;
 	-(UITextField *) unitTextField;
 	-(void) setUnitTextField:(UITextField *)p0;
 	-(void) viewDidLoad;
 	-(void) CommitButton_TouchUpInside:(UIButton *)p0;
+	-(void) ResultEditButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -2607,6 +2620,7 @@
 	@property (nonatomic, assign) UITextField * filterCourseTextField;
 	@property (nonatomic, assign) UITextField * filterDateTextField;
 	@property (nonatomic, assign) UITextField * filterLocationTextField;
+	@property (nonatomic, assign) UITextField * filterNameTextField;
 	@property (nonatomic, assign) UIView * filterRaceController;
 	@property (nonatomic, assign) UITableView * filterRaceTableView;
 	@property (nonatomic, assign) UILabel * testlabel;
@@ -2620,6 +2634,8 @@
 	-(void) setFilterDateTextField:(UITextField *)p0;
 	-(UITextField *) filterLocationTextField;
 	-(void) setFilterLocationTextField:(UITextField *)p0;
+	-(UITextField *) filterNameTextField;
+	-(void) setFilterNameTextField:(UITextField *)p0;
 	-(UIView *) filterRaceController;
 	-(void) setFilterRaceController:(UIView *)p0;
 	-(UITableView *) filterRaceTableView;
@@ -2739,6 +2755,7 @@
 }
 	@property (nonatomic, assign) UILabel * courseLabel;
 	@property (nonatomic, assign) UILabel * locationLabel;
+	@property (nonatomic, assign) UIButton * raceRecordChangeButton;
 	@property (nonatomic, assign) UITableView * RaceRecordTableView;
 	@property (nonatomic, assign) UIView * viewRaceRecordView;
 	-(void) release;
@@ -2749,6 +2766,8 @@
 	-(void) setCourseLabel:(UILabel *)p0;
 	-(UILabel *) locationLabel;
 	-(void) setLocationLabel:(UILabel *)p0;
+	-(UIButton *) raceRecordChangeButton;
+	-(void) setRaceRecordChangeButton:(UIButton *)p0;
 	-(UITableView *) RaceRecordTableView;
 	-(void) setRaceRecordTableView:(UITableView *)p0;
 	-(UIView *) viewRaceRecordView;
@@ -2760,6 +2779,7 @@
 @interface viewSeriesRecordViewController : UIViewController {
 }
 	@property (nonatomic, assign) UILabel * seriesLabel;
+	@property (nonatomic, assign) UIButton * seriesRecordChangeButton;
 	@property (nonatomic, assign) UITableView * seriesRecordTableView;
 	@property (nonatomic, assign) UIView * viewSeriesRecordView;
 	@property (nonatomic, assign) UILabel * yearLabel;
@@ -2769,6 +2789,8 @@
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(UILabel *) seriesLabel;
 	-(void) setSeriesLabel:(UILabel *)p0;
+	-(UIButton *) seriesRecordChangeButton;
+	-(void) setSeriesRecordChangeButton:(UIButton *)p0;
 	-(UITableView *) seriesRecordTableView;
 	-(void) setSeriesRecordTableView:(UITableView *)p0;
 	-(UIView *) viewSeriesRecordView;
@@ -2782,6 +2804,7 @@
 @interface handicapViewController : UIViewController {
 }
 	@property (nonatomic, assign) UITableView * handicapDateTableView;
+	@property (nonatomic, assign) UISearchBar * handicapSearchBar;
 	@property (nonatomic, assign) UITableView * handicapTimeTableView;
 	@property (nonatomic, assign) UIView * handicapView;
 	@property (nonatomic, assign) UISearchDisplayController * searchDisplayController;
@@ -2791,6 +2814,8 @@
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(UITableView *) handicapDateTableView;
 	-(void) setHandicapDateTableView:(UITableView *)p0;
+	-(UISearchBar *) handicapSearchBar;
+	-(void) setHandicapSearchBar:(UISearchBar *)p0;
 	-(UITableView *) handicapTimeTableView;
 	-(void) setHandicapTimeTableView:(UITableView *)p0;
 	-(UIView *) handicapView;
@@ -2853,19 +2878,43 @@
 
 @interface addNewRecordViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * addButton;
 	@property (nonatomic, assign) UIButton * checkButton;
+	@property (nonatomic, assign) UITextField * courseSearch;
+	@property (nonatomic, assign) UITextField * dateSearch;
 	@property (nonatomic, assign) UIView * leftView;
+	@property (nonatomic, assign) UITextField * locationSearch;
+	@property (nonatomic, assign) UITextField * memberIDSearch;
 	@property (nonatomic, assign) UIView * rightView;
+	@property (nonatomic, assign) UITextField * seriesSearch;
+	@property (nonatomic, assign) UISegmentedControl * surfaceTypeSeg;
+	@property (nonatomic, assign) UITextField * timeSearch;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) addButton;
+	-(void) setAddButton:(UIButton *)p0;
 	-(UIButton *) checkButton;
 	-(void) setCheckButton:(UIButton *)p0;
+	-(UITextField *) courseSearch;
+	-(void) setCourseSearch:(UITextField *)p0;
+	-(UITextField *) dateSearch;
+	-(void) setDateSearch:(UITextField *)p0;
 	-(UIView *) leftView;
 	-(void) setLeftView:(UIView *)p0;
+	-(UITextField *) locationSearch;
+	-(void) setLocationSearch:(UITextField *)p0;
+	-(UITextField *) memberIDSearch;
+	-(void) setMemberIDSearch:(UITextField *)p0;
 	-(UIView *) rightView;
 	-(void) setRightView:(UIView *)p0;
+	-(UITextField *) seriesSearch;
+	-(void) setSeriesSearch:(UITextField *)p0;
+	-(UISegmentedControl *) surfaceTypeSeg;
+	-(void) setSurfaceTypeSeg:(UISegmentedControl *)p0;
+	-(UITextField *) timeSearch;
+	-(void) setTimeSearch:(UITextField *)p0;
 	-(void) viewDidLoad;
 	-(void) CheckButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
@@ -3080,28 +3129,46 @@
 
 @interface courseManagementViewController : UIViewController {
 }
+	@property (nonatomic, assign) UITableView * courseTableView;
+	@property (nonatomic, assign) UITableView * locationTableView;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableView *) courseTableView;
+	-(void) setCourseTableView:(UITableView *)p0;
+	-(UITableView *) locationTableView;
+	-(void) setLocationTableView:(UITableView *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface pointScoresViewController : UIViewController {
 }
 	@property (nonatomic, assign) UIView * leftView;
+	@property (nonatomic, assign) UISearchBar * pointScoreSearchBar;
+	@property (nonatomic, assign) UITextField * pointScoreTextField;
 	@property (nonatomic, assign) UIView * rightView;
+	@property (nonatomic, assign) UITextField * seriesTextField;
 	@property (nonatomic, assign) UIButton * viewButton;
+	@property (nonatomic, assign) UITextField * yearTextField;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(UIView *) leftView;
 	-(void) setLeftView:(UIView *)p0;
+	-(UISearchBar *) pointScoreSearchBar;
+	-(void) setPointScoreSearchBar:(UISearchBar *)p0;
+	-(UITextField *) pointScoreTextField;
+	-(void) setPointScoreTextField:(UITextField *)p0;
 	-(UIView *) rightView;
 	-(void) setRightView:(UIView *)p0;
+	-(UITextField *) seriesTextField;
+	-(void) setSeriesTextField:(UITextField *)p0;
 	-(UIButton *) viewButton;
 	-(void) setViewButton:(UIButton *)p0;
+	-(UITextField *) yearTextField;
+	-(void) setYearTextField:(UITextField *)p0;
 	-(void) viewDidLoad;
 	-(void) ViewButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
@@ -3116,6 +3183,25 @@
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
 	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
 	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface chooseEventViewController : UIViewController {
+}
+	@property (nonatomic, assign) UITableView * courseTableView;
+	@property (nonatomic, assign) UITextField * dateTextField;
+	@property (nonatomic, assign) UITableView * locationTableView;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableView *) courseTableView;
+	-(void) setCourseTableView:(UITableView *)p0;
+	-(UITextField *) dateTextField;
+	-(void) setDateTextField:(UITextField *)p0;
+	-(UITableView *) locationTableView;
+	-(void) setLocationTableView:(UITableView *)p0;
+	-(void) viewDidLoad;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3211,6 +3297,29 @@
 	-(void) AddNewRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewRaceRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewSeriesRecordButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface scanButtonVewController : UIViewController {
+}
+	@property (nonatomic, assign) UIButton * detailsButton;
+	@property (nonatomic, assign) UIButton * doneButton;
+	@property (nonatomic, assign) UIButton * memScanButton;
+	@property (nonatomic, assign) UIButton * posScanButton;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) detailsButton;
+	-(void) setDetailsButton:(UIButton *)p0;
+	-(UIButton *) doneButton;
+	-(void) setDoneButton:(UIButton *)p0;
+	-(UIButton *) memScanButton;
+	-(void) setMemScanButton:(UIButton *)p0;
+	-(UIButton *) posScanButton;
+	-(void) setPosScanButton:(UIButton *)p0;
+	-(void) viewDidLoad;
+	-(void) DetailsButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -4222,6 +4331,80 @@
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(void) userContentController:(WKUserContentController *)p0 didReceiveScriptMessage:(WKScriptMessage *)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_AVCaptureScannerViewController : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) viewDidLoad;
+	-(void) viewDidAppear:(BOOL)p0;
+	-(void) viewDidDisappear:(BOOL)p0;
+	-(void) viewWillDisappear:(BOOL)p0;
+	-(void) didRotateFromInterfaceOrientation:(NSInteger)p0;
+	-(BOOL) shouldAutorotate;
+	-(NSUInteger) supportedInterfaceOrientations;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_ZXingScannerViewController : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) viewDidLoad;
+	-(void) viewDidAppear:(BOOL)p0;
+	-(void) viewDidDisappear:(BOOL)p0;
+	-(void) viewWillDisappear:(BOOL)p0;
+	-(void) didRotateFromInterfaceOrientation:(NSInteger)p0;
+	-(BOOL) shouldAutorotate;
+	-(NSUInteger) supportedInterfaceOrientations;
+	-(BOOL) shouldAutorotateToInterfaceOrientation:(NSInteger)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_AVCaptureScannerView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface ZXing_Mobile_ZXingDefaultOverlayView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) layoutSubviews;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_ZXingScannerView_OutputRecorder : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) captureOutput:(AVCaptureOutput *)p0 didDropSampleBuffer:(id)p1 fromConnection:(AVCaptureConnection *)p2;
+	-(void) captureOutput:(AVCaptureOutput *)p0 didOutputSampleBuffer:(id)p1 fromConnection:(AVCaptureConnection *)p2;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_ZXingScannerView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {

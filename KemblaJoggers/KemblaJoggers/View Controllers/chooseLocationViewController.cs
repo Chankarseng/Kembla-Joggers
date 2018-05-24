@@ -52,9 +52,8 @@ namespace KemblaJoggers
             };
 
             searchController.SearchBar.SizeToFit();
-            searchController.SearchBar.SearchBarStyle = UISearchBarStyle.Minimal;
+            searchController.SearchBar.SearchBarStyle = UISearchBarStyle.Prominent;
             searchController.SearchBar.Placeholder = "Enter a search query";
-
             searchController.HidesNavigationBarDuringPresentation = false;
             NavigationItem.TitleView = searchController.SearchBar;
             DefinesPresentationContext = true;

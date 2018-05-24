@@ -24,6 +24,10 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton raceRecordChangeButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView RaceRecordTableView { get; set; }
 
         [Outlet]
@@ -40,6 +44,11 @@ namespace KemblaJoggers
             if (locationLabel != null) {
                 locationLabel.Dispose ();
                 locationLabel = null;
+            }
+
+            if (raceRecordChangeButton != null) {
+                raceRecordChangeButton.Dispose ();
+                raceRecordChangeButton = null;
             }
 
             if (RaceRecordTableView != null) {

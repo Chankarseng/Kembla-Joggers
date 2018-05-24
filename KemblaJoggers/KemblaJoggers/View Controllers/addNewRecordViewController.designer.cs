@@ -16,7 +16,19 @@ namespace KemblaJoggers
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton addButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton checkButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField courseSearch { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField dateSearch { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -24,7 +36,27 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField locationSearch { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField memberIDSearch { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView rightView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField seriesSearch { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISegmentedControl surfaceTypeSeg { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField timeSearch { get; set; }
 
         [Action ("CheckButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -32,9 +64,24 @@ namespace KemblaJoggers
 
         void ReleaseDesignerOutlets ()
         {
+            if (addButton != null) {
+                addButton.Dispose ();
+                addButton = null;
+            }
+
             if (checkButton != null) {
                 checkButton.Dispose ();
                 checkButton = null;
+            }
+
+            if (courseSearch != null) {
+                courseSearch.Dispose ();
+                courseSearch = null;
+            }
+
+            if (dateSearch != null) {
+                dateSearch.Dispose ();
+                dateSearch = null;
             }
 
             if (leftView != null) {
@@ -42,9 +89,34 @@ namespace KemblaJoggers
                 leftView = null;
             }
 
+            if (locationSearch != null) {
+                locationSearch.Dispose ();
+                locationSearch = null;
+            }
+
+            if (memberIDSearch != null) {
+                memberIDSearch.Dispose ();
+                memberIDSearch = null;
+            }
+
             if (rightView != null) {
                 rightView.Dispose ();
                 rightView = null;
+            }
+
+            if (seriesSearch != null) {
+                seriesSearch.Dispose ();
+                seriesSearch = null;
+            }
+
+            if (surfaceTypeSeg != null) {
+                surfaceTypeSeg.Dispose ();
+                surfaceTypeSeg = null;
+            }
+
+            if (timeSearch != null) {
+                timeSearch.Dispose ();
+                timeSearch = null;
             }
         }
     }

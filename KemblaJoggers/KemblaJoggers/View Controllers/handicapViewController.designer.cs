@@ -20,6 +20,10 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISearchBar handicapSearchBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView handicapTimeTableView { get; set; }
 
         [Outlet]
@@ -35,6 +39,11 @@ namespace KemblaJoggers
             if (handicapDateTableView != null) {
                 handicapDateTableView.Dispose ();
                 handicapDateTableView = null;
+            }
+
+            if (handicapSearchBar != null) {
+                handicapSearchBar.Dispose ();
+                handicapSearchBar = null;
             }
 
             if (handicapTimeTableView != null) {

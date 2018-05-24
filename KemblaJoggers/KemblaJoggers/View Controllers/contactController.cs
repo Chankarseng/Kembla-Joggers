@@ -5,12 +5,18 @@ using KemblaJoggers.Classes;
 using GameKit;
 using ContactsUI;
 using CoreAnimation;
+using System.Security.Cryptography.X509Certificates;
 
 namespace KemblaJoggers
 {
     public partial class contactController : UIViewController
     {
-        //ContactDataSource thisContact;
+void HandlePredicate(ContactClass obj)
+        {
+        }
+
+
+        ContactClass currentContact;
         public contactController (IntPtr handle) : base (handle)
         {
         }
@@ -24,30 +30,10 @@ namespace KemblaJoggers
 		public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            contactVID.TextColor = UIColor.LightGray;
-            contactVFirst.TextColor = UIColor.LightGray;
-            contactVLast.TextColor = UIColor.LightGray;
-            contactVEmail.TextColor = UIColor.LightGray;
-            contactVAddress.TextColor = UIColor.LightGray;
-            contactVCity.TextColor = UIColor.LightGray;
-            contactVCountry.TextColor = UIColor.LightGray;
-            contactVPost.TextColor = UIColor.LightGray;
-            contactVGender.TextColor = UIColor.LightGray;
-            contactVBirthday.TextColor = UIColor.LightGray;
-            contactVEContact.TextColor = UIColor.LightGray;
-            contactVEContactNum.TextColor = UIColor.LightGray;
-            contactVMarshallID.TextColor = UIColor.LightGray;
-            contactVMedicalCondition.TextColor = UIColor.LightGray;
-            contactVDietaryCondition.TextColor = UIColor.LightGray;
-            contactVFirstAid.TextColor = UIColor.LightGray;
-            contactVAsterID.TextColor = UIColor.LightGray;
-            contactVMemberID.TextColor = UIColor.LightGray;
-            contactVANSWNumber.TextColor = UIColor.LightGray;
-            contactVLifeMember.TextColor = UIColor.LightGray;
-            contactVClubName.TextColor = UIColor.LightGray;
+            changeEditStatus(false);
+            changeColor(UIColor.Black);
             ViewDidLayoutSubviews();
             // Self
-            PrepareContactFirstList.Prepare();
             contactDs = new ContactDataSource(this);
             //contactDs = new ContactDataSource(AppData.offlineContactList);
             contactsTableView.Source = contactDs;
@@ -73,6 +59,7 @@ namespace KemblaJoggers
         // this will be called before the view is displayed
         public void SetTask(contactController d, ContactClass contact)
         {
+            currentContact = contact;
             contactLoaded = true;
             contactVID.Text = contact.ContactID;
             contactVFirst.Text = contact.FirstName;
@@ -105,98 +92,94 @@ namespace KemblaJoggers
             // Save mode, change text field to editable (Color black)
             if (contactEditButton.TitleLabel.Text == "Edit" && contactLoaded == true)
             {
-                contactEditButton.SetTitle("Save",UIControlState.Normal);
-                contactVID.Enabled = true;
-                contactVFirst.Enabled = true;
-                contactVLast.Enabled = true;
-                contactVEmail.Enabled = true;
-                contactVAddress.Enabled = true;
-                contactVCity.Enabled = true;
-                contactVCountry.Enabled = true;
-                contactVPost.Enabled = true;
-                contactVGender.Enabled = true;
-                contactVBirthday.Enabled = true;
-                contactVEContact.Enabled = true;
-                contactVEContactNum.Enabled = true;
-                contactVMarshallID.Enabled = true;
-                contactVMedicalCondition.Enabled = true;
-                contactVDietaryCondition.Enabled = true;
-                contactVFirstAid.Enabled = true;
-                contactVAsterID.Enabled = true;
-                contactVMemberID.Enabled = true;
-                contactVANSWNumber.Enabled = true;
-                contactVLifeMember.Enabled = true;
-                contactVClubName.Enabled = true;
-                contactVID.TextColor = UIColor.Black;
-                contactVFirst.TextColor = UIColor.Black;
-                contactVLast.TextColor = UIColor.Black;
-                contactVEmail.TextColor = UIColor.Black;
-                contactVAddress.TextColor = UIColor.Black;
-                contactVCity.TextColor = UIColor.Black;
-                contactVCountry.TextColor = UIColor.Black;
-                contactVPost.TextColor = UIColor.Black;
-                contactVGender.TextColor = UIColor.Black;
-                contactVBirthday.TextColor = UIColor.Black;
-                contactVEContact.TextColor = UIColor.Black;
-                contactVEContactNum.TextColor = UIColor.Black;
-                contactVMarshallID.TextColor = UIColor.Black;
-                contactVMedicalCondition.TextColor = UIColor.Black;
-                contactVDietaryCondition.TextColor = UIColor.Black;
-                contactVFirstAid.TextColor = UIColor.Black;
-                contactVAsterID.TextColor = UIColor.Black;
-                contactVMemberID.TextColor = UIColor.Black;
-                contactVANSWNumber.TextColor = UIColor.Black;
-                contactVLifeMember.TextColor = UIColor.Black;
-                contactVClubName.TextColor = UIColor.Black;
+                contactEditButton.SetTitle("Save", UIControlState.Normal);
+                changeEditStatus(true);
+                changeColor(UIColor.Black);
             }
             // Save mode, revert the text fields to not be changed (Color light gray)
             else if (contactEditButton.TitleLabel.Text == "Save" && contactLoaded == true)
             {
                 contactEditButton.SetTitle("Edit", UIControlState.Normal);
-                contactVID.Enabled = false;
-                contactVFirst.Enabled = false;
-                contactVLast.Enabled = false;
-                contactVEmail.Enabled = false;
-                contactVAddress.Enabled = false;
-                contactVCity.Enabled = false;
-                contactVCountry.Enabled = false;
-                contactVPost.Enabled = false;
-                contactVGender.Enabled = false;
-                contactVBirthday.Enabled = false;
-                contactVEContact.Enabled = false;
-                contactVEContactNum.Enabled = false;
-                contactVMarshallID.Enabled = false;
-                contactVMedicalCondition.Enabled = false;
-                contactVDietaryCondition.Enabled = false;
-                contactVFirstAid.Enabled = false;
-                contactVAsterID.Enabled = false;
-                contactVMemberID.Enabled = false;
-                contactVANSWNumber.Enabled = false;
-                contactVLifeMember.Enabled = false;
-                contactVClubName.Enabled = false;
-                contactVID.TextColor = UIColor.LightGray;
-                contactVFirst.TextColor = UIColor.LightGray;
-                contactVLast.TextColor = UIColor.LightGray;
-                contactVEmail.TextColor = UIColor.LightGray;
-                contactVAddress.TextColor = UIColor.LightGray;
-                contactVCity.TextColor = UIColor.LightGray;
-                contactVCountry.TextColor = UIColor.LightGray;
-                contactVPost.TextColor = UIColor.LightGray;
-                contactVGender.TextColor = UIColor.LightGray;
-                contactVBirthday.TextColor = UIColor.LightGray;
-                contactVEContact.TextColor = UIColor.LightGray;
-                contactVEContactNum.TextColor = UIColor.LightGray;
-                contactVMarshallID.TextColor = UIColor.LightGray;
-                contactVMedicalCondition.TextColor = UIColor.LightGray;
-                contactVDietaryCondition.TextColor = UIColor.LightGray;
-                contactVFirstAid.TextColor = UIColor.LightGray;
-                contactVAsterID.TextColor = UIColor.LightGray;
-                contactVMemberID.TextColor = UIColor.LightGray;
-                contactVANSWNumber.TextColor = UIColor.LightGray;
-                contactVLifeMember.TextColor = UIColor.LightGray;
-                contactVClubName.TextColor = UIColor.LightGray;
+                changeEditStatus(false);
+                changeColor(UIColor.LightGray);
+                var itemIndex = AppData.offlineContactList.FindIndex(p => p.ContactID == currentContact.ContactID);
+                //System.Diagnostics.Debug.WriteLine(itemIndex);
+                //contactVID.Text = itemIndex.ToString(); // TESTING : to display the index of the contact in the Appdata list
+                AppData.offlineContactList.RemoveAt(itemIndex);
+                currentContact.ContactID = contactVID.Text.ToString();
+                currentContact.FirstName = contactVFirst.Text.ToString();
+                currentContact.LastName = contactVLast.Text.ToString();
+                currentContact.Email = contactVEmail.Text.ToString();
+                currentContact.Address = contactVAddress.Text.ToString();
+                currentContact.City = contactVAddress.Text.ToString();
+                currentContact.Country = contactVCountry.Text.ToString();
+                currentContact.PostCode = Int32.Parse(contactVPost.Text);
+                currentContact.Gender = contactVGender.Text.ToString();
+                currentContact.Birthday = DateTime.Parse(contactVBirthday.Text);
+                currentContact.EmergencyContact = contactVEContact.Text.ToString();
+                currentContact.EmergencyNumber = contactVEContactNum.Text.ToString();
+                currentContact.MarshalingPreferenceID = Int32.Parse(contactVMarshallID.Text);
+                currentContact.MedicalCondition = contactVMedicalCondition.Text.ToString();
+                currentContact.DietaryCondition = contactVDietaryCondition.Text.ToString();
+                currentContact.FirstAid = Boolean.Parse(contactVFirstAid.Text);
+                currentContact.AsterGroupID = Int32.Parse(contactVAsterID.Text);
+                currentContact.MemberID = Int32.Parse(contactVMemberID.Text);
+                currentContact.ANSWNumber = Int32.Parse(contactVANSWNumber.Text);
+                currentContact.LifeMember = Boolean.Parse(contactVLifeMember.Text);
+                currentContact.ClubName = contactVClubName.Text.ToString();
+                AppData.offlineContactList.Insert(itemIndex,currentContact);
+                contactsTableView.ReloadData();
             }
             //throw new NotImplementedException();
+        }
+
+        private void changeColor(UIColor color)
+        {
+            contactVID.TextColor = color;
+            contactVFirst.TextColor = color;
+            contactVLast.TextColor = color;
+            contactVEmail.TextColor = color;
+            contactVAddress.TextColor = color;
+            contactVCity.TextColor = color;
+            contactVCountry.TextColor = color;
+            contactVPost.TextColor = color;
+            contactVGender.TextColor = color;
+            contactVBirthday.TextColor = color;
+            contactVEContact.TextColor = color;
+            contactVEContactNum.TextColor = color;
+            contactVMarshallID.TextColor = color;
+            contactVMedicalCondition.TextColor = color;
+            contactVDietaryCondition.TextColor = color;
+            contactVFirstAid.TextColor = color;
+            contactVAsterID.TextColor = color;
+            contactVMemberID.TextColor = color;
+            contactVANSWNumber.TextColor = color;
+            contactVLifeMember.TextColor = color;
+            contactVClubName.TextColor = color;
+        }
+        private void changeEditStatus(bool status)
+        {
+            contactVID.Enabled = status;
+            contactVFirst.Enabled = status;
+            contactVLast.Enabled = status;
+            contactVEmail.Enabled = status;
+            contactVAddress.Enabled = status;
+            contactVCity.Enabled = status;
+            contactVCountry.Enabled = status;
+            contactVPost.Enabled = status;
+            contactVGender.Enabled = status;
+            contactVBirthday.Enabled = status;
+            contactVEContact.Enabled = status;
+            contactVEContactNum.Enabled = status;
+            contactVMarshallID.Enabled = status;
+            contactVMedicalCondition.Enabled = status;
+            contactVDietaryCondition.Enabled = status;
+            contactVFirstAid.Enabled = status;
+            contactVAsterID.Enabled = status;
+            contactVMemberID.Enabled = status;
+            contactVANSWNumber.Enabled = status;
+            contactVLifeMember.Enabled = status;
+            contactVClubName.Enabled = status;
         }
     }
 }

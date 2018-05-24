@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{0985F0B3-47B0-4667-9BDA-EC005B2B46CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/Main.storyboard">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/DataSources and Cells/ContactDataSource.cs">
     <Files>
-      <File FileName="KemblaJoggers/Main.storyboard" />
+      <File FileName="KemblaJoggers/DataSources and Cells/ContactDataSource.cs" Line="90" Column="98" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

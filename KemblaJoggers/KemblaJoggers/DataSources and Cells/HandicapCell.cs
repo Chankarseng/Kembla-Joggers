@@ -13,8 +13,10 @@ namespace KemblaJoggers
         {
             memberLabel.Text = contacts.ContactID.ToString();
             nameLabel.Text = contacts.FirstName + " " + contacts.LastName;
-            DateTime time = new DateTime(10,10,10,0,10,0);
-            handicapTimeLabel.Text = time.Hour + ":" + time.Minute + ":" + time.Second;
+            //DateTime time = new DateTime(10,10,10,0,10,0);
+            handicapTimeLabel.Text = contacts.handicapTime.Hour + ":" 
+                + contacts.handicapTime.Minute 
+                + ":" + contacts.handicapTime.Second;
             
         }
     }
