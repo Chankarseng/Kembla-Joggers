@@ -14,8 +14,25 @@ namespace KemblaJoggers
     [Register ("courseManagementViewController")]
     partial class courseManagementViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView courseTableView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView locationTableView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (courseTableView != null) {
+                courseTableView.Dispose ();
+                courseTableView = null;
+            }
+
+            if (locationTableView != null) {
+                locationTableView.Dispose ();
+                locationTableView = null;
+            }
         }
     }
 }

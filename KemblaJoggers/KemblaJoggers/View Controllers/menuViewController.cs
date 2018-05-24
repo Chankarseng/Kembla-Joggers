@@ -3,6 +3,7 @@ using System;
 using UIKit;
 using System.Resources;
 using Xamarin.Auth;
+using KemblaJoggers.Classes;
 
 namespace KemblaJoggers
 {
@@ -26,9 +27,8 @@ namespace KemblaJoggers
             updateImage();
             this.NavigationController.SetNavigationBarHidden(false, false);
             this.NavigationItem.HidesBackButton = true;
-
-             
-
+            PrepareContactFirstList.Prepare();
+            PrepareCourseFirstList.Prepare();
 		}
 
 

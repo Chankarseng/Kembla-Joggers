@@ -28,6 +28,10 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField filterNameTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView filterRaceController { get; set; }
 
         [Outlet]
@@ -53,6 +57,11 @@ namespace KemblaJoggers
             if (filterLocationTextField != null) {
                 filterLocationTextField.Dispose ();
                 filterLocationTextField = null;
+            }
+
+            if (filterNameTextField != null) {
+                filterNameTextField.Dispose ();
+                filterNameTextField = null;
             }
 
             if (filterRaceController != null) {

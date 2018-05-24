@@ -25,7 +25,8 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
-                ActiveStatus = true
+                ActiveStatus = true,
+                handicapTime = new DateTime(10, 10, 10, 0, 10, 0),
             });
             AppData.offlineContactList.Add(new ContactClass
             {
@@ -63,11 +64,12 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
-                ActiveStatus = true
+                ActiveStatus = true,
+                handicapTime = new DateTime(10, 10, 10, 1,0, 0),
             });
             AppData.offlineContactList.Add(new ContactClass
             {
-                ContactID = "41515123",
+                ContactID = "41515124",
                 FirstName = "Tina",
                 LastName = "Fergoson",
                 Email = "test@gmail.com",
@@ -82,11 +84,12 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
-                ActiveStatus = true
+                ActiveStatus = true,
+                handicapTime = new DateTime(10, 10, 10, 0, 13, 0),
             });
             AppData.offlineContactList.Add(new ContactClass
             {
-                ContactID = "41515123",
+                ContactID = "41515125",
                 FirstName = "David",
                 LastName = "William",
                 Email = "test@gmail.com",
@@ -101,7 +104,8 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
-                ActiveStatus = false
+                ActiveStatus = false,
+                handicapTime = new DateTime(),
             });
 
 

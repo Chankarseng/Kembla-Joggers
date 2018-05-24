@@ -10,21 +10,21 @@ namespace KemblaJoggers
             AppData.offlineLocationList.Add(new LocationClass
             {
                 locationID = "123",
-                locationName = "Location1 name here",
+                locationName = "Wilandra",
                 posX = 32.42,
                 posY = -140.123,
             });
             AppData.offlineLocationList.Add(new LocationClass
             {
-                locationID = "123",
-                locationName = "Location2 name here",
+                locationID = "1234",
+                locationName = "Kerry McCann Athletic Track",
                 posX = 30.42,
                 posY = -137.123,
             });
             AppData.offlineLocationList.Add(new LocationClass
             {
-                locationID = "123",
-                locationName = "Location3 name here",
+                locationID = "12356",
+                locationName = "John O' Dwyer Oval",
                 posX = 31.42,
                 posY = -133.123,
             });

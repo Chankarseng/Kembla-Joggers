@@ -41,6 +41,7 @@ namespace KemblaJoggers
             contactDataSourceController = inputControl;
             this.tableItems = AppData.offlineContactList;
             this.searchItems = AppData.offlineContactList;
+            this.searchItems = this.searchItems.OrderBy(x => x.FirstName).ToList();
         }
 
         // The value of the cell in the table view
@@ -48,7 +49,7 @@ namespace KemblaJoggers
         {
             UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
             //ContactClass contactClass = AppData.offlineContactList[indexPath.Row];
-            cell.TextLabel.Text = searchItems[indexPath.Row].FirstName;
+            cell.TextLabel.Text = searchItems[indexPath.Row].FirstName + " " + searchItems[indexPath.Row].LastName;
             //throw new NotImplementedException();
             return cell;
         } 
@@ -75,16 +76,19 @@ namespace KemblaJoggers
 			searchText = searchText.ToLower();  
             if (activeStatus == 0) // All members
             {
-                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText)).ToList();    
+                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText)
+                                                    || x.LastName.ToLower().Contains(searchText)).ToList();    
             }
             else if (activeStatus == 1) // Active members
             {
-                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText) &&
+                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText)
+                                                    || x.LastName.ToLower().Contains(searchText) &&
                                                     x.ActiveStatus == true).ToList();
             }
             else if (activeStatus == 2) // Non-Active members
             {
-                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText) &&
+                this.searchItems = tableItems.Where(x => x.FirstName.ToLower().Contains(searchText)
+                                                    || x.LastName.ToLower().Contains(searchText) &&
                                                     x.ActiveStatus == false).ToList();   
             }
         }  

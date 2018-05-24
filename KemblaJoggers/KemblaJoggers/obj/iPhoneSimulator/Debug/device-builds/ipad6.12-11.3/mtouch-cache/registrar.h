@@ -8,26 +8,21 @@
 #include <objc/message.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreML/CoreML.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <PassKit/PassKit.h>
+#import <CoreMotion/CoreMotion.h>
+#import <WebKit/WebKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
+#import <HomeKit/HomeKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import <UserNotificationsUI/UserNotificationsUI.h>
-#import <Speech/Speech.h>
-#import <SafariServices/SafariServices.h>
-#import <QuickLook/QuickLook.h>
-#import <PushKit/PushKit.h>
-#import <NotificationCenter/NotificationCenter.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+#import <CallKit/CallKit.h>
+#import <PDFKit/PDFKit.h>
+#import <CoreSpotlight/CoreSpotlight.h>
+#import <CloudKit/CloudKit.h>
 #import <Messages/Messages.h>
-#import <IntentsUI/IntentsUI.h>
-#import <IdentityLookup/IdentityLookup.h>
-#import <iAd/iAd.h>
-#import <FileProviderUI/FileProviderUI.h>
-#import <FileProvider/FileProvider.h>
-#import <ExternalAccessory/ExternalAccessory.h>
-#import <CoreNFC/CoreNFC.h>
-#import <ContactsUI/ContactsUI.h>
-#import <AdSupport/AdSupport.h>
-#import <WatchConnectivity/WatchConnectivity.h>
-#import <PhotosUI/PhotosUI.h>
-#import <NewsstandKit/NewsstandKit.h>
 #import <CoreTelephony/CoreTelephonyDefines.h>
 #import <CoreTelephony/CTCall.h>
 #import <CoreTelephony/CTCallCenter.h>
@@ -35,136 +30,79 @@
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTSubscriber.h>
 #import <CoreTelephony/CTSubscriberInfo.h>
-#import <CoreMIDI/CoreMIDI.h>
-#import <Accounts/Accounts.h>
-#import <WatchKit/WatchKit.h>
-#import <Vision/Vision.h>
-#import <VideoSubscriberAccount/VideoSubscriberAccount.h>
-#import <UserNotifications/UserNotifications.h>
-#import <Twitter/Twitter.h>
-#import <StoreKit/StoreKit.h>
-#import <Social/Social.h>
-#import <ReplayKit/ReplayKit.h>
 #import <Photos/Photos.h>
-#import <PDFKit/PDFKit.h>
-#import <PassKit/PassKit.h>
+#import <SceneKit/SceneKit.h>
+#import <GameKit/GameKit.h>
+#import <SpriteKit/SpriteKit.h>
+#import <EventKit/EventKit.h>
+#import <ARKit/ARKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import <AudioUnit/AudioUnit.h>
+#import <Contacts/Contacts.h>
+#import <IdentityLookup/IdentityLookup.h>
+#import <CoreLocation/CoreLocation.h>
+#import <ExternalAccessory/ExternalAccessory.h>
+#import <CoreData/CoreData.h>
+#import <PushKit/PushKit.h>
+#import <QuickLook/QuickLook.h>
+#import <FileProvider/FileProvider.h>
+#import <CoreImage/CoreImage.h>
+#import <ReplayKit/ReplayKit.h>
+#import <FileProviderUI/FileProviderUI.h>
+#import <GLKit/GLKit.h>
+#import <SafariServices/SafariServices.h>
+#import <GameController/GameController.h>
+#import <GameplayKit/GameplayKit.h>
+#import <ContactsUI/ContactsUI.h>
+#import <HealthKit/HealthKit.h>
+#import <Intents/Intents.h>
+#import <MapKit/MapKit.h>
+#import <JavaScriptCore/JavaScriptCore.h>
+#import <MessageUI/MessageUI.h>
+#import <ModelIO/ModelIO.h>
 #import <NetworkExtension/NetworkExtension.h>
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
-#import <ModelIO/ModelIO.h>
-#import <MessageUI/MessageUI.h>
-#import <MediaPlayer/MediaPlayer.h>
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import <JavaScriptCore/JavaScriptCore.h>
-#import <Intents/Intents.h>
-#import <HomeKit/HomeKit.h>
-#import <HealthKit/HealthKit.h>
-#import <GameplayKit/GameplayKit.h>
-#import <GameController/GameController.h>
-#import <GLKit/GLKit.h>
+#import <StoreKit/StoreKit.h>
+#import <Twitter/Twitter.h>
+#import <Social/Social.h>
+#import <UserNotifications/UserNotifications.h>
+#import <Vision/Vision.h>
+#import <WatchKit/WatchKit.h>
+#import <VideoSubscriberAccount/VideoSubscriberAccount.h>
+#import <Accounts/Accounts.h>
+#import <AdSupport/AdSupport.h>
+#import <Speech/Speech.h>
+#import <CoreMIDI/CoreMIDI.h>
+#import <NewsstandKit/NewsstandKit.h>
+#import <NotificationCenter/NotificationCenter.h>
+#import <WatchConnectivity/WatchConnectivity.h>
+#import <iAd/iAd.h>
 #import <EventKitUI/EventKitUI.h>
-#import <EventKit/EventKit.h>
-#import <CoreSpotlight/CoreSpotlight.h>
-#import <CloudKit/CloudKit.h>
-#import <CoreMotion/CoreMotion.h>
-#import <CoreImage/CoreImage.h>
-#import <CoreData/CoreData.h>
-#import <SceneKit/SceneKit.h>
-#import <Contacts/Contacts.h>
-#import <CallKit/CallKit.h>
-#import <BusinessChat/BusinessChat.h>
-#import <AudioUnit/AudioUnit.h>
-#import <AssetsLibrary/AssetsLibrary.h>
-#import <ARKit/ARKit.h>
-#import <SpriteKit/SpriteKit.h>
-#import <AddressBookUI/AddressBookUI.h>
-#import <GameKit/GameKit.h>
-#import <WebKit/WebKit.h>
-#import <CoreML/CoreML.h>
-#import <CoreBluetooth/CoreBluetooth.h>
-#import <AVKit/AVKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import <LocalAuthentication/LocalAuthentication.h>
+#import <PhotosUI/PhotosUI.h>
 #import <HealthKitUI/HealthKitUI.h>
+#import <LocalAuthentication/LocalAuthentication.h>
 #import <CoreGraphics/CoreGraphics.h>
 
-@class UIApplicationDelegate;
-@class UIScrollViewDelegate;
-@class UITableViewSource;
-@class SFSpeechRecognitionTaskDelegate;
-@class SFSpeechRecognizerDelegate;
-@class SFSafariViewControllerDelegate;
-@class QLPreviewControllerDataSource;
-@class QLPreviewControllerDelegate;
-@class QLPreviewItem;
-@class PKPushRegistryDelegate;
-@class NCWidgetProviding;
-@class MSStickerBrowserViewDataSource;
-@class ADBannerViewDelegate;
-@class ADInterstitialAdDelegate;
-@class EAAccessoryDelegate;
-@class EAWiFiUnconfiguredAccessoryBrowserDelegate;
-@class NFCNDEFReaderSessionDelegate;
-@class NFCReaderSessionDelegate;
-@class CNContactPickerDelegate;
-@class CNContactViewControllerDelegate;
-@class WCSessionDelegate;
-@class PHContentEditingController;
-@class PHLivePhotoViewDelegate;
-@class VSAccountManagerDelegate;
-@class UNUserNotificationCenterDelegate;
-@class SKPaymentTransactionObserver;
-@class SKCloudServiceSetupViewControllerDelegate;
-@class SKRequestDelegate;
-@class SKProductsRequestDelegate;
-@class SKStoreProductViewControllerDelegate;
-@class RPBroadcastActivityViewControllerDelegate;
-@class RPBroadcastControllerDelegate;
-@class RPPreviewViewControllerDelegate;
-@class RPScreenRecorderDelegate;
-@class PHPhotoLibraryChangeObserver;
-@class PDFDocumentDelegate;
-@class PDFViewDelegate;
-@class PKAddPassesViewControllerDelegate;
-@class PKAddPaymentPassViewControllerDelegate;
-@class PKPaymentAuthorizationControllerDelegate;
-@class PKPaymentAuthorizationViewControllerDelegate;
-@class NWTCPConnectionAuthenticationDelegate;
-@class MCAdvertiserAssistantDelegate;
-@class MCBrowserViewControllerDelegate;
-@class MCNearbyServiceAdvertiserDelegate;
-@class MCNearbyServiceBrowserDelegate;
-@class MCSessionDelegate;
-@class MDLLightProbeIrradianceDataSource;
-@class UINavigationControllerDelegate;
-@class MFMailComposeViewControllerDelegate;
+@class AVFoundation_InternalAVAudioPlayerDelegate;
+@class AVFoundation_InternalAVAudioRecorderDelegate;
+@class AVFoundation_InternalAVAudioSessionDelegate;
+@class __MonoMac_NSActionDispatcher;
+@class __MonoMac_ActionDispatcher;
+@class __Xamarin_NSTimerActionDispatcher;
+@class __MonoMac_NSAsyncActionDispatcher;
+@class Foundation_InternalNSNotificationHandler;
+@class GameKit_Mono_GKSessionDelegate;
+@class AddressBookUI_InternalABNewPersonViewControllerDelegate;
+@class AddressBookUI_InternalABPeoplePickerNavigationControllerDelegate;
+@class AddressBookUI_InternalABPersonViewControllerDelegate;
+@class AddressBookUI_InternalABUnknownPersonViewControllerDelegate;
 @class MessageUI_Mono_MFMailComposeViewControllerDelegate;
-@class MFMessageComposeViewControllerDelegate;
 @class MessageUI_Mono_MFMessageComposeViewControllerDelegate;
-@class MPPlayableContentDelegate;
-@class MPPlayableContentDataSource;
-@class MPMediaPickerControllerDelegate;
-@class MKAnnotation;
-@class MKLocalSearchCompleterDelegate;
-@class MKMapViewDelegate;
-@class MKOverlay;
-@class MKReverseGeocoderDelegate;
-@class Xamarin_iOS__JavaScriptCore_JSExport;
-@class HMAccessoryBrowserDelegate;
-@class HMAccessoryDelegate;
-@class HMCameraSnapshotControlDelegate;
-@class HMCameraStreamControlDelegate;
-@class HMHomeDelegate;
-@class HMHomeManagerDelegate;
-@class GKAgentDelegate;
-@class GLKNamedEffect;
-@class GLKViewControllerDelegate;
-@class GLKViewDelegate;
-@class EKCalendarChooserDelegate;
-@class EKEventEditViewDelegate;
-@class EKEventViewDelegate;
-@class CSSearchableIndexDelegate;
-@class CLLocationManagerDelegate;
+@protocol UIPickerViewModel;
+@class __MonoTouch_UIImageStatusDispatcher;
+@class UIKit_UIControlEventProxy;
+@class __MonoTouch_UIVideoStatusDispatcher;
 @class CoreImage_CIAccordionFoldTransition;
 @class CoreImage_CICompositingFilter;
 @class CoreImage_CIAdditionCompositing;
@@ -251,16 +189,25 @@
 @class CoreImage_CIDroste;
 @class CoreImage_CIEdgePreserveUpsampleFilter;
 @class CoreImage_CIEdges;
+@class CoreImage_CIHatchedScreen;
 @class CoreImage_CIEdgeWork;
+@class CoreImage_CIHeightFieldFromMask;
 @class CoreImage_CITileFilter;
 @class CoreImage_CIEightfoldReflectedTile;
+@class CoreImage_CIHexagonalPixellate;
 @class CoreImage_CIExclusionBlendMode;
+@class CoreImage_CIHighlightShadowAdjust;
 @class CoreImage_CIExposureAdjust;
+@class CoreImage_CIHistogramDisplayFilter;
 @class CoreImage_CIFaceBalance;
-@class CoreImage_CIFalseColor;
+@class CoreImage_CIHoleDistortion;
 @class CoreImage_CIFlashTransition;
+@class CoreImage_CIHueAdjust;
 @class CoreImage_CIFourfoldReflectedTile;
+@class CoreImage_CIHueBlendMode;
+@class CoreImage_CIFalseColor;
 @class CoreImage_CIFourfoldRotatedTile;
+@class CoreImage_CIHueSaturationValueGradient;
 @class CoreImage_CIFourfoldTranslatedTile;
 @class CoreImage_CIGammaAdjust;
 @class CoreImage_CIGaussianBlur;
@@ -270,316 +217,108 @@
 @class CoreImage_CIGlideReflectedTile;
 @class CoreImage_CIGloom;
 @class CoreImage_CIHardLightBlendMode;
-@class CoreImage_CIHatchedScreen;
-@class CoreImage_CIHeightFieldFromMask;
-@class CoreImage_CIHexagonalPixellate;
-@class CoreImage_CIHighlightShadowAdjust;
-@class CoreImage_CIHistogramDisplayFilter;
-@class CoreImage_CIHoleDistortion;
-@class CoreImage_CIHueAdjust;
-@class CoreImage_CIHueBlendMode;
-@class CoreImage_CIHueSaturationValueGradient;
 @protocol CIImageProvider;
-@class CoreImage_CIKaleidoscope;
-@class CoreImage_CILabDeltaE;
-@class CoreImage_CILanczosScaleTransform;
-@class CoreImage_CILenticularHaloGenerator;
-@class CoreImage_CILightenBlendMode;
-@class CoreImage_CILightTunnel;
-@class CoreImage_CILinearBurnBlendMode;
-@class CoreImage_CILinearDodgeBlendMode;
 @class CoreImage_CILinearGradient;
-@class CoreImage_CILinearToSRGBToneCurve;
-@class CoreImage_CILineOverlay;
-@class CoreImage_CILineScreen;
-@class CoreImage_CILuminosityBlendMode;
-@class CoreImage_CIMaskedVariableBlur;
-@class CoreImage_CIMaskToAlpha;
-@class CoreImage_CIMaximumComponent;
-@class CoreImage_CIMaximumCompositing;
-@class CoreImage_CIMedianFilter;
-@class CoreImage_CIMinimumComponent;
-@class CoreImage_CIMinimumCompositing;
-@class CoreImage_CIModTransition;
 @class CoreImage_CIMorphology;
-@class CoreImage_CIMorphologyGradient;
-@class CoreImage_CIMorphologyMaximum;
 @class CoreImage_CIMorphologyMinimum;
+@class CoreImage_CILinearToSRGBToneCurve;
 @class CoreImage_CIMotionBlur;
+@class CoreImage_CILineOverlay;
 @class CoreImage_CIMultiplyBlendMode;
+@class CoreImage_CILineScreen;
 @class CoreImage_CIMultiplyCompositing;
+@class CoreImage_CILuminosityBlendMode;
 @class CoreImage_CINinePartStretched;
+@class CoreImage_CIKaleidoscope;
+@class CoreImage_CIMaskedVariableBlur;
 @class CoreImage_CINinePartTiled;
+@class CoreImage_CIMaskToAlpha;
 @class CoreImage_CINoiseReduction;
-@class CoreImage_CIOpTile;
-@class CoreImage_CIOverlayBlendMode;
-@class CoreImage_CIPageCurlTransition;
-@class CoreImage_CIPageCurlWithShadowTransition;
-@class CoreImage_CIParallelogramTile;
-@class CoreImage_CIPdf417BarcodeGenerator;
 @class CoreImage_CIPerspectiveTransform;
-@class CoreImage_CIPerspectiveCorrection;
-@class CoreImage_CIPerspectiveTile;
+@class CoreImage_CILabDeltaE;
+@class CoreImage_CIMaximumComponent;
+@class CoreImage_CIOpTile;
 @class CoreImage_CIPerspectiveTransformWithExtent;
+@class CoreImage_CILanczosScaleTransform;
+@class CoreImage_CIMaximumCompositing;
+@class CoreImage_CIOverlayBlendMode;
 @class CoreImage_CIPhotoEffect;
+@class CoreImage_CILenticularHaloGenerator;
+@class CoreImage_CIMedianFilter;
+@class CoreImage_CIPageCurlTransition;
 @class CoreImage_CIPhotoEffectChrome;
+@class CoreImage_CILightenBlendMode;
+@class CoreImage_CIMinimumComponent;
+@class CoreImage_CIPageCurlWithShadowTransition;
 @class CoreImage_CIPhotoEffectFade;
+@class CoreImage_CILightTunnel;
+@class CoreImage_CIMinimumCompositing;
+@class CoreImage_CIParallelogramTile;
 @class CoreImage_CIPhotoEffectInstant;
+@class CoreImage_CIModTransition;
+@class CoreImage_CIPdf417BarcodeGenerator;
 @class CoreImage_CIPhotoEffectMono;
+@class CoreImage_CILinearBurnBlendMode;
 @class CoreImage_CIPhotoEffectNoir;
+@class CoreImage_CILinearDodgeBlendMode;
+@class CoreImage_CIMorphologyGradient;
 @class CoreImage_CIPhotoEffectProcess;
+@class CoreImage_CIPerspectiveCorrection;
+@class CoreImage_CIMorphologyMaximum;
 @class CoreImage_CIPhotoEffectTonal;
-@class CoreImage_CIPhotoEffectTransfer;
-@class CoreImage_CIPinchDistortion;
-@class CoreImage_CIPinLightBlendMode;
-@class CoreImage_CIPixellate;
-@class CoreImage_CIPointillize;
-@class CoreImage_CIQRCodeGenerator;
-@class CoreImage_CIRadialGradient;
-@class CoreImage_CIRandomGenerator;
-@class CoreImage_CIRippleTransition;
-@class CoreImage_CIRowAverage;
-@class CoreImage_CISaturationBlendMode;
-@class CoreImage_CIScreenBlendMode;
+@class CoreImage_CIPerspectiveTile;
 @class CoreImage_CISepiaTone;
+@class CoreImage_CIQRCodeGenerator;
+@class CoreImage_CIStretchCrop;
+@class CoreImage_CIPhotoEffectTransfer;
 @class CoreImage_CIShadedMaterial;
+@class CoreImage_CIRadialGradient;
+@class CoreImage_CIPinchDistortion;
+@class CoreImage_CIStripesGenerator;
 @class CoreImage_CISharpenLuminance;
+@class CoreImage_CIRandomGenerator;
+@class CoreImage_CIPinLightBlendMode;
+@class CoreImage_CISubtractBlendMode;
 @class CoreImage_CISixfoldReflectedTile;
+@class CoreImage_CIPixellate;
+@class CoreImage_CISunbeamsGenerator;
 @class CoreImage_CISixfoldRotatedTile;
+@class CoreImage_CIPointillize;
+@class CoreImage_CISwipeTransition;
 @class CoreImage_CISmoothLinearGradient;
+@class CoreImage_CITemperatureAndTint;
 @class CoreImage_CISoftLightBlendMode;
+@class CoreImage_CITwirlDistortion;
 @class CoreImage_CISourceAtopCompositing;
 @class CoreImage_CISourceInCompositing;
+@class CoreImage_CITextImageGenerator;
+@class CoreImage_CIUnsharpMask;
 @class CoreImage_CISourceOutCompositing;
+@class CoreImage_CIThermal;
 @class CoreImage_CISourceOverCompositing;
 @class CoreImage_CISpotColor;
-@class CoreImage_CISpotLight;
-@class CoreImage_CISRGBToneCurveToLinear;
-@class CoreImage_CIStarShineGenerator;
-@class CoreImage_CIStraightenFilter;
-@class CoreImage_CIStretchCrop;
-@class CoreImage_CIStripesGenerator;
-@class CoreImage_CISubtractBlendMode;
-@class CoreImage_CISunbeamsGenerator;
-@class CoreImage_CISwipeTransition;
-@class CoreImage_CITemperatureAndTint;
-@class CoreImage_CITextImageGenerator;
-@class CoreImage_CIThermal;
 @class CoreImage_CIToneCurve;
+@class CoreImage_CISpotLight;
 @class CoreImage_CITorusLensDistortion;
-@class CoreImage_CITriangleKaleidoscope;
-@class CoreImage_CITriangleTile;
-@class CoreImage_CITwelvefoldReflectedTile;
-@class CoreImage_CITwirlDistortion;
-@class CoreImage_CIUnsharpMask;
 @class CoreImage_CIVibrance;
+@class CoreImage_CISRGBToneCurveToLinear;
+@class CoreImage_CIRippleTransition;
 @class CoreImage_CIVignette;
+@class CoreImage_CITriangleKaleidoscope;
+@class CoreImage_CIStarShineGenerator;
+@class CoreImage_CIRowAverage;
 @class CoreImage_CIVignetteEffect;
+@class CoreImage_CITriangleTile;
+@class CoreImage_CIStraightenFilter;
 @class CoreImage_CIVortexDistortion;
+@class CoreImage_CITwelvefoldReflectedTile;
+@class CoreImage_CISaturationBlendMode;
 @class CoreImage_CIWhitePointAdjust;
+@class CoreImage_CIScreenBlendMode;
 @class CoreImage_CIXRay;
 @class CoreImage_CIZoomBlur;
-@class NSFetchedResultsControllerDelegate;
-@class NSFetchedResultsSectionInfo;
-@class CALayerDelegate;
-@class CAAnimationDelegate;
-@class CAMediaTiming;
-@class CKRecordValue;
-@class CXCallDirectoryExtensionContextDelegate;
-@class CXCallObserverDelegate;
-@class CXProviderDelegate;
-@class ARSCNViewDelegate;
-@class ARSessionDelegate;
-@class ARSKViewDelegate;
-@class ABNewPersonViewControllerDelegate;
-@class AddressBookUI_InternalABNewPersonViewControllerDelegate;
-@class ABPeoplePickerNavigationControllerDelegate;
-@class AddressBookUI_InternalABPeoplePickerNavigationControllerDelegate;
-@class ABPersonViewControllerDelegate;
-@class AddressBookUI_InternalABPersonViewControllerDelegate;
-@class ABUnknownPersonViewControllerDelegate;
-@class AddressBookUI_InternalABUnknownPersonViewControllerDelegate;
-@class SKPhysicsContactDelegate;
-@class SKSceneDelegate;
-@class SKViewDelegate;
-@class SCNAnimatable;
-@class SCNSceneRenderer;
-@class SCNActionable;
-@class SCNAvoidOccluderConstraintDelegate;
-@class SCNBoundingVolume;
-@class SCNCameraControllerDelegate;
-@class SCNNodeRendererDelegate;
-@class SCNPhysicsContactDelegate;
-@class SCNProgramDelegate;
-@class SCNSceneExportDelegate;
-@class SCNSceneRendererDelegate;
-@class SCNShadable;
-@class SCNTechniqueSupport;
-@class GKLocalPlayerListener;
-@class GKSessionDelegate;
-@class GameKit_Mono_GKSessionDelegate;
-@class GKAchievementViewControllerDelegate;
-@class GKChallengeEventHandlerDelegate;
-@class GKChallengeListener;
-@class GKFriendRequestComposeViewControllerDelegate;
-@class GKGameCenterControllerDelegate;
-@class GKInviteEventListener;
-@class GKLeaderboardViewControllerDelegate;
-@class GKMatchDelegate;
-@class GKMatchmakerViewControllerDelegate;
-@class GKPeerPickerControllerDelegate;
-@class GKSavedGameListener;
-@class GKTurnBasedEventHandlerDelegate;
-@class GKTurnBasedEventListener;
-@class GKTurnBasedMatchmakerViewControllerDelegate;
-@class GKVoiceChatClient;
-@class WKNavigationDelegate;
-@class WKScriptMessageHandler;
-@class WKUIDelegate;
-@class UIAdaptivePresentationControllerDelegate;
-@class UIKit_UIControlEventProxy;
-@class __MonoTouch_UIImageStatusDispatcher;
-@class UIPopoverPresentationControllerDelegate;
-@class __MonoTouch_UIVideoStatusDispatcher;
-@class NSLayoutManagerDelegate;
-@class NSTextAttachmentContainer;
-@class NSTextStorageDelegate;
-@class UIAccelerometerDelegate;
 @protocol UIAccessibilityContainer;
-@class UIAccessibilityContainerDataTable;
-@class UIActionSheetDelegate;
-@class UIActivityItemSource;
-@class UIAlertViewDelegate;
-@class UIAppearanceContainer;
-@class UIBarPositioning;
-@class UIBarPositioningDelegate;
-@class UICloudSharingControllerDelegate;
 @protocol UICollectionViewSource;
-@class UICollectionViewDataSource;
-@class UICollectionViewDelegate;
-@class UICollectionViewDelegateFlowLayout;
-@class UICollectionViewDragDelegate;
-@class UICollectionViewDropDelegate;
-@class UICollectionViewSource;
-@class UICollisionBehaviorDelegate;
-@class UIContentContainer;
-@class UICoordinateSpace;
-@class UIDocumentBrowserViewControllerDelegate;
-@class UIDocumentInteractionControllerDelegate;
-@class UIDocumentMenuDelegate;
-@class UIDocumentPickerDelegate;
-@class UIDragInteractionDelegate;
-@class UIDropInteractionDelegate;
-@class UIDynamicAnimatorDelegate;
-@class UIDynamicItem;
-@class UIGestureRecognizerDelegate;
-@class UIImagePickerControllerDelegate;
-@class UILayoutSupport;
-@class UINavigationBarDelegate;
-@class UIObjectRestoration;
-@class UIPageViewControllerDataSource;
-@class UIPageViewControllerDelegate;
-@class UIPickerViewDelegate;
-@class UIPickerViewAccessibilityDelegate;
-@class UIPickerViewDataSource;
-@protocol UIPickerViewModel;
-@class UIPickerViewModel;
-@class UIPopoverControllerDelegate;
-@class UIPreviewInteractionDelegate;
-@class UIPrinterPickerControllerDelegate;
-@class UIPrintInteractionControllerDelegate;
-@class UIScrollViewAccessibilityDelegate;
-@class UISearchBarDelegate;
-@class UISearchControllerDelegate;
-@class UISearchDisplayDelegate;
-@class UISearchResultsUpdating;
-@class UISplitViewControllerDelegate;
-@class UIStateRestoring;
-@class UITabBarControllerDelegate;
-@class UITabBarDelegate;
-@class Xamarin_iOS__UIKit_UITableViewDataSource;
-@class UITableViewDelegate;
-@class UITableViewDragDelegate;
-@class UITableViewDropDelegate;
-@class UITextDocumentProxy;
-@class UITextDragDelegate;
-@class UITextDropDelegate;
-@class UITextFieldDelegate;
-@class UITextInputDelegate;
-@class UITextInputTokenizer;
-@class UITextPasteDelegate;
-@class UITextViewDelegate;
-@class UIToolbarDelegate;
-@class UITraitEnvironment;
-@class UIVideoEditorControllerDelegate;
-@class UIViewControllerAnimatedTransitioning;
-@class UIViewControllerContextTransitioning;
-@class UIViewControllerInteractiveTransitioning;
-@class UIViewControllerPreviewingDelegate;
-@class UIViewControllerTransitioningDelegate;
-@class UIWebViewDelegate;
-@class NSFileManagerDelegate;
-@class Foundation_InternalNSNotificationHandler;
-@class __MonoMac_NSActionDispatcher;
-@class __MonoMac_ActionDispatcher;
-@class __Xamarin_NSTimerActionDispatcher;
-@class __MonoMac_NSAsyncActionDispatcher;
-@class NSCacheDelegate;
-@class NSCoding;
-@class NSCopying;
-@class NSExtensionRequestHandling;
-@class NSFilePresenter;
-@class NSKeyedArchiverDelegate;
-@class NSKeyedUnarchiverDelegate;
-@class NSPortDelegate;
-@class NSMachPortDelegate;
-@class NSMetadataQueryDelegate;
-@class NSMutableCopying;
-@class NSNetServiceBrowserDelegate;
-@class NSNetServiceDelegate;
-@class NSStreamDelegate;
-@class NSURLAuthenticationChallengeSender;
-@class NSURLConnectionDelegate;
-@class NSURLConnectionDataDelegate;
-@class NSURLConnectionDownloadDelegate;
-@class NSURLSessionDelegate;
-@class NSURLSessionTaskDelegate;
-@class NSURLSessionDataDelegate;
-@class NSURLSessionDownloadDelegate;
-@class NSURLSessionStreamDelegate;
-@class NSUserActivityDelegate;
-@class CBCentralManagerDelegate;
-@class CBPeripheralDelegate;
-@class CBPeripheralManagerDelegate;
-@class AVPictureInPictureControllerDelegate;
-@class AVPlayerViewControllerDelegate;
-@class AVRoutePickerViewDelegate;
-@class AVCaptureAudioDataOutputSampleBufferDelegate;
-@class AVAudioPlayerDelegate;
-@class AVFoundation_InternalAVAudioPlayerDelegate;
-@class AVAudioRecorderDelegate;
-@class AVFoundation_InternalAVAudioRecorderDelegate;
-@class AVAudioSessionDelegate;
-@class AVFoundation_InternalAVAudioSessionDelegate;
-@class AVAssetDownloadDelegate;
-@class AVAssetResourceLoaderDelegate;
-@class AVAsynchronousKeyValueLoading;
-@class AVAudio3DMixing;
-@class AVAudioStereoMixing;
-@class AVCaptureDataOutputSynchronizerDelegate;
-@class AVCaptureDepthDataOutputDelegate;
-@class AVCaptureFileOutputRecordingDelegate;
-@class AVCaptureMetadataOutputObjectsDelegate;
-@class AVCapturePhotoCaptureDelegate;
-@class AVCaptureVideoDataOutputSampleBufferDelegate;
-@class AVContentKeySessionDelegate;
-@class AVPlayerItemOutputPushDelegate;
-@class AVPlayerItemLegibleOutputPushDelegate;
-@class AVPlayerItemMetadataCollectorPushDelegate;
-@class AVPlayerItemMetadataOutputPushDelegate;
-@class AVPlayerItemOutputPullDelegate;
-@class AVSpeechSynthesizerDelegate;
-@class AVVideoCompositing;
 @class AppDelegate;
 @class checkResultViewController;
 @class contactController;
@@ -614,126 +353,106 @@
 @class eventViewController;
 @class courseManagementViewController;
 @class pointScoresViewController;
+@class KemblaJoggers_chooseLocationResultViewController;
+@class chooseEventViewController;
 @class loginController;
 @class KemblaJoggers_ContactDataSource;
 @class KemblaJoggers_HandicapDataSource;
 @class chooseLocationViewController;
 @class selectRecordTypeViewController;
-@class QuickLook_QLPreviewController__QLPreviewControllerDelegate;
+@class scanButtonVewController;
+@class KemblaJoggers_chooseLocationViewController_SearchResultsUpdator;
+@class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
-@class Messages_MSStickerBrowserView_MSStickerBrowserViewAppearance;
-@class Messages_MSStickerView_MSStickerViewAppearance;
-@class iAd_ADBannerView__ADBannerViewDelegate;
-@class iAd_ADBannerView_ADBannerViewAppearance;
-@class iAd_ADInterstitialAd__ADInterstitialAdDelegate;
-@class HealthKitUI_HKActivityRingView_HKActivityRingViewAppearance;
-@class ExternalAccessory_EAAccessory__EAAccessoryDelegate;
-@class ExternalAccessory_EAWiFiUnconfiguredAccessoryBrowser__EAWiFiUnconfiguredAccessoryBrowserDelegate;
-@class CoreAudioKit_CAInterAppAudioSwitcherView_CAInterAppAudioSwitcherViewAppearance;
-@class CoreAudioKit_CAInterAppAudioTransportView_CAInterAppAudioTransportViewAppearance;
-@class PhotosUI_PHLivePhotoView_PHLivePhotoViewAppearance;
-@class StoreKit_SKRequest__SKRequestDelegate;
-@class StoreKit_SKProductsRequest__SKProductsRequestDelegate;
-@class StoreKit_SKStoreProductViewController__SKStoreProductViewControllerDelegate;
-@class Photos_PHPhotoLibrary___phlib_observer;
+@class UIKit_UIControl_UIControlAppearance;
+@class UIKit_UIDatePicker_UIDatePickerAppearance;
+@class AVKit_AVRoutePickerView_AVRoutePickerViewAppearance;
+@class AVFoundation_AVCaptureFileOutput_recordingProxy;
+@class BusinessChat_BCChatButton_BCChatButtonAppearance;
+@class BCChatButton;
+@class CoreBluetooth_CBCentralManager__CBCentralManagerDelegate;
+@class CoreBluetooth_CBPeripheralManager__CBPeripheralManagerDelegate;
+@class CoreBluetooth_CBPeripheral__CBPeripheralDelegate;
+@class HomeKit_HMCameraView_HMCameraViewAppearance;
+@class UIKit_UIDocumentInteractionController__UIDocumentInteractionControllerDelegate;
+@class UIKit_UIDocumentMenuViewController__UIDocumentMenuDelegate;
+@class UIKit_UIDocumentPickerViewController__UIDocumentPickerDelegate;
 @class PdfKit_PdfDocument__PdfDocumentDelegate;
+@class MediaPlayer_MPVolumeView_MPVolumeViewAppearance;
+@class Foundation_NSKeyedArchiver__NSKeyedArchiverDelegate;
+@class Foundation_NSKeyedUnarchiver__NSKeyedUnarchiverDelegate;
 @class PdfKit_PdfThumbnailView_PdfThumbnailViewAppearance;
+@class Foundation_NSNetService__NSNetServiceDelegate;
+@class WebKit_WKWebView_WKWebViewAppearance;
+@class __NSObject_Disposer;
+@class __XamarinObjectObserver;
 @class PdfKit_PdfView__PdfViewDelegate;
 @class PdfKit_PdfView_PdfViewAppearance;
-@class UIKit_UIControl_UIControlAppearance;
-@class UIKit_UIButton_UIButtonAppearance;
-@class PassKit_PKAddPassButton_PKAddPassButtonAppearance;
-@class PassKit_PKAddPassesViewController__PKAddPassesViewControllerDelegate;
-@class PassKit_PKPaymentAuthorizationViewController__PKPaymentAuthorizationViewControllerDelegate;
-@class PassKit_PKPaymentButton_PKPaymentButtonAppearance;
-@class MetalKit_MTKView_MTKViewAppearance;
+@class Messages_MSStickerBrowserView_MSStickerBrowserViewAppearance;
+@class Messages_MSStickerView_MSStickerViewAppearance;
+@class Foundation_NSStream__NSStreamDelegate;
 @class MessageUI_MFMailComposeViewController_MFMailComposeViewControllerAppearance;
 @class MessageUI_MFMessageComposeViewController_MFMessageComposeViewControllerAppearance;
-@class MediaPlayer_MPMediaPickerController__MPMediaPickerControllerDelegate;
-@class MediaPlayer_MPVolumeView_MPVolumeViewAppearance;
-@class MapKit_MKOverlayView_MKOverlayViewAppearance;
-@class MapKit_MKAnnotationView_MKAnnotationViewAppearance;
-@class MapKit_MKOverlayPathView_MKOverlayPathViewAppearance;
-@class MapKit_MKCircleView_MKCircleViewAppearance;
-@class MapKit_MKCompassButton_MKCompassButtonAppearance;
-@class MapKit_MKMapView__MKMapViewDelegate;
-@class MapKit_MKMapView_MKMapViewAppearance;
-@class MapKit_MKMarkerAnnotationView_MKMarkerAnnotationViewAppearance;
-@class MapKit_MKPinAnnotationView_MKPinAnnotationViewAppearance;
-@class MapKit_MKPolygonView_MKPolygonViewAppearance;
-@class MapKit_MKPolylineView_MKPolylineViewAppearance;
-@class MapKit_MKScaleView_MKScaleViewAppearance;
-@class UIKit_UIBarItem_UIBarItemAppearance;
-@class UIKit_UIBarButtonItem_UIBarButtonItemAppearance;
-@class MapKit_MKUserTrackingBarButtonItem_MKUserTrackingBarButtonItemAppearance;
-@class MapKit_MKUserTrackingButton_MKUserTrackingButtonAppearance;
+@class MonoTouch_GKSession_ReceivedObject;
+@class GameKit_GKMatch__GKMatchDelegate;
 @class HomeKit_HMHome__HMHomeDelegate;
-@class HomeKit_HMAccessory__HMAccessoryDelegate;
-@class HomeKit_HMAccessoryBrowser__HMAccessoryBrowserDelegate;
-@class HomeKit_HMCameraView_HMCameraViewAppearance;
 @class HomeKit_HMHomeManager__HMHomeManagerDelegate;
-@class GLKit_GLKView__GLKViewDelegate;
-@class GLKit_GLKView_GLKViewAppearance;
+@class UIKit_UIGestureRecognizer__UIGestureRecognizerDelegate;
+@class __UIGestureRecognizerToken;
+@class __UIGestureRecognizerParameterlessToken;
+@class __UIGestureRecognizerParametrizedToken;
+@class AddressBookUI_ABPeoplePickerNavigationController_ABPeoplePickerNavigationControllerAppearance;
+@class iAd_ADBannerView__ADBannerViewDelegate;
+@class iAd_ADBannerView_ADBannerViewAppearance;
+@class UIKit_UIImagePickerController__UIImagePickerControllerDelegate;
+@class iAd_ADInterstitialAd__ADInterstitialAdDelegate;
 @class EventKitUI_EKCalendarChooser__EKCalendarChooserDelegate;
 @class EventKitUI_EKEventEditViewController__EKEventEditViewDelegate;
 @class EventKitUI_EKEventEditViewController_EKEventEditViewControllerAppearance;
+@class Photos_PHPhotoLibrary___phlib_observer;
 @class EventKitUI_EKEventViewController__EKEventViewDelegate;
-@class CoreLocation_CLLocationManager__CLLocationManagerDelegate;
+@class ExternalAccessory_EAAccessory__EAAccessoryDelegate;
 @class CoreAnimation_CAAnimation__CAAnimationDelegate;
-@class BusinessChat_BCChatButton_BCChatButtonAppearance;
-@class SceneKit_SCNView_SCNViewAppearance;
-@class ARKit_ARSCNView_ARSCNViewAppearance;
-@class SpriteKit_SKView_SKViewAppearance;
-@class ARKit_ARSKView_ARSKViewAppearance;
-@class AddressBookUI_ABPeoplePickerNavigationController_ABPeoplePickerNavigationControllerAppearance;
-@class SpriteKit_SKPhysicsWorld__SKPhysicsContactDelegate;
-@class SceneKit_SCNPhysicsWorld__SCNPhysicsContactDelegate;
-@class MonoTouch_GKSession_ReceivedObject;
-@class GameKit_GKMatch__GKMatchDelegate;
-@class GameKit_GKGameCenterViewController__GKGameCenterControllerDelegate;
-@class GameKit_GKAchievementViewController__GKAchievementViewControllerDelegate;
-@class GameKit_GKAchievementViewController_GKAchievementViewControllerAppearance;
-@class GameKit_GKChallengeEventHandler__GKChallengeEventHandlerDelegate;
-@class GameKit_GKFriendRequestComposeViewController__GKFriendRequestComposeViewControllerDelegate;
-@class GameKit_GKFriendRequestComposeViewController_GKFriendRequestComposeViewControllerAppearance;
-@class GameKit_GKLeaderboardViewController__GKLeaderboardViewControllerDelegate;
-@class GameKit_GKLeaderboardViewController_GKLeaderboardViewControllerAppearance;
-@class GameKit_GKMatchmakerViewController__GKMatchmakerViewControllerDelegate;
-@class GameKit_GKTurnBasedMatchmakerViewController_GKTurnBasedMatchmakerViewControllerAppearance;
-@class WebKit_WKWebView_WKWebViewAppearance;
+@class UIKit_UIImageView_UIImageViewAppearance;
+@class UIKit_UIInputView_UIInputViewAppearance;
+@class PhotosUI_PHLivePhotoView_PHLivePhotoViewAppearance;
+@class ExternalAccessory_EAWiFiUnconfiguredAccessoryBrowser__EAWiFiUnconfiguredAccessoryBrowserDelegate;
+@class QuickLook_QLPreviewController__QLPreviewControllerDelegate;
+@class UIKit_UILabel_UILabelAppearance;
+@class CoreLocation_CLLocationManager__CLLocationManagerDelegate;
+@class __UILongPressGestureRecognizer;
+@class Foundation_NSCache__NSCacheDelegate;
+@class UIKit_UINavigationBar_UINavigationBarAppearance;
+@class UIKit_UIPrintInteractionController__UIPrintInteractionControllerDelegate;
+@class UIKit_UIPageControl_UIPageControlAppearance;
+@class UIKit_UIPageViewController__UIPageViewControllerDelegate;
+@class UIKit_UIPageViewController__UIPageViewControllerDataSource;
+@class MapKit_MKOverlayView_MKOverlayViewAppearance;
+@class __UIPanGestureRecognizer;
+@class UIKit_UIPickerView_UIPickerViewAppearance;
+@class __UIPinchGestureRecognizer;
+@class UIKit_UIPopoverBackgroundView_UIPopoverBackgroundViewAppearance;
+@class UIKit_UIPopoverController__UIPopoverControllerDelegate;
+@class UIKit_UIPopoverPresentationController__UIPopoverPresentationControllerDelegate;
+@class CoreAudioKit_CAInterAppAudioSwitcherView_CAInterAppAudioSwitcherViewAppearance;
+@class CoreAudioKit_CAInterAppAudioTransportView_CAInterAppAudioTransportViewAppearance;
 @class UIKit_UIPreviewInteraction__UIPreviewInteractionDelegate;
+@class MetalKit_MTKView_MTKViewAppearance;
 @class __MonoMac_FuncBoolDispatcher;
 @class UIKit_UIActionSheet__UIActionSheetDelegate;
 @class UIKit_UIActionSheet_UIActionSheetAppearance;
 @class UIKit_UIAlertView__UIAlertViewDelegate;
 @class UIKit_UIAlertView_UIAlertViewAppearance;
 @class UIKit_UIBarButtonItem_Callback;
+@class UIKit_UIBarItem_UIBarItemAppearance;
+@class UIKit_UIBarButtonItem_UIBarButtonItemAppearance;
+@class UIKit_UIButton_UIButtonAppearance;
 @class UIKit_UIScrollView_UIScrollViewAppearance;
 @class UIKit_UICollectionView_UICollectionViewAppearance;
-@class UIKit_UIDocumentMenuViewController__UIDocumentMenuDelegate;
-@class UIKit_UIDocumentPickerViewController__UIDocumentPickerDelegate;
-@class __UIGestureRecognizerToken;
-@class __UIGestureRecognizerParameterlessToken;
-@class __UIGestureRecognizerParametrizedToken;
-@class UIKit_UIGestureRecognizer__UIGestureRecognizerDelegate;
 @class __UIRotationGestureRecognizer;
-@class __UILongPressGestureRecognizer;
 @class __UITapGestureRecognizer;
-@class __UIPanGestureRecognizer;
-@class __UIPinchGestureRecognizer;
 @class __UISwipeGestureRecognizer;
 @class __UIScreenEdgePanGestureRecognizer;
-@class UIKit_UIImagePickerController__UIImagePickerControllerDelegate;
-@class UIKit_UINavigationBar_UINavigationBarAppearance;
-@class UIKit_UIPageViewController__UIPageViewControllerDelegate;
-@class UIKit_UIPageViewController__UIPageViewControllerDataSource;
-@class UIKit_UIPickerView_UIPickerViewAppearance;
-@class UIKit_UIPopoverController__UIPopoverControllerDelegate;
-@class UIKit_UIPopoverPresentationController__UIPopoverPresentationControllerDelegate;
-@class UIKit_UISearchBar_UISearchBarAppearance;
-@class UIKit_UISearchBar__UISearchBarDelegate;
-@class UIKit_UISearchController___Xamarin_UISearchResultsUpdating;
-@class UIKit_UISegmentedControl_UISegmentedControlAppearance;
 @class UIKit_UITableView_UITableViewAppearance;
 @class UIKit_UITableViewCell_UITableViewCellAppearance;
 @class UIKit_UITextField__UITextFieldDelegate;
@@ -741,25 +460,22 @@
 @class UIKit_UIScrollView__UIScrollViewDelegate;
 @class UIKit_UITextView__UITextViewDelegate;
 @class UIKit_UITextView_UITextViewAppearance;
+@class UIKit_UISearchBar_UISearchBarAppearance;
+@class UIKit_UISearchBar__UISearchBarDelegate;
+@class UIKit_UISearchController___Xamarin_UISearchResultsUpdating;
 @class UIKit_UIToolbar_UIToolbarAppearance;
+@class UIKit_UIProgressView_UIProgressViewAppearance;
+@class UIKit_UISegmentedControl_UISegmentedControlAppearance;
 @class UIKit_UIView__UIViewStaticCallback;
 @class UIKit_UIWindow_UIWindowAppearance;
-@class UIKit_UIPrintInteractionController__UIPrintInteractionControllerDelegate;
-@class UIKit_NSTextStorage__NSTextStorageDelegate;
-@class UIKit_UIAccelerometer__UIAccelerometerDelegate;
-@class UIKit_UIActivityIndicatorView_UIActivityIndicatorViewAppearance;
-@class UIKit_UICollectionReusableView_UICollectionReusableViewAppearance;
-@class UIKit_UICollectionViewCell_UICollectionViewCellAppearance;
-@class UIKit_UICollisionBehavior__UICollisionBehaviorDelegate;
-@class UIKit_UIDatePicker_UIDatePickerAppearance;
-@class UIKit_UIDocumentInteractionController__UIDocumentInteractionControllerDelegate;
-@class UIKit_UIImageView_UIImageViewAppearance;
-@class UIKit_UIInputView_UIInputViewAppearance;
-@class UIKit_UILabel_UILabelAppearance;
-@class UIKit_UIPageControl_UIPageControlAppearance;
-@class UIKit_UIPopoverBackgroundView_UIPopoverBackgroundViewAppearance;
-@class UIKit_UIProgressView_UIProgressViewAppearance;
 @class UIKit_UIRefreshControl_UIRefreshControlAppearance;
+@class Foundation_NSMetadataQuery__NSMetadataQueryDelegate;
+@class SceneKit_SCNView_SCNViewAppearance;
+@class ARKit_ARSCNView_ARSCNViewAppearance;
+@class SpriteKit_SKView_SKViewAppearance;
+@class ARKit_ARSKView_ARSKViewAppearance;
+@class Foundation_NSNetServiceBrowser__NSNetServiceBrowserDelegate;
+@class SceneKit_SCNPhysicsWorld__SCNPhysicsContactDelegate;
 @class UIKit_UISlider_UISliderAppearance;
 @class UIKit_UISplitViewController__UISplitViewControllerDelegate;
 @class UIKit_UIStackView_UIStackViewAppearance;
@@ -770,25 +486,54 @@
 @class UIKit_UITabBarController__UITabBarControllerDelegate;
 @class UIKit_UITabBarItem_UITabBarItemAppearance;
 @class UIKit_UITableViewHeaderFooterView_UITableViewHeaderFooterViewAppearance;
+@class AVFoundation_AVSpeechSynthesizer__AVSpeechSynthesizerDelegate;
+@class SpriteKit_SKPhysicsWorld__SKPhysicsContactDelegate;
+@class GameKit_GKFriendRequestComposeViewController__GKFriendRequestComposeViewControllerDelegate;
+@class GameKit_GKFriendRequestComposeViewController_GKFriendRequestComposeViewControllerAppearance;
+@class GameKit_GKGameCenterViewController__GKGameCenterControllerDelegate;
+@class GameKit_GKAchievementViewController__GKAchievementViewControllerDelegate;
+@class GameKit_GKAchievementViewController_GKAchievementViewControllerAppearance;
+@class GameKit_GKLeaderboardViewController__GKLeaderboardViewControllerDelegate;
+@class GameKit_GKLeaderboardViewController_GKLeaderboardViewControllerAppearance;
+@class GameKit_GKChallengeEventHandler__GKChallengeEventHandlerDelegate;
+@class GameKit_GKMatchmakerViewController__GKMatchmakerViewControllerDelegate;
+@class GameKit_GKTurnBasedMatchmakerViewController_GKTurnBasedMatchmakerViewControllerAppearance;
 @class UIKit_UIVideoEditorController__UIVideoEditorControllerDelegate;
+@class GLKit_GLKView__GLKViewDelegate;
+@class GLKit_GLKView_GLKViewAppearance;
+@class StoreKit_SKRequest__SKRequestDelegate;
+@class StoreKit_SKProductsRequest__SKProductsRequestDelegate;
+@class MapKit_MKOverlayPathView_MKOverlayPathViewAppearance;
+@class MapKit_MKCircleView_MKCircleViewAppearance;
+@class MapKit_MKCompassButton_MKCompassButtonAppearance;
+@class MapKit_MKPolygonView_MKPolygonViewAppearance;
+@class HealthKitUI_HKActivityRingView_HKActivityRingViewAppearance;
+@class MapKit_MKPolylineView_MKPolylineViewAppearance;
+@class MapKit_MKAnnotationView_MKAnnotationViewAppearance;
+@class MapKit_MKMarkerAnnotationView_MKMarkerAnnotationViewAppearance;
+@class StoreKit_SKStoreProductViewController__SKStoreProductViewControllerDelegate;
+@class HomeKit_HMAccessory__HMAccessoryDelegate;
+@class HomeKit_HMAccessoryBrowser__HMAccessoryBrowserDelegate;
+@class MapKit_MKUserTrackingButton_MKUserTrackingButtonAppearance;
+@class MapKit_MKScaleView_MKScaleViewAppearance;
+@class MapKit_MKPinAnnotationView_MKPinAnnotationViewAppearance;
+@class MapKit_MKUserTrackingBarButtonItem_MKUserTrackingBarButtonItemAppearance;
+@class MapKit_MKMapView__MKMapViewDelegate;
+@class MapKit_MKMapView_MKMapViewAppearance;
+@class MediaPlayer_MPMediaPickerController__MPMediaPickerControllerDelegate;
+@class PassKit_PKAddPassButton_PKAddPassButtonAppearance;
+@class PassKit_PKAddPassesViewController__PKAddPassesViewControllerDelegate;
+@class PassKit_PKPaymentButton_PKPaymentButtonAppearance;
+@class UIKit_NSTextStorage__NSTextStorageDelegate;
 @class UIKit_UIVisualEffectView_UIVisualEffectViewAppearance;
+@class UIKit_UIActivityIndicatorView_UIActivityIndicatorViewAppearance;
 @class UIKit_UIWebView__UIWebViewDelegate;
 @class UIKit_UIWebView_UIWebViewAppearance;
-@class Foundation_NSKeyedArchiver__NSKeyedArchiverDelegate;
-@class Foundation_NSKeyedUnarchiver__NSKeyedUnarchiverDelegate;
-@class Foundation_NSNetService__NSNetServiceDelegate;
-@class Foundation_NSStream__NSStreamDelegate;
-@class __NSObject_Disposer;
-@class __XamarinObjectObserver;
-@class Foundation_NSCache__NSCacheDelegate;
-@class Foundation_NSMetadataQuery__NSMetadataQueryDelegate;
-@class Foundation_NSNetServiceBrowser__NSNetServiceBrowserDelegate;
-@class CoreBluetooth_CBCentralManager__CBCentralManagerDelegate;
-@class CoreBluetooth_CBPeripheralManager__CBPeripheralManagerDelegate;
-@class CoreBluetooth_CBPeripheral__CBPeripheralDelegate;
-@class AVKit_AVRoutePickerView_AVRoutePickerViewAppearance;
-@class AVFoundation_AVCaptureFileOutput_recordingProxy;
-@class AVFoundation_AVSpeechSynthesizer__AVSpeechSynthesizerDelegate;
+@class UIKit_UIAccelerometer__UIAccelerometerDelegate;
+@class PassKit_PKPaymentAuthorizationViewController__PKPaymentAuthorizationViewControllerDelegate;
+@class UIKit_UICollectionReusableView_UICollectionReusableViewAppearance;
+@class UIKit_UICollisionBehavior__UICollisionBehaviorDelegate;
+@class UIKit_UICollectionViewCell_UICollectionViewCellAppearance;
 @class FIRDatabaseQuery;
 @class FIRDatabaseReference;
 @class FIRDataSnapshot;
@@ -808,7 +553,6 @@
 @class FIRAuthCredential;
 @class FIRAuthDataResult;
 @protocol FIRAuthUIDelegate;
-@class FIRAuthUIDelegate;
 @class FIREmailAuthProvider;
 @class FIRFacebookAuthProvider;
 @class FIRGitHubAuthProvider;
@@ -835,382 +579,17 @@
 @class Xamarin_Auth_FormAuthenticatorController_FormDataSource;
 @class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
 @class System_Net_Http_NSUrlSessionHandler_NSUrlSessionHandlerDelegate;
+@class ZXing_Mobile_CaptureDelegate;
+@class ZXing_Mobile_AVCaptureScannerViewController;
+@class ZXing_Mobile_ZXingScannerViewController;
+@class ZXing_Mobile_AVCaptureScannerView;
+@class ZXing_Mobile_ZXingDefaultOverlayView;
+@class ZXing_Mobile_ZXingScannerView_OutputRecorder;
+@class ZXing_Mobile_ZXingScannerView;
 @class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
 @class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 
-@interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIScrollViewDelegate : NSObject<UIScrollViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITableViewSource : NSObject<UIScrollViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SFSpeechRecognitionTaskDelegate : NSObject<SFSpeechRecognitionTaskDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SFSpeechRecognizerDelegate : NSObject<SFSpeechRecognizerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SFSafariViewControllerDelegate : NSObject<SFSafariViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface QLPreviewControllerDataSource : NSObject<QLPreviewControllerDataSource> {
-}
-	-(id) init;
-@end
-
-@interface QLPreviewControllerDelegate : NSObject<QLPreviewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface QLPreviewItem : NSObject<QLPreviewItem> {
-}
-	-(id) init;
-@end
-
-@interface PKPushRegistryDelegate : NSObject<PKPushRegistryDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NCWidgetProviding : NSObject<NCWidgetProviding> {
-}
-	-(id) init;
-@end
-
-@interface MSStickerBrowserViewDataSource : NSObject<MSStickerBrowserViewDataSource> {
-}
-	-(id) init;
-@end
-
-@interface ADBannerViewDelegate : NSObject<ADBannerViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ADInterstitialAdDelegate : NSObject<ADInterstitialAdDelegate> {
-}
-	-(id) init;
-@end
-
-@interface EAAccessoryDelegate : NSObject<EAAccessoryDelegate> {
-}
-	-(id) init;
-@end
-
-@interface EAWiFiUnconfiguredAccessoryBrowserDelegate : NSObject<EAWiFiUnconfiguredAccessoryBrowserDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NFCNDEFReaderSessionDelegate : NSObject<NFCNDEFReaderSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NFCReaderSessionDelegate : NSObject<NFCReaderSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CNContactPickerDelegate : NSObject<CNContactPickerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CNContactViewControllerDelegate : NSObject<CNContactViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface WCSessionDelegate : NSObject<WCSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface PHContentEditingController : NSObject<PHContentEditingController> {
-}
-	-(id) init;
-@end
-
-@interface PHLivePhotoViewDelegate : NSObject<PHLivePhotoViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface VSAccountManagerDelegate : NSObject<VSAccountManagerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UNUserNotificationCenterDelegate : NSObject<UNUserNotificationCenterDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SKPaymentTransactionObserver : NSObject<SKPaymentTransactionObserver> {
-}
-	-(id) init;
-@end
-
-@interface SKCloudServiceSetupViewControllerDelegate : NSObject<SKCloudServiceSetupViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SKRequestDelegate : NSObject<SKRequestDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SKProductsRequestDelegate : NSObject<SKProductsRequestDelegate, SKRequestDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SKStoreProductViewControllerDelegate : NSObject<SKStoreProductViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface RPBroadcastActivityViewControllerDelegate : NSObject<RPBroadcastActivityViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface RPBroadcastControllerDelegate : NSObject<RPBroadcastControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface RPPreviewViewControllerDelegate : NSObject<RPPreviewViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface RPScreenRecorderDelegate : NSObject<RPScreenRecorderDelegate> {
-}
-	-(id) init;
-@end
-
-@interface PHPhotoLibraryChangeObserver : NSObject<PHPhotoLibraryChangeObserver> {
-}
-	-(id) init;
-@end
-
-@interface PDFDocumentDelegate : NSObject<PDFDocumentDelegate> {
-}
-	-(id) init;
-@end
-
-@interface PDFViewDelegate : NSObject<PDFViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface PKAddPassesViewControllerDelegate : NSObject<PKAddPassesViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface PKAddPaymentPassViewControllerDelegate : NSObject<PKAddPaymentPassViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface PKPaymentAuthorizationControllerDelegate : NSObject<PKPaymentAuthorizationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface PKPaymentAuthorizationViewControllerDelegate : NSObject<PKPaymentAuthorizationViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NWTCPConnectionAuthenticationDelegate : NSObject<NWTCPConnectionAuthenticationDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MCAdvertiserAssistantDelegate : NSObject<MCAdvertiserAssistantDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MCBrowserViewControllerDelegate : NSObject<MCBrowserViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MCNearbyServiceAdvertiserDelegate : NSObject<MCNearbyServiceAdvertiserDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MCNearbyServiceBrowserDelegate : NSObject<MCNearbyServiceBrowserDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MCSessionDelegate : NSObject<MCSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MDLLightProbeIrradianceDataSource : NSObject<MDLLightProbeIrradianceDataSource> {
-}
-	-(id) init;
-@end
-
-@interface UINavigationControllerDelegate : NSObject<UINavigationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MFMailComposeViewControllerDelegate : NSObject<MFMailComposeViewControllerDelegate, UINavigationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MFMessageComposeViewControllerDelegate : NSObject<MFMessageComposeViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MPPlayableContentDelegate : NSObject<MPPlayableContentDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MPPlayableContentDataSource : NSObject<MPPlayableContentDataSource> {
-}
-	-(id) init;
-@end
-
-@interface MPMediaPickerControllerDelegate : NSObject<MPMediaPickerControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MKAnnotation : NSObject<MKAnnotation> {
-}
-	-(id) init;
-@end
-
-@interface MKLocalSearchCompleterDelegate : NSObject<MKLocalSearchCompleterDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MKMapViewDelegate : NSObject<MKMapViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface MKOverlay : NSObject<MKOverlay, MKAnnotation> {
-}
-	-(id) init;
-@end
-
-@interface MKReverseGeocoderDelegate : NSObject<MKReverseGeocoderDelegate> {
-}
-	-(id) init;
-@end
-
-@interface Xamarin_iOS__JavaScriptCore_JSExport : NSObject<JSExport> {
-}
-	-(id) init;
-@end
-
-@interface HMAccessoryBrowserDelegate : NSObject<HMAccessoryBrowserDelegate> {
-}
-	-(id) init;
-@end
-
-@interface HMAccessoryDelegate : NSObject<HMAccessoryDelegate> {
-}
-	-(id) init;
-@end
-
-@interface HMCameraSnapshotControlDelegate : NSObject<HMCameraSnapshotControlDelegate> {
-}
-	-(id) init;
-@end
-
-@interface HMCameraStreamControlDelegate : NSObject<HMCameraStreamControlDelegate> {
-}
-	-(id) init;
-@end
-
-@interface HMHomeDelegate : NSObject<HMHomeDelegate> {
-}
-	-(id) init;
-@end
-
-@interface HMHomeManagerDelegate : NSObject<HMHomeManagerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKAgentDelegate : NSObject<GKAgentDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GLKNamedEffect : NSObject<GLKNamedEffect> {
-}
-	-(id) init;
-@end
-
-@interface GLKViewControllerDelegate : NSObject<GLKViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GLKViewDelegate : NSObject<GLKViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface EKCalendarChooserDelegate : NSObject<EKCalendarChooserDelegate> {
-}
-	-(id) init;
-@end
-
-@interface EKEventEditViewDelegate : NSObject<EKEventEditViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface EKEventViewDelegate : NSObject<EKEventViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CSSearchableIndexDelegate : NSObject<CSSearchableIndexDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CLLocationManagerDelegate : NSObject<CLLocationManagerDelegate> {
-}
-	-(id) init;
+@protocol UIPickerViewModel<UIPickerViewDataSource, UIPickerViewDelegate>
 @end
 
 @interface CoreImage_CIAccordionFoldTransition : CIFilter {
@@ -1963,7 +1342,24 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIHatchedScreen : CoreImage_CIScreenFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIEdgeWork : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIHeightFieldFromMask : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -1990,13 +1386,46 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIHexagonalPixellate : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIExclusionBlendMode : CoreImage_CIBlendFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIHighlightShadowAdjust : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIExposureAdjust : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIHistogramDisplayFilter : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -2017,6 +1446,41 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIHoleDistortion : CoreImage_CIDistortionFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIFlashTransition : CoreImage_CITransitionFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIHueAdjust : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIFourfoldReflectedTile : CoreImage_CITileFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIHueBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIFalseColor : CIFilter {
 }
 	-(void) release;
@@ -2028,20 +1492,19 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CIFlashTransition : CoreImage_CITransitionFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIFourfoldReflectedTile : CoreImage_CITileFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
 @interface CoreImage_CIFourfoldRotatedTile : CoreImage_CITileFilter {
 }
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIHueSaturationValueGradient : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
@@ -2130,165 +1593,8 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CIHatchedScreen : CoreImage_CIScreenFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHeightFieldFromMask : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHexagonalPixellate : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHighlightShadowAdjust : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHistogramDisplayFilter : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHoleDistortion : CoreImage_CIDistortionFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHueAdjust : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHueBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIHueSaturationValueGradient : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
 @protocol CIImageProvider
 	@required -(void) provideImageData:(void *)p0 bytesPerRow:(NSUInteger)p1 origin:(NSUInteger)p2 :(NSUInteger)p3 size:(NSUInteger)p4 :(NSUInteger)p5 userInfo:(NSObject *)p6;
-@end
-
-@interface CoreImage_CIKaleidoscope : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILabDeltaE : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILanczosScaleTransform : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILenticularHaloGenerator : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILightenBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILightTunnel : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILinearBurnBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILinearDodgeBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
 @interface CoreImage_CILinearGradient : CIFilter {
@@ -2298,6 +1604,22 @@
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMorphology : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMorphologyMinimum : CoreImage_CIMorphology {
+}
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
@@ -2313,6 +1635,12 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIMotionBlur : CoreImage_CILinearBlur {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CILineOverlay : CIFilter {
 }
 	-(void) release;
@@ -2324,126 +1652,13 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CILineScreen : CoreImage_CIScreenFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CILuminosityBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMaskedVariableBlur : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMaskToAlpha : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMaximumComponent : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMaximumCompositing : CoreImage_CICompositingFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMedianFilter : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMinimumComponent : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMinimumCompositing : CoreImage_CICompositingFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIModTransition : CoreImage_CITransitionFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMorphology : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMorphologyGradient : CoreImage_CIMorphology {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMorphologyMaximum : CoreImage_CIMorphology {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMorphologyMinimum : CoreImage_CIMorphology {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIMotionBlur : CoreImage_CILinearBlur {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
 @interface CoreImage_CIMultiplyBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILineScreen : CoreImage_CIScreenFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
@@ -2455,7 +1670,35 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CILuminosityBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CINinePartStretched : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIKaleidoscope : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMaskedVariableBlur : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -2477,7 +1720,51 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIMaskToAlpha : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CINoiseReduction : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPerspectiveTransform : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILabDeltaE : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMaximumComponent : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -2494,14 +1781,92 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIPerspectiveTransformWithExtent : CoreImage_CIPerspectiveTransform {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILanczosScaleTransform : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMaximumCompositing : CoreImage_CICompositingFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIOverlayBlendMode : CoreImage_CIBlendFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIPhotoEffect : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILenticularHaloGenerator : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMedianFilter : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIPageCurlTransition : CoreImage_CITransitionFilter {
 }
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPhotoEffectChrome : CoreImage_CIPhotoEffect {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILightenBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMinimumComponent : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
@@ -2517,7 +1882,42 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIPhotoEffectFade : CoreImage_CIPhotoEffect {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILightTunnel : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMinimumCompositing : CoreImage_CICompositingFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIParallelogramTile : CoreImage_CITileFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPhotoEffectInstant : CoreImage_CIPhotoEffect {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIModTransition : CoreImage_CITransitionFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
@@ -2529,18 +1929,55 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CIPerspectiveTransform : CIFilter {
+@interface CoreImage_CIPhotoEffectMono : CoreImage_CIPhotoEffect {
 }
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILinearBurnBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPhotoEffectNoir : CoreImage_CIPhotoEffect {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CILinearDodgeBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMorphologyGradient : CoreImage_CIMorphology {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPhotoEffectProcess : CoreImage_CIPhotoEffect {
+}
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
 @interface CoreImage_CIPerspectiveCorrection : CoreImage_CIPerspectiveTransform {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIMorphologyMaximum : CoreImage_CIMorphology {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPhotoEffectTonal : CoreImage_CIPhotoEffect {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
@@ -2557,94 +1994,7 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CIPerspectiveTransformWithExtent : CoreImage_CIPerspectiveTransform {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffect : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectChrome : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectFade : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectInstant : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectMono : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectNoir : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectProcess : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectTonal : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPhotoEffectTransfer : CoreImage_CIPhotoEffect {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPinchDistortion : CoreImage_CIDistortionFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPinLightBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPixellate : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIPointillize : CIFilter {
+@interface CoreImage_CISepiaTone : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -2661,6 +2011,34 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIStretchCrop : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPhotoEffectTransfer : CoreImage_CIPhotoEffect {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIShadedMaterial : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIRadialGradient : CIFilter {
 }
 	-(void) release;
@@ -2672,58 +2050,13 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CIRandomGenerator : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIRippleTransition : CoreImage_CITransitionFilter {
+@interface CoreImage_CIPinchDistortion : CoreImage_CIDistortionFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CIRowAverage : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CISaturationBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIScreenBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CISepiaTone : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIShadedMaterial : CIFilter {
+@interface CoreImage_CIStripesGenerator : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -2745,13 +2078,75 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIRandomGenerator : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPinLightBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CISubtractBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CISixfoldReflectedTile : CoreImage_CITileFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CIPixellate : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CISunbeamsGenerator : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CISixfoldRotatedTile : CoreImage_CITileFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIPointillize : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CISwipeTransition : CoreImage_CITransitionFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
@@ -2763,7 +2158,24 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CITemperatureAndTint : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CISoftLightBlendMode : CoreImage_CIBlendFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CITwirlDistortion : CoreImage_CIDistortionFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
@@ -2781,8 +2193,36 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CITextImageGenerator : CoreImage_CIImageGenerator {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIUnsharpMask : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CISourceOutCompositing : CoreImage_CICompositingFilter {
 }
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIThermal : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
@@ -2804,124 +2244,18 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CISpotLight : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CISRGBToneCurveToLinear : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIStarShineGenerator : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIStraightenFilter : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIStretchCrop : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIStripesGenerator : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CISubtractBlendMode : CoreImage_CIBlendFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CISunbeamsGenerator : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CISwipeTransition : CoreImage_CITransitionFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CITemperatureAndTint : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CITextImageGenerator : CoreImage_CIImageGenerator {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIThermal : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
 @interface CoreImage_CIToneCurve : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CISpotLight : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -2943,46 +2277,6 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface CoreImage_CITriangleKaleidoscope : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CITriangleTile : CoreImage_CITileFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CITwelvefoldReflectedTile : CoreImage_CITileFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CITwirlDistortion : CoreImage_CIDistortionFilter {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface CoreImage_CIUnsharpMask : CIFilter {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
 @interface CoreImage_CIVibrance : CIFilter {
 }
 	-(void) release;
@@ -2994,7 +2288,57 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CISRGBToneCurveToLinear : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIRippleTransition : CoreImage_CITransitionFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIVignette : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CITriangleKaleidoscope : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIStarShineGenerator : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIRowAverage : CIFilter {
 }
 	-(void) release;
 	-(id) retain;
@@ -3016,7 +2360,36 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
+@interface CoreImage_CITriangleTile : CoreImage_CITileFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIStraightenFilter : CIFilter {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
 @interface CoreImage_CIVortexDistortion : CoreImage_CIDistortionFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CITwelvefoldReflectedTile : CoreImage_CITileFilter {
+}
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CISaturationBlendMode : CoreImage_CIBlendFilter {
 }
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
@@ -3029,6 +2402,12 @@
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+	-(id) initWithCoder:(NSCoder *)p0;
+@end
+
+@interface CoreImage_CIScreenBlendMode : CoreImage_CIBlendFilter {
+}
 	-(id) init;
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
@@ -3055,924 +2434,10 @@
 	-(id) initWithCoder:(NSCoder *)p0;
 @end
 
-@interface NSFetchedResultsControllerDelegate : NSObject<NSFetchedResultsControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSFetchedResultsSectionInfo : NSObject<NSFetchedResultsSectionInfo> {
-}
-	-(id) init;
-@end
-
-@interface CALayerDelegate : NSObject<CALayerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CAAnimationDelegate : NSObject<CAAnimationDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CAMediaTiming : NSObject<CAMediaTiming> {
-}
-	-(id) init;
-@end
-
-@interface CKRecordValue : NSObject<CKRecordValue> {
-}
-	-(id) init;
-@end
-
-@interface CXCallDirectoryExtensionContextDelegate : NSObject<CXCallDirectoryExtensionContextDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CXCallObserverDelegate : NSObject<CXCallObserverDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CXProviderDelegate : NSObject<CXProviderDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ARSCNViewDelegate : NSObject<ARSCNViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ARSessionDelegate : NSObject<ARSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ARSKViewDelegate : NSObject<ARSKViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ABNewPersonViewControllerDelegate : NSObject<ABNewPersonViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ABPeoplePickerNavigationControllerDelegate : NSObject<ABPeoplePickerNavigationControllerDelegate, UINavigationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ABPersonViewControllerDelegate : NSObject<ABPersonViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface ABUnknownPersonViewControllerDelegate : NSObject<ABUnknownPersonViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SKPhysicsContactDelegate : NSObject<SKPhysicsContactDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SKSceneDelegate : NSObject<SKSceneDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SKViewDelegate : NSObject<SKViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNAnimatable : NSObject<SCNAnimatable> {
-}
-	-(id) init;
-@end
-
-@interface SCNSceneRenderer : NSObject<SCNSceneRenderer> {
-}
-	-(id) init;
-@end
-
-@interface SCNActionable : NSObject<SCNActionable> {
-}
-	-(id) init;
-@end
-
-@interface SCNAvoidOccluderConstraintDelegate : NSObject<SCNAvoidOccluderConstraintDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNBoundingVolume : NSObject<SCNBoundingVolume> {
-}
-	-(id) init;
-@end
-
-@interface SCNCameraControllerDelegate : NSObject<SCNCameraControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNNodeRendererDelegate : NSObject<SCNNodeRendererDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNPhysicsContactDelegate : NSObject<SCNPhysicsContactDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNProgramDelegate : NSObject<SCNProgramDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNSceneExportDelegate : NSObject<SCNSceneExportDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNSceneRendererDelegate : NSObject<SCNSceneRendererDelegate> {
-}
-	-(id) init;
-@end
-
-@interface SCNShadable : NSObject<SCNShadable> {
-}
-	-(id) init;
-@end
-
-@interface SCNTechniqueSupport : NSObject<SCNTechniqueSupport> {
-}
-	-(id) init;
-@end
-
-@interface GKLocalPlayerListener : NSObject<GKLocalPlayerListener> {
-}
-	-(id) init;
-@end
-
-@interface GKSessionDelegate : NSObject<GKSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKAchievementViewControllerDelegate : NSObject<GKAchievementViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKChallengeEventHandlerDelegate : NSObject<GKChallengeEventHandlerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKChallengeListener : NSObject<GKChallengeListener> {
-}
-	-(id) init;
-@end
-
-@interface GKFriendRequestComposeViewControllerDelegate : NSObject<GKFriendRequestComposeViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKGameCenterControllerDelegate : NSObject<GKGameCenterControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKInviteEventListener : NSObject<GKInviteEventListener> {
-}
-	-(id) init;
-@end
-
-@interface GKLeaderboardViewControllerDelegate : NSObject<GKLeaderboardViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKMatchDelegate : NSObject<GKMatchDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKMatchmakerViewControllerDelegate : NSObject<GKMatchmakerViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKPeerPickerControllerDelegate : NSObject<GKPeerPickerControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKSavedGameListener : NSObject<GKSavedGameListener> {
-}
-	-(id) init;
-@end
-
-@interface GKTurnBasedEventHandlerDelegate : NSObject<GKTurnBasedEventHandlerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKTurnBasedEventListener : NSObject<GKTurnBasedEventListener> {
-}
-	-(id) init;
-@end
-
-@interface GKTurnBasedMatchmakerViewControllerDelegate : NSObject<GKTurnBasedMatchmakerViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface GKVoiceChatClient : NSObject<GKVoiceChatClient> {
-}
-	-(id) init;
-@end
-
-@interface WKNavigationDelegate : NSObject<WKNavigationDelegate> {
-}
-	-(id) init;
-@end
-
-@interface WKScriptMessageHandler : NSObject<WKScriptMessageHandler> {
-}
-	-(id) init;
-@end
-
-@interface WKUIDelegate : NSObject<WKUIDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIAdaptivePresentationControllerDelegate : NSObject<UIAdaptivePresentationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPopoverPresentationControllerDelegate : NSObject<UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSLayoutManagerDelegate : NSObject<NSLayoutManagerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSTextAttachmentContainer : NSObject<NSTextAttachmentContainer> {
-}
-	-(id) init;
-@end
-
-@interface NSTextStorageDelegate : NSObject<NSTextStorageDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIAccelerometerDelegate : NSObject<UIAccelerometerDelegate> {
-}
-	-(id) init;
-@end
-
 @protocol UIAccessibilityContainer
 @end
 
-@interface UIAccessibilityContainerDataTable : NSObject<UIAccessibilityContainerDataTable> {
-}
-	-(id) init;
-@end
-
-@interface UIActionSheetDelegate : NSObject<UIActionSheetDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIActivityItemSource : NSObject<UIActivityItemSource> {
-}
-	-(id) init;
-@end
-
-@interface UIAlertViewDelegate : NSObject<UIAlertViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIAppearanceContainer : NSObject<UIAppearanceContainer> {
-}
-	-(id) init;
-@end
-
-@interface UIBarPositioning : NSObject<UIBarPositioning> {
-}
-	-(id) init;
-@end
-
-@interface UIBarPositioningDelegate : NSObject<UIBarPositioningDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UICloudSharingControllerDelegate : NSObject<UICloudSharingControllerDelegate> {
-}
-	-(id) init;
-@end
-
 @protocol UICollectionViewSource<UICollectionViewDataSource, UICollectionViewDelegate>
-@end
-
-@interface UICollectionViewDataSource : NSObject<UICollectionViewDataSource> {
-}
-	-(id) init;
-@end
-
-@interface UICollectionViewDelegate : NSObject<UICollectionViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UICollectionViewDelegateFlowLayout : NSObject<UICollectionViewDelegateFlowLayout, UICollectionViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UICollectionViewDragDelegate : NSObject<UICollectionViewDragDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UICollectionViewDropDelegate : NSObject<UICollectionViewDropDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UICollectionViewSource : NSObject<UICollectionViewDataSource, UICollectionViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UICollisionBehaviorDelegate : NSObject<UICollisionBehaviorDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIContentContainer : NSObject<UIContentContainer> {
-}
-	-(id) init;
-@end
-
-@interface UICoordinateSpace : NSObject<UICoordinateSpace> {
-}
-	-(id) init;
-@end
-
-@interface UIDocumentBrowserViewControllerDelegate : NSObject<UIDocumentBrowserViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIDocumentInteractionControllerDelegate : NSObject<UIDocumentInteractionControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIDocumentMenuDelegate : NSObject<UIDocumentMenuDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIDocumentPickerDelegate : NSObject<UIDocumentPickerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIDragInteractionDelegate : NSObject<UIDragInteractionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIDropInteractionDelegate : NSObject<UIDropInteractionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIDynamicAnimatorDelegate : NSObject<UIDynamicAnimatorDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIDynamicItem : NSObject<UIDynamicItem> {
-}
-	-(id) init;
-@end
-
-@interface UIGestureRecognizerDelegate : NSObject<UIGestureRecognizerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIImagePickerControllerDelegate : NSObject<UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UILayoutSupport : NSObject<UILayoutSupport> {
-}
-	-(id) init;
-@end
-
-@interface UINavigationBarDelegate : NSObject<UINavigationBarDelegate, UIBarPositioningDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIObjectRestoration : NSObject<UIObjectRestoration> {
-}
-	-(id) init;
-@end
-
-@interface UIPageViewControllerDataSource : NSObject<UIPageViewControllerDataSource> {
-}
-	-(id) init;
-@end
-
-@interface UIPageViewControllerDelegate : NSObject<UIPageViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPickerViewDelegate : NSObject<UIPickerViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPickerViewAccessibilityDelegate : NSObject<UIPickerViewAccessibilityDelegate, UIPickerViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPickerViewDataSource : NSObject<UIPickerViewDataSource> {
-}
-	-(id) init;
-@end
-
-@protocol UIPickerViewModel<UIPickerViewDataSource, UIPickerViewDelegate>
-@end
-
-@interface UIPickerViewModel : NSObject<UIPickerViewDataSource, UIPickerViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPopoverControllerDelegate : NSObject<UIPopoverControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPreviewInteractionDelegate : NSObject<UIPreviewInteractionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPrinterPickerControllerDelegate : NSObject<UIPrinterPickerControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIPrintInteractionControllerDelegate : NSObject<UIPrintInteractionControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIScrollViewAccessibilityDelegate : NSObject<UIScrollViewAccessibilityDelegate, UIScrollViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UISearchBarDelegate : NSObject<UISearchBarDelegate, UIBarPositioningDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UISearchControllerDelegate : NSObject<UISearchControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UISearchDisplayDelegate : NSObject<UISearchDisplayDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UISearchResultsUpdating : NSObject<UISearchResultsUpdating> {
-}
-	-(id) init;
-@end
-
-@interface UISplitViewControllerDelegate : NSObject<UISplitViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIStateRestoring : NSObject<UIStateRestoring> {
-}
-	-(id) init;
-@end
-
-@interface UITabBarControllerDelegate : NSObject<UITabBarControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITabBarDelegate : NSObject<UITabBarDelegate> {
-}
-	-(id) init;
-@end
-
-@interface Xamarin_iOS__UIKit_UITableViewDataSource : NSObject<UITableViewDataSource> {
-}
-	-(id) init;
-@end
-
-@interface UITableViewDelegate : NSObject<UITableViewDelegate, UIScrollViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITableViewDragDelegate : NSObject<UITableViewDragDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITableViewDropDelegate : NSObject<UITableViewDropDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITextDocumentProxy : NSObject<UITextDocumentProxy> {
-}
-	-(id) init;
-@end
-
-@interface UITextDragDelegate : NSObject<UITextDragDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITextDropDelegate : NSObject<UITextDropDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITextFieldDelegate : NSObject<UITextFieldDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITextInputDelegate : NSObject<UITextInputDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITextInputTokenizer : NSObject<UITextInputTokenizer> {
-}
-	-(id) init;
-@end
-
-@interface UITextPasteDelegate : NSObject<UITextPasteDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITextViewDelegate : NSObject<UITextViewDelegate, UIScrollViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIToolbarDelegate : NSObject<UIToolbarDelegate, UIBarPositioningDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UITraitEnvironment : NSObject<UITraitEnvironment> {
-}
-	-(id) init;
-@end
-
-@interface UIVideoEditorControllerDelegate : NSObject<UIVideoEditorControllerDelegate, UINavigationControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIViewControllerAnimatedTransitioning : NSObject<UIViewControllerAnimatedTransitioning> {
-}
-	-(id) init;
-@end
-
-@interface UIViewControllerContextTransitioning : NSObject<UIViewControllerContextTransitioning> {
-}
-	-(id) init;
-@end
-
-@interface UIViewControllerInteractiveTransitioning : NSObject<UIViewControllerInteractiveTransitioning> {
-}
-	-(id) init;
-@end
-
-@interface UIViewControllerPreviewingDelegate : NSObject<UIViewControllerPreviewingDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIViewControllerTransitioningDelegate : NSObject<UIViewControllerTransitioningDelegate> {
-}
-	-(id) init;
-@end
-
-@interface UIWebViewDelegate : NSObject<UIWebViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSFileManagerDelegate : NSObject<NSFileManagerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSCacheDelegate : NSObject<NSCacheDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSCoding : NSObject<NSCoding> {
-}
-	-(id) init;
-	-(id) initWithCoder:(NSCoder *)p0;
-@end
-
-@interface NSCopying : NSObject<NSCopying> {
-}
-	-(id) init;
-@end
-
-@interface NSExtensionRequestHandling : NSObject<NSExtensionRequestHandling> {
-}
-	-(id) init;
-@end
-
-@interface NSFilePresenter : NSObject<NSFilePresenter> {
-}
-	-(id) init;
-@end
-
-@interface NSKeyedArchiverDelegate : NSObject<NSKeyedArchiverDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSKeyedUnarchiverDelegate : NSObject<NSKeyedUnarchiverDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSPortDelegate : NSObject<NSPortDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSMachPortDelegate : NSObject<NSMachPortDelegate, NSPortDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSMetadataQueryDelegate : NSObject<NSMetadataQueryDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSMutableCopying : NSObject<NSMutableCopying> {
-}
-	-(id) init;
-@end
-
-@interface NSNetServiceBrowserDelegate : NSObject<NSNetServiceBrowserDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSNetServiceDelegate : NSObject<NSNetServiceDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSStreamDelegate : NSObject<NSStreamDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLAuthenticationChallengeSender : NSObject<NSURLAuthenticationChallengeSender> {
-}
-	-(id) init;
-@end
-
-@interface NSURLConnectionDelegate : NSObject<NSURLConnectionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLConnectionDataDelegate : NSObject<NSURLConnectionDataDelegate, NSURLConnectionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLConnectionDownloadDelegate : NSObject<NSURLConnectionDownloadDelegate, NSURLConnectionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLSessionDelegate : NSObject<NSURLSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLSessionTaskDelegate : NSObject<NSURLSessionTaskDelegate, NSURLSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLSessionDataDelegate : NSObject<NSURLSessionDataDelegate, NSURLSessionTaskDelegate, NSURLSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLSessionDownloadDelegate : NSObject<NSURLSessionDownloadDelegate, NSURLSessionTaskDelegate, NSURLSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSURLSessionStreamDelegate : NSObject<NSURLSessionStreamDelegate, NSURLSessionTaskDelegate, NSURLSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface NSUserActivityDelegate : NSObject<NSUserActivityDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CBCentralManagerDelegate : NSObject<CBCentralManagerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CBPeripheralDelegate : NSObject<CBPeripheralDelegate> {
-}
-	-(id) init;
-@end
-
-@interface CBPeripheralManagerDelegate : NSObject<CBPeripheralManagerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVPictureInPictureControllerDelegate : NSObject<AVPictureInPictureControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVPlayerViewControllerDelegate : NSObject<AVPlayerViewControllerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVRoutePickerViewDelegate : NSObject<AVRoutePickerViewDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVCaptureAudioDataOutputSampleBufferDelegate : NSObject<AVCaptureAudioDataOutputSampleBufferDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVAudioPlayerDelegate : NSObject<AVAudioPlayerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVAudioRecorderDelegate : NSObject<AVAudioRecorderDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVAudioSessionDelegate : NSObject<AVAudioSessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVAssetDownloadDelegate : NSObject<AVAssetDownloadDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVAssetResourceLoaderDelegate : NSObject<AVAssetResourceLoaderDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVAsynchronousKeyValueLoading : NSObject<AVAsynchronousKeyValueLoading> {
-}
-	-(id) init;
-@end
-
-@interface AVAudio3DMixing : NSObject<AVAudio3DMixing> {
-}
-	-(id) init;
-@end
-
-@interface AVAudioStereoMixing : NSObject<AVAudioStereoMixing> {
-}
-	-(id) init;
-@end
-
-@interface AVCaptureDataOutputSynchronizerDelegate : NSObject<AVCaptureDataOutputSynchronizerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVCaptureDepthDataOutputDelegate : NSObject<AVCaptureDepthDataOutputDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVCaptureFileOutputRecordingDelegate : NSObject<AVCaptureFileOutputRecordingDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVCaptureMetadataOutputObjectsDelegate : NSObject<AVCaptureMetadataOutputObjectsDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVCapturePhotoCaptureDelegate : NSObject<AVCapturePhotoCaptureDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVCaptureVideoDataOutputSampleBufferDelegate : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVContentKeySessionDelegate : NSObject<AVContentKeySessionDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVPlayerItemOutputPushDelegate : NSObject<AVPlayerItemOutputPushDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVPlayerItemLegibleOutputPushDelegate : NSObject<AVPlayerItemLegibleOutputPushDelegate, AVPlayerItemOutputPushDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVPlayerItemMetadataCollectorPushDelegate : NSObject<AVPlayerItemMetadataCollectorPushDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVPlayerItemMetadataOutputPushDelegate : NSObject<AVPlayerItemMetadataOutputPushDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVPlayerItemOutputPullDelegate : NSObject<AVPlayerItemOutputPullDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVSpeechSynthesizerDelegate : NSObject<AVSpeechSynthesizerDelegate> {
-}
-	-(id) init;
-@end
-
-@interface AVVideoCompositing : NSObject<AVVideoCompositing> {
-}
-	-(id) init;
 @end
 
 @interface AppDelegate : NSObject<UIApplicationDelegate> {
@@ -4007,6 +2472,7 @@
 	@property (nonatomic, assign) UITextField * locationTextField;
 	@property (nonatomic, assign) UITextField * numLegsTextField;
 	@property (nonatomic, assign) UITextField * relayTextField;
+	@property (nonatomic, assign) UIButton * resultEditButton;
 	@property (nonatomic, assign) UITextField * surfaceTypeTextField;
 	@property (nonatomic, assign) UITextField * unitTextField;
 	-(void) release;
@@ -4037,12 +2503,15 @@
 	-(void) setNumLegsTextField:(UITextField *)p0;
 	-(UITextField *) relayTextField;
 	-(void) setRelayTextField:(UITextField *)p0;
+	-(UIButton *) resultEditButton;
+	-(void) setResultEditButton:(UIButton *)p0;
 	-(UITextField *) surfaceTypeTextField;
 	-(void) setSurfaceTypeTextField:(UITextField *)p0;
 	-(UITextField *) unitTextField;
 	-(void) setUnitTextField:(UITextField *)p0;
 	-(void) viewDidLoad;
 	-(void) CommitButton_TouchUpInside:(UIButton *)p0;
+	-(void) ResultEditButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -4151,6 +2620,7 @@
 	@property (nonatomic, assign) UITextField * filterCourseTextField;
 	@property (nonatomic, assign) UITextField * filterDateTextField;
 	@property (nonatomic, assign) UITextField * filterLocationTextField;
+	@property (nonatomic, assign) UITextField * filterNameTextField;
 	@property (nonatomic, assign) UIView * filterRaceController;
 	@property (nonatomic, assign) UITableView * filterRaceTableView;
 	@property (nonatomic, assign) UILabel * testlabel;
@@ -4164,6 +2634,8 @@
 	-(void) setFilterDateTextField:(UITextField *)p0;
 	-(UITextField *) filterLocationTextField;
 	-(void) setFilterLocationTextField:(UITextField *)p0;
+	-(UITextField *) filterNameTextField;
+	-(void) setFilterNameTextField:(UITextField *)p0;
 	-(UIView *) filterRaceController;
 	-(void) setFilterRaceController:(UIView *)p0;
 	-(UITableView *) filterRaceTableView;
@@ -4283,6 +2755,7 @@
 }
 	@property (nonatomic, assign) UILabel * courseLabel;
 	@property (nonatomic, assign) UILabel * locationLabel;
+	@property (nonatomic, assign) UIButton * raceRecordChangeButton;
 	@property (nonatomic, assign) UITableView * RaceRecordTableView;
 	@property (nonatomic, assign) UIView * viewRaceRecordView;
 	-(void) release;
@@ -4293,6 +2766,8 @@
 	-(void) setCourseLabel:(UILabel *)p0;
 	-(UILabel *) locationLabel;
 	-(void) setLocationLabel:(UILabel *)p0;
+	-(UIButton *) raceRecordChangeButton;
+	-(void) setRaceRecordChangeButton:(UIButton *)p0;
 	-(UITableView *) RaceRecordTableView;
 	-(void) setRaceRecordTableView:(UITableView *)p0;
 	-(UIView *) viewRaceRecordView;
@@ -4304,6 +2779,7 @@
 @interface viewSeriesRecordViewController : UIViewController {
 }
 	@property (nonatomic, assign) UILabel * seriesLabel;
+	@property (nonatomic, assign) UIButton * seriesRecordChangeButton;
 	@property (nonatomic, assign) UITableView * seriesRecordTableView;
 	@property (nonatomic, assign) UIView * viewSeriesRecordView;
 	@property (nonatomic, assign) UILabel * yearLabel;
@@ -4313,6 +2789,8 @@
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(UILabel *) seriesLabel;
 	-(void) setSeriesLabel:(UILabel *)p0;
+	-(UIButton *) seriesRecordChangeButton;
+	-(void) setSeriesRecordChangeButton:(UIButton *)p0;
 	-(UITableView *) seriesRecordTableView;
 	-(void) setSeriesRecordTableView:(UITableView *)p0;
 	-(UIView *) viewSeriesRecordView;
@@ -4326,6 +2804,7 @@
 @interface handicapViewController : UIViewController {
 }
 	@property (nonatomic, assign) UITableView * handicapDateTableView;
+	@property (nonatomic, assign) UISearchBar * handicapSearchBar;
 	@property (nonatomic, assign) UITableView * handicapTimeTableView;
 	@property (nonatomic, assign) UIView * handicapView;
 	@property (nonatomic, assign) UISearchDisplayController * searchDisplayController;
@@ -4335,6 +2814,8 @@
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(UITableView *) handicapDateTableView;
 	-(void) setHandicapDateTableView:(UITableView *)p0;
+	-(UISearchBar *) handicapSearchBar;
+	-(void) setHandicapSearchBar:(UISearchBar *)p0;
 	-(UITableView *) handicapTimeTableView;
 	-(void) setHandicapTimeTableView:(UITableView *)p0;
 	-(UIView *) handicapView;
@@ -4358,6 +2839,7 @@
 
 @interface timeEventViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * doneButton;
 	@property (nonatomic, assign) UIButton * lapButton;
 	@property (nonatomic, assign) UITableView * lapTimings;
 	@property (nonatomic, assign) UIButton * startButton;
@@ -4366,6 +2848,8 @@
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) doneButton;
+	-(void) setDoneButton:(UIButton *)p0;
 	-(UIButton *) lapButton;
 	-(void) setLapButton:(UIButton *)p0;
 	-(UITableView *) lapTimings;
@@ -4375,6 +2859,7 @@
 	-(UILabel *) timerLabel;
 	-(void) setTimerLabel:(UILabel *)p0;
 	-(void) viewDidLoad;
+	-(void) DoneButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -4393,17 +2878,45 @@
 
 @interface addNewRecordViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * addButton;
+	@property (nonatomic, assign) UIButton * checkButton;
+	@property (nonatomic, assign) UITextField * courseSearch;
+	@property (nonatomic, assign) UITextField * dateSearch;
 	@property (nonatomic, assign) UIView * leftView;
+	@property (nonatomic, assign) UITextField * locationSearch;
+	@property (nonatomic, assign) UITextField * memberIDSearch;
 	@property (nonatomic, assign) UIView * rightView;
+	@property (nonatomic, assign) UITextField * seriesSearch;
+	@property (nonatomic, assign) UISegmentedControl * surfaceTypeSeg;
+	@property (nonatomic, assign) UITextField * timeSearch;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) addButton;
+	-(void) setAddButton:(UIButton *)p0;
+	-(UIButton *) checkButton;
+	-(void) setCheckButton:(UIButton *)p0;
+	-(UITextField *) courseSearch;
+	-(void) setCourseSearch:(UITextField *)p0;
+	-(UITextField *) dateSearch;
+	-(void) setDateSearch:(UITextField *)p0;
 	-(UIView *) leftView;
 	-(void) setLeftView:(UIView *)p0;
+	-(UITextField *) locationSearch;
+	-(void) setLocationSearch:(UITextField *)p0;
+	-(UITextField *) memberIDSearch;
+	-(void) setMemberIDSearch:(UITextField *)p0;
 	-(UIView *) rightView;
 	-(void) setRightView:(UIView *)p0;
+	-(UITextField *) seriesSearch;
+	-(void) setSeriesSearch:(UITextField *)p0;
+	-(UISegmentedControl *) surfaceTypeSeg;
+	-(void) setSurfaceTypeSeg:(UISegmentedControl *)p0;
+	-(UITextField *) timeSearch;
+	-(void) setTimeSearch:(UITextField *)p0;
 	-(void) viewDidLoad;
+	-(void) CheckButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -4616,25 +3129,78 @@
 
 @interface courseManagementViewController : UIViewController {
 }
+	@property (nonatomic, assign) UITableView * courseTableView;
+	@property (nonatomic, assign) UITableView * locationTableView;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableView *) courseTableView;
+	-(void) setCourseTableView:(UITableView *)p0;
+	-(UITableView *) locationTableView;
+	-(void) setLocationTableView:(UITableView *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
 @interface pointScoresViewController : UIViewController {
 }
 	@property (nonatomic, assign) UIView * leftView;
+	@property (nonatomic, assign) UISearchBar * pointScoreSearchBar;
+	@property (nonatomic, assign) UITextField * pointScoreTextField;
 	@property (nonatomic, assign) UIView * rightView;
+	@property (nonatomic, assign) UITextField * seriesTextField;
+	@property (nonatomic, assign) UIButton * viewButton;
+	@property (nonatomic, assign) UITextField * yearTextField;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(UIView *) leftView;
 	-(void) setLeftView:(UIView *)p0;
+	-(UISearchBar *) pointScoreSearchBar;
+	-(void) setPointScoreSearchBar:(UISearchBar *)p0;
+	-(UITextField *) pointScoreTextField;
+	-(void) setPointScoreTextField:(UITextField *)p0;
 	-(UIView *) rightView;
 	-(void) setRightView:(UIView *)p0;
+	-(UITextField *) seriesTextField;
+	-(void) setSeriesTextField:(UITextField *)p0;
+	-(UIButton *) viewButton;
+	-(void) setViewButton:(UIButton *)p0;
+	-(UITextField *) yearTextField;
+	-(void) setYearTextField:(UITextField *)p0;
+	-(void) viewDidLoad;
+	-(void) ViewButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_chooseLocationResultViewController : UITableViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface chooseEventViewController : UIViewController {
+}
+	@property (nonatomic, assign) UITableView * courseTableView;
+	@property (nonatomic, assign) UITextField * dateTextField;
+	@property (nonatomic, assign) UITableView * locationTableView;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableView *) courseTableView;
+	-(void) setCourseTableView:(UITableView *)p0;
+	-(UITextField *) dateTextField;
+	-(void) setDateTextField:(UITextField *)p0;
+	-(UITableView *) locationTableView;
+	-(void) setLocationTableView:(UITableView *)p0;
 	-(void) viewDidLoad;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
@@ -4689,7 +3255,6 @@
 
 @interface chooseLocationViewController : UIViewController {
 }
-	@property (nonatomic, assign) UITextField * addressTextField;
 	@property (nonatomic, assign) UIImageView * locationImage;
 	@property (nonatomic, assign) MKMapView * locationMap;
 	@property (nonatomic, assign) UIButton * setLocationButton;
@@ -4698,8 +3263,6 @@
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITextField *) addressTextField;
-	-(void) setAddressTextField:(UITextField *)p0;
 	-(UIImageView *) locationImage;
 	-(void) setLocationImage:(UIImageView *)p0;
 	-(MKMapView *) locationMap;
@@ -4717,20 +3280,62 @@
 
 @interface selectRecordTypeViewController : UIViewController {
 }
+	@property (nonatomic, assign) UIButton * addNewRecordButton;
 	@property (nonatomic, assign) UIButton * viewRaceRecordButton;
 	@property (nonatomic, assign) UIButton * viewSeriesRecordButton;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) addNewRecordButton;
+	-(void) setAddNewRecordButton:(UIButton *)p0;
 	-(UIButton *) viewRaceRecordButton;
 	-(void) setViewRaceRecordButton:(UIButton *)p0;
 	-(UIButton *) viewSeriesRecordButton;
 	-(void) setViewSeriesRecordButton:(UIButton *)p0;
 	-(void) viewDidLoad;
+	-(void) AddNewRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewRaceRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewSeriesRecordButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface scanButtonVewController : UIViewController {
+}
+	@property (nonatomic, assign) UIButton * detailsButton;
+	@property (nonatomic, assign) UIButton * doneButton;
+	@property (nonatomic, assign) UIButton * memScanButton;
+	@property (nonatomic, assign) UIButton * posScanButton;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) detailsButton;
+	-(void) setDetailsButton:(UIButton *)p0;
+	-(UIButton *) doneButton;
+	-(void) setDoneButton:(UIButton *)p0;
+	-(UIButton *) memScanButton;
+	-(void) setMemScanButton:(UIButton *)p0;
+	-(UIButton *) posScanButton;
+	-(void) setPosScanButton:(UIButton *)p0;
+	-(void) viewDidLoad;
+	-(void) DetailsButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_chooseLocationViewController_SearchResultsUpdator : NSObject<UISearchResultsUpdating> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) updateSearchResultsForSearchController:(UISearchController *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface BCChatAction : NSObject {
+}
 @end
 
 @interface UIKit_UIView_UIViewAppearance : NSObject {
@@ -4746,31 +3351,33 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface Messages_MSStickerBrowserView_MSStickerBrowserViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface UIKit_UIControl_UIControlAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface Messages_MSStickerView_MSStickerViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface UIKit_UIDatePicker_UIDatePickerAppearance : UIKit_UIControl_UIControlAppearance {
 }
 @end
 
-@interface iAd_ADBannerView_ADBannerViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface AVKit_AVRoutePickerView_AVRoutePickerViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface HealthKitUI_HKActivityRingView_HKActivityRingViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface BusinessChat_BCChatButton_BCChatButtonAppearance : UIKit_UIControl_UIControlAppearance {
 }
 @end
 
-@interface CoreAudioKit_CAInterAppAudioSwitcherView_CAInterAppAudioSwitcherViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface BCChatButton : UIControl {
+}
+	-(id) initWithCoder:(NSCoder *)p0;
+	-(id) initWithStyle:(NSInteger)p0;
+@end
+
+@interface HomeKit_HMCameraView_HMCameraViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface CoreAudioKit_CAInterAppAudioTransportView_CAInterAppAudioTransportViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface PhotosUI_PHLivePhotoView_PHLivePhotoViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface MediaPlayer_MPVolumeView_MPVolumeViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
@@ -4778,41 +3385,19 @@
 }
 @end
 
+@interface WebKit_WKWebView_WKWebViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
 @interface PdfKit_PdfView_PdfViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface UIKit_UIControl_UIControlAppearance : UIKit_UIView_UIViewAppearance {
+@interface Messages_MSStickerBrowserView_MSStickerBrowserViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface UIKit_UIButton_UIButtonAppearance : UIKit_UIControl_UIControlAppearance {
-}
-	-(UIImage *) backgroundImageForState:(NSUInteger)p0;
-	-(UIImage *) currentBackgroundImage;
-	-(UIImage *) currentImage;
-	-(UIColor *) currentTitleColor;
-	-(UIColor *) currentTitleShadowColor;
-	-(UIImage *) imageForState:(NSUInteger)p0;
-	-(void) setBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1;
-	-(void) setImage:(UIImage *)p0 forState:(NSUInteger)p1;
-	-(void) setTitleColor:(UIColor *)p0 forState:(NSUInteger)p1;
-	-(void) setTitleShadowColor:(UIColor *)p0 forState:(NSUInteger)p1;
-	-(UIColor *) titleColorForState:(NSUInteger)p0;
-	-(UIColor *) titleShadowColorForState:(NSUInteger)p0;
-@end
-
-@interface PassKit_PKAddPassButton_PKAddPassButtonAppearance : UIKit_UIButton_UIButtonAppearance {
-}
-	-(NSInteger) addPassButtonStyle;
-	-(void) setAddPassButtonStyle:(NSInteger)p0;
-@end
-
-@interface PassKit_PKPaymentButton_PKPaymentButtonAppearance : UIKit_UIButton_UIButtonAppearance {
-}
-@end
-
-@interface MetalKit_MTKView_MTKViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface Messages_MSStickerView_MSStickerViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
@@ -4834,63 +3419,137 @@
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
-@interface MediaPlayer_MPVolumeView_MPVolumeViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface __UIGestureRecognizerToken : NSObject {
 }
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface __UIGestureRecognizerParameterlessToken : __UIGestureRecognizerToken {
+}
+	-(void) target;
+@end
+
+@interface __UIGestureRecognizerParametrizedToken : __UIGestureRecognizerToken {
+}
+	-(void) target:(UIGestureRecognizer *)p0;
+@end
+
+@interface AddressBookUI_ABPeoplePickerNavigationController_ABPeoplePickerNavigationControllerAppearance : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface iAd_ADBannerView_ADBannerViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface EventKitUI_EKEventEditViewController_EKEventEditViewControllerAppearance : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface UIKit_UIImageView_UIImageViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface UIKit_UIInputView_UIInputViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface PhotosUI_PHLivePhotoView_PHLivePhotoViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface UIKit_UILabel_UILabelAppearance : UIKit_UIView_UIViewAppearance {
+}
+	-(UIFont *) font;
+	-(void) setFont:(UIFont *)p0;
+	-(UIColor *) highlightedTextColor;
+	-(void) setHighlightedTextColor:(UIColor *)p0;
+	-(UIColor *) shadowColor;
+	-(void) setShadowColor:(UIColor *)p0;
+	-(CGSize) shadowOffset;
+	-(void) setShadowOffset:(CGSize)p0;
+	-(UIColor *) textColor;
+	-(void) setTextColor:(UIColor *)p0;
+@end
+
+@interface UIKit_UINavigationBar_UINavigationBarAppearance : UIKit_UIView_UIViewAppearance {
+}
+	-(UIImage *) backIndicatorImage;
+	-(void) setBackIndicatorImage:(UIImage *)p0;
+	-(UIImage *) backIndicatorTransitionMaskImage;
+	-(void) setBackIndicatorTransitionMaskImage:(UIImage *)p0;
+	-(NSInteger) barStyle;
+	-(void) setBarStyle:(NSInteger)p0;
+	-(UIColor *) barTintColor;
+	-(void) setBarTintColor:(UIColor *)p0;
+	-(UIImage *) backgroundImageForBarMetrics:(NSInteger)p0;
+	-(UIImage *) backgroundImageForBarPosition:(NSInteger)p0 barMetrics:(NSInteger)p1;
+	-(CGFloat) titleVerticalPositionAdjustmentForBarMetrics:(NSInteger)p0;
+	-(void) setBackgroundImage:(UIImage *)p0 forBarMetrics:(NSInteger)p1;
+	-(void) setBackgroundImage:(UIImage *)p0 forBarPosition:(NSInteger)p1 barMetrics:(NSInteger)p2;
+	-(void) setTitleVerticalPositionAdjustment:(CGFloat)p0 forBarMetrics:(NSInteger)p1;
+	-(UIImage *) shadowImage;
+	-(void) setShadowImage:(UIImage *)p0;
+	-(BOOL) isTranslucent;
+	-(void) setTranslucent:(BOOL)p0;
+	-(NSDictionary *) largeTitleTextAttributes;
+	-(void) setLargeTitleTextAttributes:(NSDictionary *)p0;
+	-(NSDictionary *) titleTextAttributes;
+	-(void) setTitleTextAttributes:(NSDictionary *)p0;
+@end
+
+@interface UIKit_UIPageControl_UIPageControlAppearance : UIKit_UIControl_UIControlAppearance {
+}
+	-(UIColor *) currentPageIndicatorTintColor;
+	-(void) setCurrentPageIndicatorTintColor:(UIColor *)p0;
+	-(UIColor *) pageIndicatorTintColor;
+	-(void) setPageIndicatorTintColor:(UIColor *)p0;
 @end
 
 @interface MapKit_MKOverlayView_MKOverlayViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface MapKit_MKAnnotationView_MKAnnotationViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface UIKit_UIPickerView_UIPickerViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface MapKit_MKOverlayPathView_MKOverlayPathViewAppearance : MapKit_MKOverlayView_MKOverlayViewAppearance {
+@interface UIKit_UIPopoverBackgroundView_UIPopoverBackgroundViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface MapKit_MKCircleView_MKCircleViewAppearance : MapKit_MKOverlayPathView_MKOverlayPathViewAppearance {
+@interface CoreAudioKit_CAInterAppAudioSwitcherView_CAInterAppAudioSwitcherViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface MapKit_MKCompassButton_MKCompassButtonAppearance : UIKit_UIView_UIViewAppearance {
+@interface CoreAudioKit_CAInterAppAudioTransportView_CAInterAppAudioTransportViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface MapKit_MKMapView_MKMapViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface MetalKit_MTKView_MTKViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface MapKit_MKMarkerAnnotationView_MKMarkerAnnotationViewAppearance : MapKit_MKAnnotationView_MKAnnotationViewAppearance {
-}
-	-(UIImage *) glyphImage;
-	-(void) setGlyphImage:(UIImage *)p0;
-	-(NSString *) glyphText;
-	-(void) setGlyphText:(NSString *)p0;
-	-(UIColor *) glyphTintColor;
-	-(void) setGlyphTintColor:(UIColor *)p0;
-	-(UIColor *) markerTintColor;
-	-(void) setMarkerTintColor:(UIColor *)p0;
-	-(UIImage *) selectedGlyphImage;
-	-(void) setSelectedGlyphImage:(UIImage *)p0;
-@end
-
-@interface MapKit_MKPinAnnotationView_MKPinAnnotationViewAppearance : MapKit_MKAnnotationView_MKAnnotationViewAppearance {
-}
-	-(UIColor *) pinTintColor;
-	-(void) setPinTintColor:(UIColor *)p0;
-@end
-
-@interface MapKit_MKPolygonView_MKPolygonViewAppearance : MapKit_MKOverlayPathView_MKOverlayPathViewAppearance {
+@interface UIKit_UIActionSheet_UIActionSheetAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface MapKit_MKPolylineView_MKPolylineViewAppearance : MapKit_MKOverlayPathView_MKOverlayPathViewAppearance {
-}
-@end
-
-@interface MapKit_MKScaleView_MKScaleViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface UIKit_UIAlertView_UIAlertViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
@@ -4925,106 +3584,20 @@
 	-(void) setTintColor:(UIColor *)p0;
 @end
 
-@interface MapKit_MKUserTrackingBarButtonItem_MKUserTrackingBarButtonItemAppearance : UIKit_UIBarButtonItem_UIBarButtonItemAppearance {
+@interface UIKit_UIButton_UIButtonAppearance : UIKit_UIControl_UIControlAppearance {
 }
-@end
-
-@interface MapKit_MKUserTrackingButton_MKUserTrackingButtonAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface HomeKit_HMCameraView_HMCameraViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface GLKit_GLKView_GLKViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface EventKitUI_EKEventEditViewController_EKEventEditViewControllerAppearance : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface BusinessChat_BCChatButton_BCChatButtonAppearance : UIKit_UIControl_UIControlAppearance {
-}
-@end
-
-@interface SceneKit_SCNView_SCNViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface ARKit_ARSCNView_ARSCNViewAppearance : SceneKit_SCNView_SCNViewAppearance {
-}
-@end
-
-@interface SpriteKit_SKView_SKViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface ARKit_ARSKView_ARSKViewAppearance : SpriteKit_SKView_SKViewAppearance {
-}
-@end
-
-@interface AddressBookUI_ABPeoplePickerNavigationController_ABPeoplePickerNavigationControllerAppearance : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface GameKit_GKAchievementViewController_GKAchievementViewControllerAppearance : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface GameKit_GKFriendRequestComposeViewController_GKFriendRequestComposeViewControllerAppearance : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface GameKit_GKLeaderboardViewController_GKLeaderboardViewControllerAppearance : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface GameKit_GKTurnBasedMatchmakerViewController_GKTurnBasedMatchmakerViewControllerAppearance : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface WebKit_WKWebView_WKWebViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UIActionSheet_UIActionSheetAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UIAlertView_UIAlertViewAppearance : UIKit_UIView_UIViewAppearance {
-}
+	-(UIImage *) backgroundImageForState:(NSUInteger)p0;
+	-(UIImage *) currentBackgroundImage;
+	-(UIImage *) currentImage;
+	-(UIColor *) currentTitleColor;
+	-(UIColor *) currentTitleShadowColor;
+	-(UIImage *) imageForState:(NSUInteger)p0;
+	-(void) setBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1;
+	-(void) setImage:(UIImage *)p0 forState:(NSUInteger)p1;
+	-(void) setTitleColor:(UIColor *)p0 forState:(NSUInteger)p1;
+	-(void) setTitleShadowColor:(UIColor *)p0 forState:(NSUInteger)p1;
+	-(UIColor *) titleColorForState:(NSUInteger)p0;
+	-(UIColor *) titleShadowColorForState:(NSUInteger)p0;
 @end
 
 @interface UIKit_UIScrollView_UIScrollViewAppearance : UIKit_UIView_UIViewAppearance {
@@ -5033,90 +3606,6 @@
 
 @interface UIKit_UICollectionView_UICollectionViewAppearance : UIKit_UIScrollView_UIScrollViewAppearance {
 }
-@end
-
-@interface __UIGestureRecognizerToken : NSObject {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
-@end
-
-@interface __UIGestureRecognizerParameterlessToken : __UIGestureRecognizerToken {
-}
-	-(void) target;
-@end
-
-@interface __UIGestureRecognizerParametrizedToken : __UIGestureRecognizerToken {
-}
-	-(void) target:(UIGestureRecognizer *)p0;
-@end
-
-@interface UIKit_UINavigationBar_UINavigationBarAppearance : UIKit_UIView_UIViewAppearance {
-}
-	-(UIImage *) backIndicatorImage;
-	-(void) setBackIndicatorImage:(UIImage *)p0;
-	-(UIImage *) backIndicatorTransitionMaskImage;
-	-(void) setBackIndicatorTransitionMaskImage:(UIImage *)p0;
-	-(NSInteger) barStyle;
-	-(void) setBarStyle:(NSInteger)p0;
-	-(UIColor *) barTintColor;
-	-(void) setBarTintColor:(UIColor *)p0;
-	-(UIImage *) backgroundImageForBarMetrics:(NSInteger)p0;
-	-(UIImage *) backgroundImageForBarPosition:(NSInteger)p0 barMetrics:(NSInteger)p1;
-	-(CGFloat) titleVerticalPositionAdjustmentForBarMetrics:(NSInteger)p0;
-	-(void) setBackgroundImage:(UIImage *)p0 forBarMetrics:(NSInteger)p1;
-	-(void) setBackgroundImage:(UIImage *)p0 forBarPosition:(NSInteger)p1 barMetrics:(NSInteger)p2;
-	-(void) setTitleVerticalPositionAdjustment:(CGFloat)p0 forBarMetrics:(NSInteger)p1;
-	-(UIImage *) shadowImage;
-	-(void) setShadowImage:(UIImage *)p0;
-	-(BOOL) isTranslucent;
-	-(void) setTranslucent:(BOOL)p0;
-	-(NSDictionary *) largeTitleTextAttributes;
-	-(void) setLargeTitleTextAttributes:(NSDictionary *)p0;
-	-(NSDictionary *) titleTextAttributes;
-	-(void) setTitleTextAttributes:(NSDictionary *)p0;
-@end
-
-@interface UIKit_UIPickerView_UIPickerViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UISearchBar_UISearchBarAppearance : UIKit_UIView_UIViewAppearance {
-}
-	-(UIImage *) backgroundImage;
-	-(void) setBackgroundImage:(UIImage *)p0;
-	-(UIImage *) backgroundImageForBarPosition:(NSInteger)p0 barMetrics:(NSInteger)p1;
-	-(UIColor *) barTintColor;
-	-(void) setBarTintColor:(UIColor *)p0;
-	-(UIImage *) imageForSearchBarIcon:(NSInteger)p0 state:(NSUInteger)p1;
-	-(UIImage *) scopeBarButtonBackgroundImageForState:(NSUInteger)p0;
-	-(UIImage *) scopeBarButtonDividerImageForLeftSegmentState:(NSUInteger)p0 rightSegmentState:(NSUInteger)p1;
-	-(UIImage *) searchFieldBackgroundImageForState:(NSUInteger)p0;
-	-(UIImage *) scopeBarBackgroundImage;
-	-(void) setScopeBarBackgroundImage:(UIImage *)p0;
-	-(void) setBackgroundImage:(UIImage *)p0 forBarPosition:(NSInteger)p1 barMetrics:(NSInteger)p2;
-	-(void) setImage:(UIImage *)p0 forSearchBarIcon:(NSInteger)p1 state:(NSUInteger)p2;
-	-(void) setScopeBarButtonBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1;
-	-(void) setScopeBarButtonDividerImage:(UIImage *)p0 forLeftSegmentState:(NSUInteger)p1 rightSegmentState:(NSUInteger)p2;
-	-(void) setSearchFieldBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1;
-	-(NSDictionary *) scopeBarButtonTitleTextAttributesForState:(NSUInteger)p0;
-	-(void) setScopeBarButtonTitleTextAttributes:(NSDictionary *)p0 forState:(NSUInteger)p1;
-@end
-
-@interface UIKit_UISegmentedControl_UISegmentedControlAppearance : UIKit_UIControl_UIControlAppearance {
-}
-	-(UIOffset) contentPositionAdjustmentForSegmentType:(NSInteger)p0 barMetrics:(NSInteger)p1;
-	-(UIImage *) dividerImageForLeftSegmentState:(NSUInteger)p0 rightSegmentState:(NSUInteger)p1 barMetrics:(NSInteger)p2;
-	-(UIImage *) backgroundImageForState:(NSUInteger)p0 barMetrics:(NSInteger)p1;
-	-(void) setBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1 barMetrics:(NSInteger)p2;
-	-(void) setContentPositionAdjustment:(UIOffset)p0 forSegmentType:(NSInteger)p1 barMetrics:(NSInteger)p2;
-	-(void) setDividerImage:(UIImage *)p0 forLeftSegmentState:(NSUInteger)p1 rightSegmentState:(NSUInteger)p2 barMetrics:(NSInteger)p3;
-	-(NSDictionary *) titleTextAttributesForState:(NSUInteger)p0;
-	-(void) setTitleTextAttributes:(NSDictionary *)p0 forState:(NSUInteger)p1;
 @end
 
 @interface UIKit_UITableView_UITableViewAppearance : UIKit_UIScrollView_UIScrollViewAppearance {
@@ -5147,6 +3636,28 @@
 }
 @end
 
+@interface UIKit_UISearchBar_UISearchBarAppearance : UIKit_UIView_UIViewAppearance {
+}
+	-(UIImage *) backgroundImage;
+	-(void) setBackgroundImage:(UIImage *)p0;
+	-(UIImage *) backgroundImageForBarPosition:(NSInteger)p0 barMetrics:(NSInteger)p1;
+	-(UIColor *) barTintColor;
+	-(void) setBarTintColor:(UIColor *)p0;
+	-(UIImage *) imageForSearchBarIcon:(NSInteger)p0 state:(NSUInteger)p1;
+	-(UIImage *) scopeBarButtonBackgroundImageForState:(NSUInteger)p0;
+	-(UIImage *) scopeBarButtonDividerImageForLeftSegmentState:(NSUInteger)p0 rightSegmentState:(NSUInteger)p1;
+	-(UIImage *) searchFieldBackgroundImageForState:(NSUInteger)p0;
+	-(UIImage *) scopeBarBackgroundImage;
+	-(void) setScopeBarBackgroundImage:(UIImage *)p0;
+	-(void) setBackgroundImage:(UIImage *)p0 forBarPosition:(NSInteger)p1 barMetrics:(NSInteger)p2;
+	-(void) setImage:(UIImage *)p0 forSearchBarIcon:(NSInteger)p1 state:(NSUInteger)p2;
+	-(void) setScopeBarButtonBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1;
+	-(void) setScopeBarButtonDividerImage:(UIImage *)p0 forLeftSegmentState:(NSUInteger)p1 rightSegmentState:(NSUInteger)p2;
+	-(void) setSearchFieldBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1;
+	-(NSDictionary *) scopeBarButtonTitleTextAttributesForState:(NSUInteger)p0;
+	-(void) setScopeBarButtonTitleTextAttributes:(NSDictionary *)p0 forState:(NSUInteger)p1;
+@end
+
 @interface UIKit_UIToolbar_UIToolbarAppearance : UIKit_UIView_UIViewAppearance {
 }
 	-(UIColor *) barTintColor;
@@ -5155,62 +3666,6 @@
 	-(UIImage *) shadowImageForToolbarPosition:(NSInteger)p0;
 	-(void) setBackgroundImage:(UIImage *)p0 forToolbarPosition:(NSInteger)p1 barMetrics:(NSInteger)p2;
 	-(void) setShadowImage:(UIImage *)p0 forToolbarPosition:(NSInteger)p1;
-@end
-
-@interface UIKit_UIWindow_UIWindowAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UIActivityIndicatorView_UIActivityIndicatorViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-	-(UIColor *) color;
-	-(void) setColor:(UIColor *)p0;
-@end
-
-@interface UIKit_UICollectionReusableView_UICollectionReusableViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UICollectionViewCell_UICollectionViewCellAppearance : UIKit_UICollectionReusableView_UICollectionReusableViewAppearance {
-}
-@end
-
-@interface UIKit_UIDatePicker_UIDatePickerAppearance : UIKit_UIControl_UIControlAppearance {
-}
-@end
-
-@interface UIKit_UIImageView_UIImageViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UIInputView_UIInputViewAppearance : UIKit_UIView_UIViewAppearance {
-}
-@end
-
-@interface UIKit_UILabel_UILabelAppearance : UIKit_UIView_UIViewAppearance {
-}
-	-(UIFont *) font;
-	-(void) setFont:(UIFont *)p0;
-	-(UIColor *) highlightedTextColor;
-	-(void) setHighlightedTextColor:(UIColor *)p0;
-	-(UIColor *) shadowColor;
-	-(void) setShadowColor:(UIColor *)p0;
-	-(CGSize) shadowOffset;
-	-(void) setShadowOffset:(CGSize)p0;
-	-(UIColor *) textColor;
-	-(void) setTextColor:(UIColor *)p0;
-@end
-
-@interface UIKit_UIPageControl_UIPageControlAppearance : UIKit_UIControl_UIControlAppearance {
-}
-	-(UIColor *) currentPageIndicatorTintColor;
-	-(void) setCurrentPageIndicatorTintColor:(UIColor *)p0;
-	-(UIColor *) pageIndicatorTintColor;
-	-(void) setPageIndicatorTintColor:(UIColor *)p0;
-@end
-
-@interface UIKit_UIPopoverBackgroundView_UIPopoverBackgroundViewAppearance : UIKit_UIView_UIViewAppearance {
-}
 @end
 
 @interface UIKit_UIProgressView_UIProgressViewAppearance : UIKit_UIView_UIViewAppearance {
@@ -5225,10 +3680,42 @@
 	-(void) setTrackTintColor:(UIColor *)p0;
 @end
 
+@interface UIKit_UISegmentedControl_UISegmentedControlAppearance : UIKit_UIControl_UIControlAppearance {
+}
+	-(UIOffset) contentPositionAdjustmentForSegmentType:(NSInteger)p0 barMetrics:(NSInteger)p1;
+	-(UIImage *) dividerImageForLeftSegmentState:(NSUInteger)p0 rightSegmentState:(NSUInteger)p1 barMetrics:(NSInteger)p2;
+	-(UIImage *) backgroundImageForState:(NSUInteger)p0 barMetrics:(NSInteger)p1;
+	-(void) setBackgroundImage:(UIImage *)p0 forState:(NSUInteger)p1 barMetrics:(NSInteger)p2;
+	-(void) setContentPositionAdjustment:(UIOffset)p0 forSegmentType:(NSInteger)p1 barMetrics:(NSInteger)p2;
+	-(void) setDividerImage:(UIImage *)p0 forLeftSegmentState:(NSUInteger)p1 rightSegmentState:(NSUInteger)p2 barMetrics:(NSInteger)p3;
+	-(NSDictionary *) titleTextAttributesForState:(NSUInteger)p0;
+	-(void) setTitleTextAttributes:(NSDictionary *)p0 forState:(NSUInteger)p1;
+@end
+
+@interface UIKit_UIWindow_UIWindowAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
 @interface UIKit_UIRefreshControl_UIRefreshControlAppearance : UIKit_UIControl_UIControlAppearance {
 }
 	-(NSAttributedString *) attributedTitle;
 	-(void) setAttributedTitle:(NSAttributedString *)p0;
+@end
+
+@interface SceneKit_SCNView_SCNViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface ARKit_ARSCNView_ARSCNViewAppearance : SceneKit_SCNView_SCNViewAppearance {
+}
+@end
+
+@interface SpriteKit_SKView_SKViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface ARKit_ARSKView_ARSKViewAppearance : SpriteKit_SKView_SKViewAppearance {
+}
 @end
 
 @interface UIKit_UISlider_UISliderAppearance : UIKit_UIControl_UIControlAppearance {
@@ -5303,15 +3790,139 @@
 }
 @end
 
+@interface GameKit_GKFriendRequestComposeViewController_GKFriendRequestComposeViewControllerAppearance : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface GameKit_GKAchievementViewController_GKAchievementViewControllerAppearance : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface GameKit_GKLeaderboardViewController_GKLeaderboardViewControllerAppearance : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface GameKit_GKTurnBasedMatchmakerViewController_GKTurnBasedMatchmakerViewControllerAppearance : NSObject {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface GLKit_GLKView_GLKViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface MapKit_MKOverlayPathView_MKOverlayPathViewAppearance : MapKit_MKOverlayView_MKOverlayViewAppearance {
+}
+@end
+
+@interface MapKit_MKCircleView_MKCircleViewAppearance : MapKit_MKOverlayPathView_MKOverlayPathViewAppearance {
+}
+@end
+
+@interface MapKit_MKCompassButton_MKCompassButtonAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface MapKit_MKPolygonView_MKPolygonViewAppearance : MapKit_MKOverlayPathView_MKOverlayPathViewAppearance {
+}
+@end
+
+@interface HealthKitUI_HKActivityRingView_HKActivityRingViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface MapKit_MKPolylineView_MKPolylineViewAppearance : MapKit_MKOverlayPathView_MKOverlayPathViewAppearance {
+}
+@end
+
+@interface MapKit_MKAnnotationView_MKAnnotationViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface MapKit_MKMarkerAnnotationView_MKMarkerAnnotationViewAppearance : MapKit_MKAnnotationView_MKAnnotationViewAppearance {
+}
+	-(UIImage *) glyphImage;
+	-(void) setGlyphImage:(UIImage *)p0;
+	-(NSString *) glyphText;
+	-(void) setGlyphText:(NSString *)p0;
+	-(UIColor *) glyphTintColor;
+	-(void) setGlyphTintColor:(UIColor *)p0;
+	-(UIColor *) markerTintColor;
+	-(void) setMarkerTintColor:(UIColor *)p0;
+	-(UIImage *) selectedGlyphImage;
+	-(void) setSelectedGlyphImage:(UIImage *)p0;
+@end
+
+@interface MapKit_MKUserTrackingButton_MKUserTrackingButtonAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface MapKit_MKScaleView_MKScaleViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface MapKit_MKPinAnnotationView_MKPinAnnotationViewAppearance : MapKit_MKAnnotationView_MKAnnotationViewAppearance {
+}
+	-(UIColor *) pinTintColor;
+	-(void) setPinTintColor:(UIColor *)p0;
+@end
+
+@interface MapKit_MKUserTrackingBarButtonItem_MKUserTrackingBarButtonItemAppearance : UIKit_UIBarButtonItem_UIBarButtonItemAppearance {
+}
+@end
+
+@interface MapKit_MKMapView_MKMapViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface PassKit_PKAddPassButton_PKAddPassButtonAppearance : UIKit_UIButton_UIButtonAppearance {
+}
+	-(NSInteger) addPassButtonStyle;
+	-(void) setAddPassButtonStyle:(NSInteger)p0;
+@end
+
+@interface PassKit_PKPaymentButton_PKPaymentButtonAppearance : UIKit_UIButton_UIButtonAppearance {
+}
+@end
+
 @interface UIKit_UIVisualEffectView_UIVisualEffectViewAppearance : UIKit_UIView_UIViewAppearance {
 }
+@end
+
+@interface UIKit_UIActivityIndicatorView_UIActivityIndicatorViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+	-(UIColor *) color;
+	-(void) setColor:(UIColor *)p0;
 @end
 
 @interface UIKit_UIWebView_UIWebViewAppearance : UIKit_UIView_UIViewAppearance {
 }
 @end
 
-@interface AVKit_AVRoutePickerView_AVRoutePickerViewAppearance : UIKit_UIView_UIViewAppearance {
+@interface UIKit_UICollectionReusableView_UICollectionReusableViewAppearance : UIKit_UIView_UIViewAppearance {
+}
+@end
+
+@interface UIKit_UICollectionViewCell_UICollectionViewCellAppearance : UIKit_UICollectionReusableView_UICollectionReusableViewAppearance {
 }
 @end
 
@@ -5573,11 +4184,6 @@
 	@required -(void) dismissViewControllerAnimated:(BOOL)p0 completion:(id)p1;
 @end
 
-@interface FIRAuthUIDelegate : NSObject<FIRAuthUIDelegate> {
-}
-	-(id) init;
-@end
-
 @interface FIREmailAuthProvider : NSObject {
 }
 @end
@@ -5725,6 +4331,80 @@
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(void) userContentController:(WKUserContentController *)p0 didReceiveScriptMessage:(WKScriptMessage *)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_AVCaptureScannerViewController : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) viewDidLoad;
+	-(void) viewDidAppear:(BOOL)p0;
+	-(void) viewDidDisappear:(BOOL)p0;
+	-(void) viewWillDisappear:(BOOL)p0;
+	-(void) didRotateFromInterfaceOrientation:(NSInteger)p0;
+	-(BOOL) shouldAutorotate;
+	-(NSUInteger) supportedInterfaceOrientations;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_ZXingScannerViewController : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) viewDidLoad;
+	-(void) viewDidAppear:(BOOL)p0;
+	-(void) viewDidDisappear:(BOOL)p0;
+	-(void) viewWillDisappear:(BOOL)p0;
+	-(void) didRotateFromInterfaceOrientation:(NSInteger)p0;
+	-(BOOL) shouldAutorotate;
+	-(NSUInteger) supportedInterfaceOrientations;
+	-(BOOL) shouldAutorotateToInterfaceOrientation:(NSInteger)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_AVCaptureScannerView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface ZXing_Mobile_ZXingDefaultOverlayView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) layoutSubviews;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_ZXingScannerView_OutputRecorder : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(void) captureOutput:(AVCaptureOutput *)p0 didDropSampleBuffer:(id)p1 fromConnection:(AVCaptureConnection *)p2;
+	-(void) captureOutput:(AVCaptureOutput *)p0 didOutputSampleBuffer:(id)p1 fromConnection:(AVCaptureConnection *)p2;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface ZXing_Mobile_ZXingScannerView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {

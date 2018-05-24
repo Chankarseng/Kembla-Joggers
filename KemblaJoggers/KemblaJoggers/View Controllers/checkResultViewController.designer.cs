@@ -64,6 +64,10 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton resultEditButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField surfaceTypeTextField { get; set; }
 
         [Outlet]
@@ -73,6 +77,10 @@ namespace KemblaJoggers
         [Action ("CommitButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void CommitButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("ResultEditButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ResultEditButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -134,6 +142,11 @@ namespace KemblaJoggers
             if (relayTextField != null) {
                 relayTextField.Dispose ();
                 relayTextField = null;
+            }
+
+            if (resultEditButton != null) {
+                resultEditButton.Dispose ();
+                resultEditButton = null;
             }
 
             if (surfaceTypeTextField != null) {

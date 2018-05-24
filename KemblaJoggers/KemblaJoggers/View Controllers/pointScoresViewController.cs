@@ -13,5 +13,11 @@ namespace KemblaJoggers
 		{
             base.ViewDidLoad();
 		}
-	}
+
+        partial void ViewButton_TouchUpInside(UIButton sender)
+        {
+            rightView.Hidden = false;
+            //throw new NotImplementedException();
+        }
+    }
 }

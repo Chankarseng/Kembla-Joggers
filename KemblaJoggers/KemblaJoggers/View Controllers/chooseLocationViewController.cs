@@ -10,10 +10,12 @@ namespace KemblaJoggers
 {
     public partial class chooseLocationViewController : UIViewController
     {
+        UISearchController searchController;
+
         void HandleCLGeocodeCompletionHandler(CLPlacemark[] placemarks, NSError error)
         {
             var placemark = placemarks[0];
-            addressTextField.Text = placemark.Name;
+            searchController.SearchBar.Text = placemark.Name;
         }
 
         bool setLocation = false;
@@ -36,6 +38,27 @@ namespace KemblaJoggers
             span.LongitudeDelta = 0.005;
             region.Span = span;
             locationMap.SetRegion(region, true);
+
+            locationMap.MapType = MKMapType.Standard;
+            var searchResultsController = new chooseLocationResultViewController(locationMap);
+
+            var searchUpdater = new SearchResultsUpdator();
+            searchUpdater.UpdateSearchResults += searchResultsController.Search;
+
+            //add the search controller
+            searchController = new UISearchController(searchResultsController)
+            {
+                SearchResultsUpdater = searchUpdater
+            };
+
+            searchController.SearchBar.SizeToFit();
+            searchController.SearchBar.SearchBarStyle = UISearchBarStyle.Prominent;
+            searchController.SearchBar.Placeholder = "Enter a search query";
+            searchController.HidesNavigationBarDuringPresentation = false;
+            NavigationItem.TitleView = searchController.SearchBar;
+            DefinesPresentationContext = true;
+
+
             // When the user wants to choose the location manually
             locationMap.RegionChanged += (sender,e) => 
             {
@@ -46,10 +69,25 @@ namespace KemblaJoggers
                     geocoder.ReverseGeocodeLocation(coor, HandleCLGeocodeCompletionHandler);
 				}
             };
+
 		}
+
+
+        public class SearchResultsUpdator : UISearchResultsUpdating
+        {
+            public event Action<string> UpdateSearchResults = delegate { };
+
+            public override void UpdateSearchResultsForSearchController(UISearchController searchController)
+            {
+                this.UpdateSearchResults(searchController.SearchBar.Text);
+            }
+        }
+
+
 
         partial void SetLocationButton_TouchUpInside(UIButton sender)
         {
+            searchController.ResignFirstResponder();
             // If the user is not setting new location
             if (setLocation == false)
             {
@@ -67,6 +105,7 @@ namespace KemblaJoggers
 
         partial void ZoomToUserButton_TouchUpInside(UIButton sender)
         {
+            searchController.ResignFirstResponder();
             MKCoordinateRegion region;
             MKCoordinateSpan span;
             region.Center = locationMap.UserLocation.Coordinate;

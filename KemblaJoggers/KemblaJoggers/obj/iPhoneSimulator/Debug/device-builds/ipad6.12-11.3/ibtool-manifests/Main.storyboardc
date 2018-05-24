@@ -8,6 +8,69 @@
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
 	<dict>
+		<key>113252</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>113250</string>
+					<string>113252</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>116977</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>116975</string>
+					<string>116977</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>124294</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>124294</string>
+				</array>
+				<key>message</key>
+				<string>“Choose Event“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>127500</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>127499</string>
+					<string>127500</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
 		<key>28497</key>
 		<array>
 			<dict>
@@ -118,57 +181,12 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>76758</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>76758</string>
-				</array>
-				<key>message</key>
-				<string>“Add New Race Record“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
-		<key>78783</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>78783</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>80058</key>
 		<array>
 			<dict>
 				<key>affected-objects</key>
 				<array>
 					<string>80058</string>
-				</array>
-				<key>message</key>
-				<string>Prototype table cells must have reuse identifiers</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
-		<key>98970</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>98970</string>
 				</array>
 				<key>message</key>
 				<string>Prototype table cells must have reuse identifiers</string>

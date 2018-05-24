@@ -16,6 +16,10 @@ namespace KemblaJoggers
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton doneButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton lapButton { get; set; }
 
         [Outlet]
@@ -30,8 +34,17 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel timerLabel { get; set; }
 
+        [Action ("DoneButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void DoneButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (doneButton != null) {
+                doneButton.Dispose ();
+                doneButton = null;
+            }
+
             if (lapButton != null) {
                 lapButton.Dispose ();
                 lapButton = null;

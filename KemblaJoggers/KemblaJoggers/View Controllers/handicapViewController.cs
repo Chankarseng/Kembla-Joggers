@@ -25,11 +25,28 @@ namespace KemblaJoggers
             time[3] = _time4;
             time[4] = _time5;
             handicapDateTableView.Source = new TableSource(time);
-            PrepareContactFirstList.Prepare();
-            handicapDs = new HandicapDataSource(this);
+            //PrepareContactFirstList.Prepare();
+			handicapDs = new HandicapDataSource(this);
             handicapTimeTableView.Source = handicapDs;
-		}
-	}
+            handicapSearchBar.TextChanged += (sender, e) =>
+            {
+                //this is the method that is called when the user searches  
+                searchTable();
+            };
+            handicapSearchBar.SelectedScopeButtonIndexChanged += (sender, e) =>
+            {
+                searchTable();
+            };
+        }
+		private void searchTable()  
+		{  
+			//perform the search, and refresh the table with the results  
+            handicapDs.PerformSearch((int)handicapSearchBar.SelectedScopeButtonIndex, handicapSearchBar.Text);  
+            handicapTimeTableView.ReloadData();  
+		}  
+    }
+
+
     public class TableSource : UITableViewSource
     {
 

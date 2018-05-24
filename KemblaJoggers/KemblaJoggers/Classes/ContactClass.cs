@@ -27,5 +27,6 @@ namespace KemblaJoggers
         public bool LifeMember { get; set; } // contactVLifeMember
         public string ClubName { get; set; } // contactVClubName
         public bool ActiveStatus { get; set; }
+        public DateTime handicapTime { get; set; }
     }
 }

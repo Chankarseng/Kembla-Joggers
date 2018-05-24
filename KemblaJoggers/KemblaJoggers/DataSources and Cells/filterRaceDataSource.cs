@@ -39,8 +39,8 @@ namespace KemblaJoggers
             return cell;
         }
 
-		public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
-		{
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
             UITableViewCell cell = tableView.CellAt(indexPath);
             cell.Accessory = UITableViewCellAccessory.Checkmark;
         }

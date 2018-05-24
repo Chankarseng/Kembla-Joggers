@@ -20,6 +20,10 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton seriesRecordChangeButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView seriesRecordTableView { get; set; }
 
         [Outlet]
@@ -35,6 +39,11 @@ namespace KemblaJoggers
             if (seriesLabel != null) {
                 seriesLabel.Dispose ();
                 seriesLabel = null;
+            }
+
+            if (seriesRecordChangeButton != null) {
+                seriesRecordChangeButton.Dispose ();
+                seriesRecordChangeButton = null;
             }
 
             if (seriesRecordTableView != null) {
