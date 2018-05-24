@@ -246,7 +246,6 @@
     </Compile>
     <Compile Include="DataSources and Cells\CheckResultDataSource.cs" />
     <Compile Include="DataSources and Cells\ContactDataSource.cs" />
-    <Compile Include="DataSources and Cells\CoursesDataSource.cs" />
     <Compile Include="DataSources and Cells\filterRaceDataSource.cs" />
     <Compile Include="DataSources and Cells\HandicapCell.cs" />
     <Compile Include="DataSources and Cells\HandicapCell.designer.cs">
@@ -305,6 +304,12 @@
     <Compile Include="View Controllers\chooseEventViewController.cs" />
     <Compile Include="View Controllers\chooseEventViewController.designer.cs">
       <DependentUpon>chooseEventViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources and Cells\LocationDataSource.cs" />
+    <Compile Include="DataSources and Cells\CourseDataSource.cs" />
+    <Compile Include="View Controllers\courseManagementChooseViewController.cs" />
+    <Compile Include="View Controllers\courseManagementChooseViewController.designer.cs">
+      <DependentUpon>courseManagementChooseViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

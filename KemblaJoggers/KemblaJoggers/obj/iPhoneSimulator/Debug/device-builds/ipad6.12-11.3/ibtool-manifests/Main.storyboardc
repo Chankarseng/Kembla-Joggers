@@ -40,21 +40,6 @@
 				<integer>9</integer>
 			</dict>
 		</array>
-		<key>124294</key>
-		<array>
-			<dict>
-				<key>affected-objects</key>
-				<array>
-					<string>124294</string>
-				</array>
-				<key>message</key>
-				<string>“Choose Event“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].</string>
-				<key>type</key>
-				<string>IBIssueTypeUnsupportedConfiguration</string>
-				<key>type-value</key>
-				<integer>9</integer>
-			</dict>
-		</array>
 		<key>127500</key>
 		<array>
 			<dict>
@@ -62,6 +47,70 @@
 				<array>
 					<string>127499</string>
 					<string>127500</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>140937</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>140936</string>
+					<string>140937</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>145873</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>145872</string>
+					<string>145873</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>149756</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>149755</string>
+					<string>149756</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBIssueTypeUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>152468</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>152467</string>
+					<string>152468</string>
 				</array>
 				<key>message</key>
 				<string>Plain Style unsupported in a Navigation Item</string>

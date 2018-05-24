@@ -1,7 +1,18 @@
 ﻿<Properties StartupConfiguration="{0985F0B3-47B0-4667-9BDA-EC005B2B46CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/DataSources and Cells/ContactDataSource.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/Main.storyboard">
     <Files>
-      <File FileName="KemblaJoggers/DataSources and Cells/ContactDataSource.cs" Line="90" Column="98" />
+      <File FileName="KemblaJoggers/Main.storyboard" />
+      <File FileName="KemblaJoggers/Classes/CoursesClass.cs" Line="6" Column="26" />
+      <File FileName="KemblaJoggers/Classes/AppData.cs" Line="33" Column="48" />
+      <File FileName="KemblaJoggers/View Controllers/timeEventViewController.cs" Line="17" Column="39" />
+      <File FileName="KemblaJoggers/View Controllers/chooseEventViewController.cs" Line="50" Column="46" />
+      <File FileName="KemblaJoggers/View Controllers/courseManagementChooseViewController.cs" Line="49" Column="15" />
+      <File FileName="KemblaJoggers/View Controllers/courseManagementViewController.cs" Line="48" Column="10" />
+      <File FileName="KemblaJoggers/DataSources and Cells/CourseDataSource.cs" Line="43" Column="45" />
+      <File FileName="KemblaJoggers/Classes/RecordClass.cs" Line="12" Column="24" />
+      <File FileName="KemblaJoggers/View Controllers/checkResultViewController.cs" Line="41" Column="14" />
+      <File FileName="KemblaJoggers/Classes/ContactClass.cs" Line="31" Column="42" />
+      <File FileName="KemblaJoggers/PrepareList/PrepareContactFirstList.cs" Line="30" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

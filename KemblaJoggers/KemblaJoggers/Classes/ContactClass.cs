@@ -28,5 +28,6 @@ namespace KemblaJoggers
         public string ClubName { get; set; } // contactVClubName
         public bool ActiveStatus { get; set; }
         public DateTime handicapTime { get; set; }
+        public int raceCount { get; set; }
     }
 }

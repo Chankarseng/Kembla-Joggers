@@ -29,6 +29,7 @@ namespace KemblaJoggers
             this.NavigationItem.HidesBackButton = true;
             PrepareContactFirstList.Prepare();
             PrepareCourseFirstList.Prepare();
+            PrepareLocationFirstList.Prepare();
 		}
 
 

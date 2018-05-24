@@ -3,6 +3,8 @@ using System;
 using UIKit;
 using System.Collections.Generic;
 using System.Timers;
+using System.Runtime.CompilerServices;
+using System.Linq;
 
 namespace KemblaJoggers
 {
@@ -83,7 +85,7 @@ namespace KemblaJoggers
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
 
-            var cell = (RaceResultsCell)tableView.DequeueReusableCell("cell_id",indexPath);
+            var cell = (RaceResultsCell)tableView.DequeueReusableCell("cell_id", indexPath);
             //ContactClass contactClass = AppData.offlineContactList[indexPath.Row];
             var result = results[indexPath.Row];
             //throw new NotImplementedException();
@@ -93,7 +95,13 @@ namespace KemblaJoggers
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {
+            check();
             return results.Count;
+        }
+        // FOR FILTERING TESTING
+        private void check()
+        {
+            results = results.Where(x => x.name.ToLower().Equals("john")).ToList();
         }
     }
     public partial class RaceResultsCell:UITableViewCell
