@@ -5,6 +5,12 @@ using System.Resources;
 using Xamarin.Auth;
 using KemblaJoggers.Classes;
 using System.Collections.Generic;
+using Firebase.Database;
+using Firebase.Auth;
+using Firebase.Core;
+using Intents;
+using System.Diagnostics;
+
 
 namespace KemblaJoggers
 {
@@ -32,9 +38,8 @@ namespace KemblaJoggers
             PrepareCourseFirstList.Prepare();
             PrepareLocationFirstList.Prepare();
             PrepareRaceResultFirstList.Prepare();
+
 		}
-
-
 
         void updateImage()
         {
@@ -43,9 +48,5 @@ namespace KemblaJoggers
             menuBackgroundImage.Image = effectImage;
         }
 
-        partial void UIButton2250_TouchUpInside(UIButton sender)
-        {
-            // Transfer
-        }
     }
 }

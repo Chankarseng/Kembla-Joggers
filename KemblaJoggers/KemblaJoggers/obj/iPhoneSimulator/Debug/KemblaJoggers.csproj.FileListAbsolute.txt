@@ -86,7 +86,6 @@
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.3/optimized/User Management.png
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.3/optimized/Scan Codes.png
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.3/optimized/Time Event.png
-/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.3/optimized/GoogleService-Info.plist
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.3/optimized/
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/XbdMerge/Firebase.Core.dll.stamp
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/XbdMerge/Firebase.InstanceID.dll.stamp
@@ -96,3 +95,4 @@
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.csproj.CoreCompileInputs.cache
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.exe
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.pdb
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.csprojResolveAssemblyReference.cache

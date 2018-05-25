@@ -16,6 +16,7 @@ namespace KemblaJoggers
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            AppData.chooseCourse = false;
             setText(curCourse);
         }
 
@@ -59,6 +60,10 @@ namespace KemblaJoggers
             curCourse.HandicapCutOff = handicapCTF.Text.ToString();
             curCourse.IsRelay = bool.Parse(relayTF.Text);
             AppData.offlineLocationList[AppData.curLocIndex].courses.Insert(itemIndex, curCourse);
+            UIAlertController alertController;
+            alertController = UIAlertController.Create("Saved", "Successfully saved", UIAlertControllerStyle.Alert);
+            alertController.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Cancel, null));
+            PresentViewController(alertController, true, null);
         }
     }
 }

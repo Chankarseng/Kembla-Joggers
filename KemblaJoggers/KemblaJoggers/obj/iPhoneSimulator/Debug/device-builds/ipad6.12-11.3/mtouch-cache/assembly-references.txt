@@ -1,50 +1,52 @@
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/KemblaJoggers.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/mscorlib.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/../../64bits/Xamarin.iOS.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Mono.Security.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Xml.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Core.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Database.4.1.3/lib/Xamarin.iOS10/Firebase.Database.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Core.4.0.13/lib/Xamarin.iOS10/Firebase.Core.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.InstanceID.2.0.8/lib/Xamarin.iOS10/Firebase.InstanceID.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Analytics.4.0.5/lib/Xamarin.iOS10/Firebase.Analytics.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Auth.4.4.1/lib/Xamarin.iOS10/Firebase.Auth.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xamarin.Auth.1.6.0.1/lib/Xamarin.iOS10/Xamarin.Auth.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Net.Http.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Json.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xam.Plugins.Messaging.5.2.0/lib/Xamarin.iOS10/Plugin.Messaging.Abstractions.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Runtime.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.ComponentModel.Composition.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Collections.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/ZXing.Net.Mobile.2.4.1/lib/Xamarin.iOS10/zxing.portable.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.IO.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Text.RegularExpressions.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Threading.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Runtime.Extensions.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Globalization.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/ZXing.Net.Mobile.2.4.1/lib/Xamarin.iOS10/ZXingNetMobile.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/ZXing.Net.Mobile.2.4.1/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Debug.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Newtonsoft.Json.11.0.2/lib/netstandard2.0/Newtonsoft.Json.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/netstandard.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Data.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Numerics.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Transactions.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.StackTrace.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/OpenTK-1.0.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Globalization.Extensions.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.IO.Compression.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.IO.Compression.FileSystem.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Runtime.Serialization.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.ServiceModel.Internals.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Runtime.Serialization.Xml.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Runtime.Serialization.Primitives.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Algorithms.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Security.SecureString.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Web.Services.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/System.Xml.Linq.dll
-/Library/Frameworks/Xamarin.iOS.framework/Versions/11.10.1.177/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll
-/Users/csit321bs01s/kemblajoggers/KemblaJoggers/packages/Xam.Plugins.Messaging.5.2.0/lib/Xamarin.iOS10/Plugin.Messaging.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/KemblaJoggers.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/mscorlib.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/../../64bits/Xamarin.iOS.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Mono.Security.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Xml.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Core.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Database.4.1.3/lib/Xamarin.iOS10/Firebase.Database.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Core.4.0.13/lib/Xamarin.iOS10/Firebase.Core.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.InstanceID.2.0.8/lib/Xamarin.iOS10/Firebase.InstanceID.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Analytics.4.0.5/lib/Xamarin.iOS10/Firebase.Analytics.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xamarin.Firebase.iOS.Auth.4.4.1/lib/Xamarin.iOS10/Firebase.Auth.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xamarin.Auth.1.6.0.1/lib/Xamarin.iOS10/Xamarin.Auth.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Net.Http.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Json.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xam.Plugins.Messaging.5.2.0/lib/Xamarin.iOS10/Plugin.Messaging.Abstractions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Runtime.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.ComponentModel.Composition.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Collections.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/ZXing.Net.Mobile.2.4.1/lib/Xamarin.iOS10/zxing.portable.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.IO.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Text.RegularExpressions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Threading.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Runtime.Extensions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Globalization.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/ZXing.Net.Mobile.2.4.1/lib/Xamarin.iOS10/ZXingNetMobile.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/ZXing.Net.Mobile.2.4.1/lib/Xamarin.iOS10/ZXing.Net.Mobile.Core.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Threading.Tasks.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.Debug.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Newtonsoft.Json.11.0.2/lib/netstandard2.0/Newtonsoft.Json.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/netstandard.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Data.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Numerics.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Transactions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Mono.Data.Tds.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Diagnostics.StackTrace.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/OpenTK-1.0.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Globalization.Extensions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.IO.Compression.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.IO.Compression.FileSystem.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Runtime.InteropServices.RuntimeInformation.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Runtime.Serialization.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.ServiceModel.Internals.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Runtime.Serialization.Xml.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Runtime.Serialization.Primitives.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Security.Cryptography.Algorithms.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Security.SecureString.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Web.Services.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/System.Xml.Linq.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/11.9.1.24/lib/mono/Xamarin.iOS/Facades/System.Xml.XPath.XDocument.dll
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/packages/Xam.Plugins.Messaging.5.2.0/lib/Xamarin.iOS10/Plugin.Messaging.dll

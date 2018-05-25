@@ -1,19 +1,14 @@
 ﻿<Properties StartupConfiguration="{0985F0B3-47B0-4667-9BDA-EC005B2B46CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/PrepareList/PrepareContactFirstList.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/View Controllers/menuViewController.cs">
     <Files>
       <File FileName="KemblaJoggers/Main.storyboard" />
-      <File FileName="KemblaJoggers/View Controllers/selectRecordTypeViewController_.cs" Line="79" Column="67" />
-      <File FileName="KemblaJoggers/View Controllers/viewRaceRecordViewController.cs" Line="23" Column="10" />
-      <File FileName="KemblaJoggers/DataSources and Cells/RaceRecordsDataSource.cs" Line="13" Column="39" />
-      <File FileName="KemblaJoggers/DataSources and Cells/CourseDataSource.cs" Line="1" Column="1" />
-      <File FileName="KemblaJoggers/PrepareList/PrepareRaceResultFirstList.cs" Line="24" Column="57" />
-      <File FileName="KemblaJoggers/View Controllers/contactController.cs" Line="1" Column="1" />
-      <File FileName="KemblaJoggers/View Controllers/timeEventViewController.cs" Line="23" Column="37" />
-      <File FileName="KemblaJoggers/PrepareList/PrepareLocationFirstList.cs" Line="77" Column="33" />
-      <File FileName="KemblaJoggers/Main.cs" Line="12" Column="1" />
-      <File FileName="KemblaJoggers/DataSources and Cells/ParticipationCell.cs" Line="22" Column="44" />
-      <File FileName="KemblaJoggers/Classes/ContactClass.cs" Line="11" Column="36" />
-      <File FileName="KemblaJoggers/PrepareList/PrepareContactFirstList.cs" Line="16" Column="17" />
+      <File FileName="KemblaJoggers/Classes/AppData.cs" Line="1" Column="1" />
+      <File FileName="KemblaJoggers/View Controllers/courseManagementChooseViewController.cs" Line="38" Column="37" />
+      <File FileName="KemblaJoggers/View Controllers/courseManagementViewController.cs" Line="69" Column="2" />
+      <File FileName="KemblaJoggers/View Controllers/selectRecordTypeViewController_.cs" Line="69" Column="68" />
+      <File FileName="KemblaJoggers/View Controllers/filterRaceViewController.cs" Line="1" Column="1" />
+      <File FileName="KemblaJoggers/View Controllers/RaceResultViewController.cs" Line="1" Column="1" />
+      <File FileName="KemblaJoggers/View Controllers/menuViewController.cs" Line="41" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -21,6 +16,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.KemblaJoggers PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DE202D0C-3EAF-4440-B70C-2BCBC79BD9ED" />
+  <MonoDevelop.Ide.ItemProperties.KemblaJoggers PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DE202D0C-3EAF-4440-B70C-2BCBC79BD9ED" automaticSigning="False" />
   <MultiItemStartupConfigurations />
 </Properties>

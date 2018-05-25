@@ -3366,22 +3366,18 @@
 
 @interface selectRecordTypeViewController : UIViewController {
 }
-	@property (nonatomic, assign) UIButton * addNewRecordButton;
 	@property (nonatomic, assign) UIButton * viewRaceRecordButton;
 	@property (nonatomic, assign) UIButton * viewSeriesRecordButton;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UIButton *) addNewRecordButton;
-	-(void) setAddNewRecordButton:(UIButton *)p0;
 	-(UIButton *) viewRaceRecordButton;
 	-(void) setViewRaceRecordButton:(UIButton *)p0;
 	-(UIButton *) viewSeriesRecordButton;
 	-(void) setViewSeriesRecordButton:(UIButton *)p0;
 	-(void) viewDidLoad;
 	-(void) prepareForSegue:(UIStoryboardSegue *)p0 sender:(NSObject *)p1;
-	-(void) AddNewRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewRaceRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewSeriesRecordButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;

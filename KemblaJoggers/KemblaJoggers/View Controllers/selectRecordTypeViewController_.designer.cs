@@ -16,19 +16,11 @@ namespace KemblaJoggers
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton addNewRecordButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton viewRaceRecordButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton viewSeriesRecordButton { get; set; }
-
-        [Action ("AddNewRecordButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void AddNewRecordButton_TouchUpInside (UIKit.UIButton sender);
 
         [Action ("ViewRaceRecordButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -40,11 +32,6 @@ namespace KemblaJoggers
 
         void ReleaseDesignerOutlets ()
         {
-            if (addNewRecordButton != null) {
-                addNewRecordButton.Dispose ();
-                addNewRecordButton = null;
-            }
-
             if (viewRaceRecordButton != null) {
                 viewRaceRecordButton.Dispose ();
                 viewRaceRecordButton = null;

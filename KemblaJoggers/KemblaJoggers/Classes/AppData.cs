@@ -27,6 +27,7 @@ namespace KemblaJoggers
         public static string[] currentRaceLapTime; // For inserting and displaying at the event screen
         public static int curLocIndex;
         public static CoursesClass _curCourse;
+        public static List<CoursesClass> cur_listCourse;
         #endregion
 
         #region setting for course management

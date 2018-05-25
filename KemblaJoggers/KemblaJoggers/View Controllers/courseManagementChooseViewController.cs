@@ -10,7 +10,6 @@ namespace KemblaJoggers
     {
         CourseDataSource courseDs;
         LocationDataSource locationDs;
-        List<CoursesClass> curCourse;
         public courseManagementChooseViewController(IntPtr handle) : base(handle)
         {
         }
@@ -26,7 +25,7 @@ namespace KemblaJoggers
         }
         public void SetTask(courseManagementChooseViewController d, List<CoursesClass> courses)
         {
-            curCourse = courses;
+            AppData.cur_listCourse = courses;
             courseDs = new CourseDataSource(this, courses);
             courseTableView.Source = courseDs;
             locationTableView.ReloadData();
@@ -40,7 +39,7 @@ namespace KemblaJoggers
             {
                 NSIndexPath senderIndexPath = (NSIndexPath)sender;
                 var itemsViewCtrl = segue.DestinationViewController as courseManagementViewController;
-                itemsViewCtrl.curCourse = curCourse[senderIndexPath.Row];
+                itemsViewCtrl.curCourse = AppData.cur_listCourse[senderIndexPath.Row];
             }
         }
 

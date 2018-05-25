@@ -111,9 +111,9 @@ namespace KemblaJoggers
 
 
         // Add new record
-        partial void AddNewRecordButton_TouchUpInside(UIButton sender)
+        /*partial void AddNewRecordButton_TouchUpInside(UIButton sender)
         {
             //throw new NotImplementedException();
-        }
+        }*/
     }
 }

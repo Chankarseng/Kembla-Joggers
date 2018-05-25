@@ -508,22 +508,9 @@
                     <connections>
                         <outlet property="viewRaceRecordButton" destination="8365" id="name-outlet-8365"/>
                         <outlet property="viewSeriesRecordButton" destination="8367" id="name-outlet-8367"/>
-                        <outlet property="addNewRecordButton" destination="113251" id="name-outlet-113251"/>
                     </connections>
                     <toolbarItems/>
-                    <navigationItem id="113250" key="navigationItem" title="Select Record Type">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="113252">
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="113251" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
-                                <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add New Record"/>
-                                <connections>
-                                    <action selector="AddNewRecordButton_TouchUpInside:" destination="7725" id="113254" eventType="touchUpInside"/>
-                                    <segue id="113305" destination="76758" kind="show"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem id="113250" key="navigationItem" title="Select Record Type"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7727" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3355,5 +3342,8 @@
         <image name="User Management.png" width="189" height="139"/>
         <image name="CentreLocation" width="48" height="48"/>
         <image name="mapLocation" width="96" height="96"/>
+        <image name="Background" width="1920" height="1440"/>
+        <image name="Kembla_logo.png" width="387" height="421"/>
+        <image name="Running_background_img.jpg" width="1920" height="1440"/>
     </resources>
 </document>
