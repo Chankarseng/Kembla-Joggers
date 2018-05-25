@@ -13,6 +13,7 @@ namespace KemblaJoggers.Classes
                 ContactID = "1232131",
                 FirstName = "John",
                 LastName = "Malone",
+                Age = 31,
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -27,13 +28,15 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = true,
                 handicapTime = new DateTime(10, 10, 10, 0, 10, 0),
-                raceCount = 2
+                raceCount = 2,
+                pointScores = 100
             });
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "41515123",
                 FirstName = "Art",
                 LastName = "Garfunkel",
+                Age = 20,
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -47,13 +50,15 @@ namespace KemblaJoggers.Classes
                 MedicalCondition = "none",
                 DietaryCondition = "none",
                 ActiveStatus = false,
-                raceCount = 1
+                raceCount = 1,
+                pointScores = 20,
             });
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "41515123",
                 FirstName = "Rick",
                 LastName = "Marshall",
+                Age = 17,
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -68,13 +73,15 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = true,
                 handicapTime = new DateTime(10, 10, 10, 1,0, 0),
-                raceCount = 4
+                raceCount = 4,
+                pointScores = 13,
             });
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "41515124",
                 FirstName = "Tina",
                 LastName = "Fergoson",
+                Age = 23,
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -89,13 +96,15 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = true,
                 handicapTime = new DateTime(10, 10, 10, 0, 13, 0),
-                raceCount = 10
+                raceCount = 10,
+                pointScores = 300,
             });
             AppData.offlineContactList.Add(new ContactClass
             {
                 ContactID = "41515125",
                 FirstName = "David",
                 LastName = "William",
+                Age = 27,
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
                 Address = "Test apartment complex, test street, test postcode",
@@ -110,7 +119,8 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = false,
                 handicapTime = new DateTime(),
-                raceCount = 3
+                raceCount = 3,
+                pointScores = 200
             });
 
 

@@ -20,6 +20,15 @@ namespace KemblaJoggers
         {
             AppData.index = AppData.i;
             AppData.currentRaceLapTime = AppData.lapTime;
+            AppData.offlineRaceResultList.Add(new RaceResultClass
+            {
+                raceid = "123",
+                date = DateTime.UtcNow,
+                location = AppData._curLoc,
+                currentCourse = AppData._curCourse,
+                raceContacts = AppData.offlineContactList,
+                raceTimings = AppData.currentRaceLapTime
+            });
             UIAlertView alertView = new UIAlertView();
             alertView.Title = "Done";
             alertView.AddButton("Ok");

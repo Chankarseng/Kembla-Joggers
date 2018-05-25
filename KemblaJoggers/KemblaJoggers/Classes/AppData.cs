@@ -32,6 +32,7 @@ namespace KemblaJoggers
         #region setting for course management
         public static bool chooseCourse = false;
         public static int viewcontroller = 0;
+        public static LocationClass _curLoc;
         #endregion
         #region firebaseandonline
         public static List<CoursesClass> onlineCourseList;

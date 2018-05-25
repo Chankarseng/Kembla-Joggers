@@ -8,6 +8,7 @@ namespace KemblaJoggers
     {
         public string raceid { get; set; }
         public DateTime date { get; set; }
+        public LocationClass location { get; set; }
         public CoursesClass currentCourse { get; set;}
         public List<ContactClass> raceContacts { get; set; }
         public string[] raceTimings { get; set; }

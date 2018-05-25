@@ -13,9 +13,15 @@ namespace KemblaJoggers
         internal void updateCell(ContactClass contacts)
         {
             nameLabel.Text = contacts.FirstName + " " + contacts.LastName;
-            ageGroupLabel.Text = "<21";
+            if (contacts.Age <= 21)
+            {
+                ageGroupLabel.Text = "<=21";
+            }
+            else
+            {
+                ageGroupLabel.Text = ">21";
+            }
             raceCountLabel.Text = "10";
-            slopeLabel.Text = "0.75";
         }
     }
 }

@@ -311,6 +311,11 @@
     <Compile Include="View Controllers\courseManagementChooseViewController.designer.cs">
       <DependentUpon>courseManagementChooseViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSources and Cells\PointScoresCell.cs" />
+    <Compile Include="DataSources and Cells\PointScoresCell.designer.cs">
+      <DependentUpon>PointScoresCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources and Cells\pointScoreDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Kembla_logo.png" />

@@ -36,7 +36,7 @@ namespace KemblaJoggers
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
             base.PrepareForSegue(segue, sender);
-            if (AppData.chooseCourse == true)
+            if (AppData.chooseCourse == false)
             {
                 NSIndexPath senderIndexPath = (NSIndexPath)sender;
                 var itemsViewCtrl = segue.DestinationViewController as courseManagementViewController;

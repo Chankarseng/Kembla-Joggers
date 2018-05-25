@@ -4,6 +4,7 @@ using UIKit;
 using System.Resources;
 using Xamarin.Auth;
 using KemblaJoggers.Classes;
+using System.Collections.Generic;
 
 namespace KemblaJoggers
 {
@@ -30,6 +31,7 @@ namespace KemblaJoggers
             PrepareContactFirstList.Prepare();
             PrepareCourseFirstList.Prepare();
             PrepareLocationFirstList.Prepare();
+            PrepareRaceResultFirstList.Prepare();
 		}
 
 

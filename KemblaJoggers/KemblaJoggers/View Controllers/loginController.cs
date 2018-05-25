@@ -32,14 +32,14 @@ namespace KemblaJoggers
 
         partial void LoginButton_TouchUpInside(UIButton sender)
         {
-            /*var auth = new OAuth2Authenticator(clientId: "750aa6d449c1c1d58dafb00eacc374f169793c26345ed56794d51dfb2da4f61f",
+            var auth = new OAuth2Authenticator(clientId: "750aa6d449c1c1d58dafb00eacc374f169793c26345ed56794d51dfb2da4f61f",
                                                scope: "",
                                                authorizeUrl: new Uri("https://accounts.tidyhq.com/oauth/authorize"),
                                                redirectUrl: new Uri("https://dart.tidyhq.com/"));
-            */
-            //auth.Completed += Auth_Completed;
-            //var ui = auth.GetUI();
-            //PresentViewController(ui, true, null);
+            
+            auth.Completed += Auth_Completed;
+            var ui = auth.GetUI();
+            PresentViewController(ui, true, null);
         }
 
         private async void Auth_Completed(object sender, AuthenticatorCompletedEventArgs e) {

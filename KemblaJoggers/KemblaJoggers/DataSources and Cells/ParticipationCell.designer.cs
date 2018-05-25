@@ -26,10 +26,6 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel raceCountLabel { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel slopeLabel { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
             if (ageGroupLabel != null) {
@@ -45,11 +41,6 @@ namespace KemblaJoggers
             if (raceCountLabel != null) {
                 raceCountLabel.Dispose ();
                 raceCountLabel = null;
-            }
-
-            if (slopeLabel != null) {
-                slopeLabel.Dispose ();
-                slopeLabel = null;
             }
         }
     }

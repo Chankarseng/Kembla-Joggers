@@ -333,7 +333,6 @@
 @class viewRaceRecordViewController;
 @class viewSeriesRecordViewController;
 @class handicapViewController;
-@class KemblaJoggers_TableSource;
 @class timeEventViewController;
 @class ParticipationViewController;
 @class addNewRecordViewController;
@@ -357,6 +356,7 @@
 @class KemblaJoggers_LocationDataSource;
 @class KemblaJoggers_CourseDataSource;
 @class courseManagementChooseViewController;
+@class PointScoresCell;
 @class loginController;
 @class KemblaJoggers_employeeTVS;
 @class KemblaJoggers_ContactDataSource;
@@ -364,6 +364,7 @@
 @class chooseLocationViewController;
 @class selectRecordTypeViewController;
 @class scanButtonVewController;
+@class KemblaJoggers_pointScoreDataSource;
 @class KemblaJoggers_chooseLocationViewController_SearchResultsUpdator;
 @class BCChatAction;
 @class UIKit_UIView_UIViewAppearance;
@@ -2806,7 +2807,6 @@
 
 @interface handicapViewController : UIViewController {
 }
-	@property (nonatomic, assign) UITableView * handicapDateTableView;
 	@property (nonatomic, assign) UISearchBar * handicapSearchBar;
 	@property (nonatomic, assign) UITableView * handicapTimeTableView;
 	@property (nonatomic, assign) UIView * handicapView;
@@ -2815,8 +2815,6 @@
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITableView *) handicapDateTableView;
-	-(void) setHandicapDateTableView:(UITableView *)p0;
 	-(UISearchBar *) handicapSearchBar;
 	-(void) setHandicapSearchBar:(UISearchBar *)p0;
 	-(UITableView *) handicapTimeTableView;
@@ -2826,17 +2824,6 @@
 	-(UISearchDisplayController *) searchDisplayController;
 	-(void) setSearchDisplayController:(UISearchDisplayController *)p0;
 	-(void) viewDidLoad;
-	-(BOOL) conformsToProtocol:(void *)p0;
-@end
-
-@interface KemblaJoggers_TableSource : NSObject<UIScrollViewDelegate> {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
-	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3015,7 +3002,6 @@
 	@property (nonatomic, assign) UILabel * ageGroupLabel;
 	@property (nonatomic, assign) UILabel * nameLabel;
 	@property (nonatomic, assign) UILabel * raceCountLabel;
-	@property (nonatomic, assign) UILabel * slopeLabel;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
@@ -3026,8 +3012,6 @@
 	-(void) setNameLabel:(UILabel *)p0;
 	-(UILabel *) raceCountLabel;
 	-(void) setRaceCountLabel:(UILabel *)p0;
-	-(UILabel *) slopeLabel;
-	-(void) setSlopeLabel:(UILabel *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3194,33 +3178,17 @@
 
 @interface pointScoresViewController : UIViewController {
 }
-	@property (nonatomic, assign) UIView * leftView;
 	@property (nonatomic, assign) UISearchBar * pointScoreSearchBar;
-	@property (nonatomic, assign) UITextField * pointScoreTextField;
-	@property (nonatomic, assign) UIView * rightView;
-	@property (nonatomic, assign) UITextField * seriesTextField;
-	@property (nonatomic, assign) UIButton * viewButton;
-	@property (nonatomic, assign) UITextField * yearTextField;
+	@property (nonatomic, assign) UITableView * pointScoreTableView;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UIView *) leftView;
-	-(void) setLeftView:(UIView *)p0;
 	-(UISearchBar *) pointScoreSearchBar;
 	-(void) setPointScoreSearchBar:(UISearchBar *)p0;
-	-(UITextField *) pointScoreTextField;
-	-(void) setPointScoreTextField:(UITextField *)p0;
-	-(UIView *) rightView;
-	-(void) setRightView:(UIView *)p0;
-	-(UITextField *) seriesTextField;
-	-(void) setSeriesTextField:(UITextField *)p0;
-	-(UIButton *) viewButton;
-	-(void) setViewButton:(UIButton *)p0;
-	-(UITextField *) yearTextField;
-	-(void) setYearTextField:(UITextField *)p0;
+	-(UITableView *) pointScoreTableView;
+	-(void) setPointScoreTableView:(UITableView *)p0;
 	-(void) viewDidLoad;
-	-(void) ViewButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3304,6 +3272,24 @@
 	-(void) viewDidLoad;
 	-(void) prepareForSegue:(UIStoryboardSegue *)p0 sender:(NSObject *)p1;
 	-(void) AddLocationButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface PointScoresCell : UITableViewCell {
+}
+	@property (nonatomic, assign) UILabel * nameLabel;
+	@property (nonatomic, assign) UILabel * placeLabel;
+	@property (nonatomic, assign) UILabel * pointScoreLabel;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UILabel *) nameLabel;
+	-(void) setNameLabel:(UILabel *)p0;
+	-(UILabel *) placeLabel;
+	-(void) setPlaceLabel:(UILabel *)p0;
+	-(UILabel *) pointScoreLabel;
+	-(void) setPointScoreLabel:(UILabel *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -3394,6 +3380,7 @@
 	-(UIButton *) viewSeriesRecordButton;
 	-(void) setViewSeriesRecordButton:(UIButton *)p0;
 	-(void) viewDidLoad;
+	-(void) prepareForSegue:(UIStoryboardSegue *)p0 sender:(NSObject *)p1;
 	-(void) AddNewRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewRaceRecordButton_TouchUpInside:(UIButton *)p0;
 	-(void) ViewSeriesRecordButton_TouchUpInside:(UIButton *)p0;
@@ -3421,6 +3408,18 @@
 	-(void) viewDidLoad;
 	-(void) DetailsButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_pointScoreDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
 @end
 
 @interface KemblaJoggers_chooseLocationViewController_SearchResultsUpdator : NSObject<UISearchResultsUpdating> {

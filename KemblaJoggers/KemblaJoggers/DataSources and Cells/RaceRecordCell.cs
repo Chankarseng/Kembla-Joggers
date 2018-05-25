@@ -11,13 +11,13 @@ namespace KemblaJoggers
         {
         }
 
-        internal void UpdateCell(RecordClass record)
+        internal void UpdateCell(int Index,ContactClass record,string Time,DateTime date)
         {
-            positionLabel.Text = record.Line.ToString();
-            ageGroupLabel.Text = record.AgeGroup;
+            positionLabel.Text = Index.ToString();
+            ageGroupLabel.Text = record.Age.ToString();
             nameLabel.Text = record.FirstName + " " + record.LastName;
-            timeLabel.Text = record.Time.ToShortTimeString();
-            dateLabel.Text = record.Date.ToShortDateString();
+            timeLabel.Text = Time;
+            dateLabel.Text = date.ToShortDateString();
         }
     }
 }

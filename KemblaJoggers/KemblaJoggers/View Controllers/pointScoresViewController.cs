@@ -9,15 +9,24 @@ namespace KemblaJoggers
         public pointScoresViewController (IntPtr handle) : base (handle)
         {
         }
+        pointScoreDataSource pointscoreDS;
 		public override void ViewDidLoad()
 		{
             base.ViewDidLoad();
+            pointscoreDS = new pointScoreDataSource(this);
+            pointScoreTableView.Source = pointscoreDS;
+
+            pointScoreSearchBar.TextChanged += (sender, e) =>
+            {
+                searchTable();
+            };
 		}
 
-        partial void ViewButton_TouchUpInside(UIButton sender)
+        private void searchTable()
         {
-            rightView.Hidden = false;
-            //throw new NotImplementedException();
+            pointscoreDS.searchTable(pointScoreSearchBar.Text);
+            pointScoreTableView.ReloadData();
         }
+
     }
 }

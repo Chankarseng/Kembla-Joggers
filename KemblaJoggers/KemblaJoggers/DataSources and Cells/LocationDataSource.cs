@@ -36,6 +36,7 @@ namespace KemblaJoggers
         {
             //ContactClass thisContact = AppData.offlineContactList[indexPath.Row];
             AppData.curLocIndex = indexPath.Row;
+            AppData._curLoc = AppData.offlineLocationList[indexPath.Row];
             List<CoursesClass> thisCourse = AppData.offlineLocationList[indexPath.Row].courses;
             var locationC = dataSourceController as courseManagementChooseViewController;
             if (locationC != null)
