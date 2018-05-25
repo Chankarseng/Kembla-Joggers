@@ -25,9 +25,14 @@ namespace KemblaJoggers
         public static string currentTime = "00:00:00:00";
         public static int index = 0;
         public static string[] currentRaceLapTime; // For inserting and displaying at the event screen
+        public static int curLocIndex;
+        public static CoursesClass _curCourse;
         #endregion
 
-
+        #region setting for course management
+        public static bool chooseCourse = false;
+        public static int viewcontroller = 0;
+        #endregion
         #region firebaseandonline
         public static List<CoursesClass> onlineCourseList;
         public static List<ContactClass> onlineContactList;

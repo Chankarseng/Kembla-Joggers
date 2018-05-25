@@ -24,6 +24,20 @@ namespace KemblaJoggers
                 IsRelay = false,
                 NumberOfLegs = 0
             });
+            AppData.offlineCourseList.Add(new CoursesClass
+            {
+                Uid = "123142",
+                CourseName = "4x300 relay",
+                LocationID = "123144233",
+                LocationName = "Kerryn McCann Athletics Track",
+                SurfaceType = "Track",
+                Distance = 400,
+                Units = "Meters",
+                Handicap = false,
+                HandicapBuffer = "-",
+                IsRelay = false,
+                NumberOfLegs = 0
+            });
         }
     }
 }

@@ -15,7 +15,6 @@ namespace KemblaJoggers
         {
         }
         Timer stopTimer = new Timer();
-
         // When race is over
         partial void DoneButton_TouchUpInside(UIButton sender)
         {

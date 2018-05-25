@@ -26,6 +26,14 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView locationTableView { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton timeEventButton { get; set; }
+
+        [Action ("TimeEventButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void TimeEventButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (courseTableView != null) {
@@ -41,6 +49,11 @@ namespace KemblaJoggers
             if (locationTableView != null) {
                 locationTableView.Dispose ();
                 locationTableView = null;
+            }
+
+            if (timeEventButton != null) {
+                timeEventButton.Dispose ();
+                timeEventButton = null;
             }
         }
     }

@@ -2,11 +2,17 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/Main.storyboard">
     <Files>
       <File FileName="KemblaJoggers/Main.storyboard" />
-      <File FileName="KemblaJoggers/PrepareList/PrepareLocationFirstList.cs" Line="29" Column="28" />
-      <File FileName="KemblaJoggers/Classes/LocationClass.cs" Line="1" Column="1" />
-      <File FileName="KemblaJoggers/Classes/AppData.cs" Line="48" Column="1" />
-      <File FileName="KemblaJoggers/Classes/CoursesClass.cs" Line="1" Column="1" />
-      <File FileName="KemblaJoggers/View Controllers/selectRecordTypeViewController_.cs" Line="39" Column="1" />
+      <File FileName="KemblaJoggers/Classes/CoursesClass.cs" Line="6" Column="26" />
+      <File FileName="KemblaJoggers/Classes/AppData.cs" Line="33" Column="48" />
+      <File FileName="KemblaJoggers/View Controllers/timeEventViewController.cs" Line="17" Column="39" />
+      <File FileName="KemblaJoggers/View Controllers/chooseEventViewController.cs" Line="50" Column="46" />
+      <File FileName="KemblaJoggers/View Controllers/courseManagementChooseViewController.cs" Line="49" Column="15" />
+      <File FileName="KemblaJoggers/View Controllers/courseManagementViewController.cs" Line="48" Column="10" />
+      <File FileName="KemblaJoggers/DataSources and Cells/CourseDataSource.cs" Line="43" Column="45" />
+      <File FileName="KemblaJoggers/Classes/RecordClass.cs" Line="12" Column="24" />
+      <File FileName="KemblaJoggers/View Controllers/checkResultViewController.cs" Line="41" Column="14" />
+      <File FileName="KemblaJoggers/Classes/ContactClass.cs" Line="31" Column="42" />
+      <File FileName="KemblaJoggers/PrepareList/PrepareContactFirstList.cs" Line="30" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -14,6 +20,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.KemblaJoggers PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3140C334-BC86-4DB3-9290-82D67A2BCF55" />
+  <MonoDevelop.Ide.ItemProperties.KemblaJoggers PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.DE202D0C-3EAF-4440-B70C-2BCBC79BD9ED" />
   <MultiItemStartupConfigurations />
 </Properties>

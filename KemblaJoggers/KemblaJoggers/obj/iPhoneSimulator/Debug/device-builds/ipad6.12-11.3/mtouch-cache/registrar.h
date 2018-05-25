@@ -587,7 +587,6 @@
 @class filterRaceViewController;
 @class menuViewController;
 @class RaceResultViewController;
-@class KemblaJoggers_employeeTVS;
 @class RaceResultsCell;
 @class reportController;
 @class settingController;
@@ -616,7 +615,11 @@
 @class pointScoresViewController;
 @class KemblaJoggers_chooseLocationResultViewController;
 @class chooseEventViewController;
+@class KemblaJoggers_LocationDataSource;
+@class KemblaJoggers_CourseDataSource;
+@class courseManagementChooseViewController;
 @class loginController;
+@class KemblaJoggers_employeeTVS;
 @class KemblaJoggers_ContactDataSource;
 @class KemblaJoggers_HandicapDataSource;
 @class chooseLocationViewController;
@@ -4675,16 +4678,63 @@
 
 @interface courseManagementViewController : UIViewController {
 }
-	@property (nonatomic, assign) UITableView * courseTableView;
-	@property (nonatomic, assign) UITableView * locationTableView;
+	@property (nonatomic, assign) UITextField * courseIDTF;
+	@property (nonatomic, assign) UITextField * distanceTF;
+	@property (nonatomic, assign) UITextField * handicapCTF;
+	@property (nonatomic, assign) UITextField * handicapFTF;
+	@property (nonatomic, assign) UITextField * handicapTF;
+	@property (nonatomic, assign) UITextField * keepRecordTF;
+	@property (nonatomic, assign) UITextField * leg1TF;
+	@property (nonatomic, assign) UITextField * leg2TF;
+	@property (nonatomic, assign) UITextField * leg3TF;
+	@property (nonatomic, assign) UITextField * leg4TF;
+	@property (nonatomic, assign) UITextField * locationTF;
+	@property (nonatomic, assign) UITextField * minAge31TF;
+	@property (nonatomic, assign) UITextField * penaltyTF;
+	@property (nonatomic, assign) UITextField * relayTF;
+	@property (nonatomic, assign) UIButton * saveButton;
+	@property (nonatomic, assign) UITextField * surfaceTF;
+	@property (nonatomic, assign) UITextField * unitsTF;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(UITableView *) courseTableView;
-	-(void) setCourseTableView:(UITableView *)p0;
-	-(UITableView *) locationTableView;
-	-(void) setLocationTableView:(UITableView *)p0;
+	-(UITextField *) courseIDTF;
+	-(void) setCourseIDTF:(UITextField *)p0;
+	-(UITextField *) distanceTF;
+	-(void) setDistanceTF:(UITextField *)p0;
+	-(UITextField *) handicapCTF;
+	-(void) setHandicapCTF:(UITextField *)p0;
+	-(UITextField *) handicapFTF;
+	-(void) setHandicapFTF:(UITextField *)p0;
+	-(UITextField *) handicapTF;
+	-(void) setHandicapTF:(UITextField *)p0;
+	-(UITextField *) keepRecordTF;
+	-(void) setKeepRecordTF:(UITextField *)p0;
+	-(UITextField *) leg1TF;
+	-(void) setLeg1TF:(UITextField *)p0;
+	-(UITextField *) leg2TF;
+	-(void) setLeg2TF:(UITextField *)p0;
+	-(UITextField *) leg3TF;
+	-(void) setLeg3TF:(UITextField *)p0;
+	-(UITextField *) leg4TF;
+	-(void) setLeg4TF:(UITextField *)p0;
+	-(UITextField *) locationTF;
+	-(void) setLocationTF:(UITextField *)p0;
+	-(UITextField *) minAge31TF;
+	-(void) setMinAge31TF:(UITextField *)p0;
+	-(UITextField *) penaltyTF;
+	-(void) setPenaltyTF:(UITextField *)p0;
+	-(UITextField *) relayTF;
+	-(void) setRelayTF:(UITextField *)p0;
+	-(UIButton *) saveButton;
+	-(void) setSaveButton:(UIButton *)p0;
+	-(UITextField *) surfaceTF;
+	-(void) setSurfaceTF:(UITextField *)p0;
+	-(UITextField *) unitsTF;
+	-(void) setUnitsTF:(UITextField *)p0;
+	-(void) viewDidLoad;
+	-(void) SaveButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -4737,6 +4787,7 @@
 	@property (nonatomic, assign) UITableView * courseTableView;
 	@property (nonatomic, assign) UITextField * dateTextField;
 	@property (nonatomic, assign) UITableView * locationTableView;
+	@property (nonatomic, assign) UIButton * timeEventButton;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
@@ -4747,7 +4798,58 @@
 	-(void) setDateTextField:(UITextField *)p0;
 	-(UITableView *) locationTableView;
 	-(void) setLocationTableView:(UITableView *)p0;
+	-(UIButton *) timeEventButton;
+	-(void) setTimeEventButton:(UIButton *)p0;
 	-(void) viewDidLoad;
+	-(void) prepareForSegue:(UIStoryboardSegue *)p0 sender:(NSObject *)p1;
+	-(void) TimeEventButton_TouchUpInside:(UIButton *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+@end
+
+@interface KemblaJoggers_LocationDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface KemblaJoggers_CourseDataSource : NSObject<UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface courseManagementChooseViewController : UIViewController {
+}
+	@property (nonatomic, assign) UIButton * addLocationButton;
+	@property (nonatomic, assign) UITableView * courseTableView;
+	@property (nonatomic, assign) UITableView * locationTableView;
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	-(UIButton *) addLocationButton;
+	-(void) setAddLocationButton:(UIButton *)p0;
+	-(UITableView *) courseTableView;
+	-(void) setCourseTableView:(UITableView *)p0;
+	-(UITableView *) locationTableView;
+	-(void) setLocationTableView:(UITableView *)p0;
+	-(void) viewDidLoad;
+	-(void) prepareForSegue:(UIStoryboardSegue *)p0 sender:(NSObject *)p1;
+	-(void) AddLocationButton_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 
@@ -4779,8 +4881,6 @@
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(NSArray *) sectionIndexTitlesForTableView:(UITableView *)p0;
-	-(NSString *) tableView:(UITableView *)p0 titleForHeaderInSection:(NSInteger)p1;
 	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
 	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
 	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;

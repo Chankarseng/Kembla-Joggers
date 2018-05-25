@@ -27,6 +27,7 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = true,
                 handicapTime = new DateTime(10, 10, 10, 0, 10, 0),
+                raceCount = 2
             });
             AppData.offlineContactList.Add(new ContactClass
             {
@@ -45,7 +46,8 @@ namespace KemblaJoggers.Classes
                 EmergencyNumber = "433292102",
                 MedicalCondition = "none",
                 DietaryCondition = "none",
-                ActiveStatus = false
+                ActiveStatus = false,
+                raceCount = 1
             });
             AppData.offlineContactList.Add(new ContactClass
             {
@@ -66,6 +68,7 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = true,
                 handicapTime = new DateTime(10, 10, 10, 1,0, 0),
+                raceCount = 4
             });
             AppData.offlineContactList.Add(new ContactClass
             {
@@ -86,6 +89,7 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = true,
                 handicapTime = new DateTime(10, 10, 10, 0, 13, 0),
+                raceCount = 10
             });
             AppData.offlineContactList.Add(new ContactClass
             {
@@ -106,6 +110,7 @@ namespace KemblaJoggers.Classes
                 DietaryCondition = "none",
                 ActiveStatus = false,
                 handicapTime = new DateTime(),
+                raceCount = 3
             });
 
 

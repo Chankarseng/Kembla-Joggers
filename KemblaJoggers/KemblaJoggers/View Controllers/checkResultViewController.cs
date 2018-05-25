@@ -26,7 +26,20 @@ namespace KemblaJoggers
             checkResultTableView.Source = resultDs;
             // For testing purporses
             dateTextField.Text = DateTime.UtcNow.ToShortDateString();
-            categoryTextField.Text = AppData.offlineCourseList[0].CourseName;
+            if (AppData._curCourse != null)
+            {
+                categoryTextField.Text = AppData._curCourse.CourseName;
+                locationTextField.Text = AppData._curCourse.LocationName;
+                surfaceTypeTextField.Text = AppData._curCourse.SurfaceType;
+                distanceTextField.Text = AppData._curCourse.Distance.ToString();
+                unitTextField.Text = AppData._curCourse.Units;
+                handicapDetTextField.Text = AppData._curCourse.Handicap.ToString();
+                handicapFacTextField.Text = AppData._curCourse.HandicapCutOff;
+                handicapBufTextField.Text = AppData._curCourse.HandicapBuffer;
+                relayTextField.Text = AppData._curCourse.IsRelay.ToString();
+                numLegsTextField.Text = AppData._curCourse.NumberOfLegs.ToString();
+            }
+            /*categoryTextField.Text = AppData.offlineCourseList[0].CourseName;
             locationTextField.Text = AppData.offlineCourseList[0].LocationName;
             surfaceTypeTextField.Text = AppData.offlineCourseList[0].SurfaceType;
             distanceTextField.Text = AppData.offlineCourseList[0].Distance.ToString();
@@ -35,7 +48,7 @@ namespace KemblaJoggers
             handicapFacTextField.Text = "-";
             handicapBufTextField.Text = "-";
             relayTextField.Text = "-";
-            numLegsTextField.Text = AppData.offlineCourseList[0].NumberOfLegs.ToString();
+            numLegsTextField.Text = AppData.offlineCourseList[0].NumberOfLegs.ToString();*/
             changeColor(UIColor.LightGray);
         }
 
