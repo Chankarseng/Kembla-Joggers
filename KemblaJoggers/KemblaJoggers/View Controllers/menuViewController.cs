@@ -38,7 +38,6 @@ namespace KemblaJoggers
             PrepareCourseFirstList.Prepare();
             PrepareLocationFirstList.Prepare();
             PrepareRaceResultFirstList.Prepare();
-
 		}
 
         void updateImage()

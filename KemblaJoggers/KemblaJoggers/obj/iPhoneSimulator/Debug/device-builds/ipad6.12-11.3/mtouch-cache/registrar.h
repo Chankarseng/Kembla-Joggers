@@ -2661,7 +2661,6 @@
 	-(UIImageView *) menuBackgroundImage;
 	-(void) setMenuBackgroundImage:(UIImageView *)p0;
 	-(void) viewDidLoad;
-	-(void) UIButton2250_TouchUpInside:(UIButton *)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 @end

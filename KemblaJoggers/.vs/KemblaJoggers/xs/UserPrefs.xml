@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{0985F0B3-47B0-4667-9BDA-EC005B2B46CB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/View Controllers/menuViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KemblaJoggers/View Controllers/contactController.cs">
     <Files>
-      <File FileName="KemblaJoggers/Main.storyboard" />
-      <File FileName="KemblaJoggers/Classes/AppData.cs" Line="1" Column="1" />
-      <File FileName="KemblaJoggers/View Controllers/courseManagementChooseViewController.cs" Line="38" Column="37" />
-      <File FileName="KemblaJoggers/View Controllers/courseManagementViewController.cs" Line="69" Column="2" />
-      <File FileName="KemblaJoggers/View Controllers/selectRecordTypeViewController_.cs" Line="69" Column="68" />
-      <File FileName="KemblaJoggers/View Controllers/filterRaceViewController.cs" Line="1" Column="1" />
-      <File FileName="KemblaJoggers/View Controllers/RaceResultViewController.cs" Line="1" Column="1" />
-      <File FileName="KemblaJoggers/View Controllers/menuViewController.cs" Line="41" Column="1" />
+      <File FileName="../../GroceryiOS/GroceriesiOSCS/Classes/AppData.cs" Line="35" Column="86" />
+      <File FileName="KemblaJoggers/Classes/AppData.cs" Line="20" Column="43" />
+      <File FileName="../../GroceryiOS/GroceriesiOSCS/SaveItemOnCloud.cs" Line="19" Column="15" />
+      <File FileName="../../GroceryiOS/GroceriesiOSCS/Classes/SaveListOnCloud.cs" Line="43" Column="82" />
+      <File FileName="KemblaJoggers/Classes/saveDataToCloud.cs" Line="98" Column="77" />
+      <File FileName="KemblaJoggers/Classes/ContactClass.cs" Line="33" Column="45" />
+      <File FileName="KemblaJoggers/View Controllers/menuViewController.cs" Line="40" Column="50" />
+      <File FileName="KemblaJoggers/PrepareList/PrepareContactFirstList.cs" Line="29" Column="31" />
+      <File FileName="KemblaJoggers/View Controllers/contactController.cs" Line="132" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

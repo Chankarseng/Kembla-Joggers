@@ -96,3 +96,4 @@
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.exe
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.pdb
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/KemblaJoggers.csprojResolveAssemblyReference.cache
+/Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/obj/iPhoneSimulator/Debug/device-builds/ipad6.12-11.3/optimized/GoogleService-Info.plist

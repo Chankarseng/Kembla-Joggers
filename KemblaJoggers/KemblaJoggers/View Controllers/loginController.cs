@@ -27,6 +27,8 @@ namespace KemblaJoggers
             }
             image = UIImage.FromBundle("Background");
             updateImage();
+            AppData.GetInstance();
+
             //accounts = AccountStore.Create().FindAccountsForService("TidyHq");
 		}
 

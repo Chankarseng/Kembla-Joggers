@@ -104,7 +104,6 @@
                                 <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <state key="normal" title="CONTACTS" image="Contacts.png"/>
                                 <connections>
-                                    <action selector="UIButton2250_TouchUpInside:" destination="1071" eventType="touchUpInside" id="23221"/>
                                     <segue destination="22862" kind="show" id="30112"/>
                                 </connections>
                             </button>

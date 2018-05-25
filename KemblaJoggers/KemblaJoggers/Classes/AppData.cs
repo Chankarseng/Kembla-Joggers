@@ -15,9 +15,9 @@ namespace KemblaJoggers
 
         public static List<CoursesClass> offlineCourseList; // For a list of courses (containing location name and id)
         public static List<ContactClass> offlineContactList; // For a list of contacts
-        public static List<RecordClass> offlineRecordList; 
+        public static List<RecordClass> offlineRecordList; // For a list of record
         public static List<LocationClass> offlineLocationList; // For a list of locations
-        public static List<RaceResultClass> offlineRaceResultList;
+        public static List<RaceResultClass> offlineRaceResultList; // For a list of race results
         #region race event
         public static int i = 0;
         public static Stopwatch stopwatch = new Stopwatch();
@@ -54,6 +54,9 @@ namespace KemblaJoggers
             offlineRaceResultList = new List<RaceResultClass>();
 
             App.Configure(); // Goes through the Googleservices plist and connects to firebase
+
+            CourseNode = Database.DefaultInstance.GetRootReference().GetChild("courses");
+            ContactNode = Database.DefaultInstance.GetRootReference().GetChild("contacts");
 
             auth = Auth.DefaultInstance;
         }
