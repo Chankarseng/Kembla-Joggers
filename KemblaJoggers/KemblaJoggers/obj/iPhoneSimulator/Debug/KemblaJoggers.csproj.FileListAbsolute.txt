@@ -97,3 +97,14 @@
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.Abstractions.pdb
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.Abstractions.xml
 /Volumes/Internal Storage/KemblaJoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.xml
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.Abstractions.dll
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.dll
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/zxing.dll
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/ZXing.Net.Mobile.Core.dll
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/zxing.portable.dll
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/ZXingNetMobile.dll
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/zxing.pdb
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/zxing.xml
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.Abstractions.pdb
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.Abstractions.xml
+/Users/csit321bs01s/kemblajoggers/KemblaJoggers/KemblaJoggers/bin/iPhoneSimulator/Debug/Plugin.Messaging.xml
