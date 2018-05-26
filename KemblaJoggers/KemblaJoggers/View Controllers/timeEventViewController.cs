@@ -7,6 +7,8 @@ using Firebase.Core;
 using System.Xml;
 using CoreGraphics;
 using KemblaJoggers.Classes;
+using System.Security.Cryptography;
+
 namespace KemblaJoggers
 {
     public partial class timeEventViewController : UIViewController
@@ -22,10 +24,10 @@ namespace KemblaJoggers
             AppData.currentRaceLapTime = AppData.lapTime;
             AppData.offlineRaceResultList.Add(new RaceResultClass
             {
-                raceid = "123",
+                raceid = new Random().Next(0,217431234).ToString(),
                 date = DateTime.UtcNow,
-                location = AppData._curLoc,
-                currentCourse = AppData._curCourse,
+                location_name = AppData._curLoc.locationName,
+                course_name = AppData._curCourse.CourseName,
                 raceContacts = AppData.offlineContactList,
                 raceTimings = AppData.currentRaceLapTime
             });
@@ -40,6 +42,7 @@ namespace KemblaJoggers
         public override void ViewDidLoad()
 		{
             base.ViewDidLoad();
+            raceNameLabel.Text = AppData._curLoc.locationName + " , " + AppData._curCourse.CourseName;
             timerLabel.Text = AppData.currentTime;
             lapTimings.Source = new LapDataSource(AppData.lapTime, AppData.i);
             startButton.Layer.CornerRadius = 75;

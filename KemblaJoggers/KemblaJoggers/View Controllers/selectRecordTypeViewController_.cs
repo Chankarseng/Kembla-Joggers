@@ -55,8 +55,8 @@ namespace KemblaJoggers
 		void filterRace()
         {
             filteredResult = AppData.offlineRaceResultList.Find
-                                    (x => x.location.locationName.ToLower().Contains(alertController1.TextFields[0].Text.ToLower())
-                                     && x.currentCourse.CourseName.ToLower().Contains(alertController1.TextFields[1].Text.ToLower()));
+                                    (x => x.location_name.ToLower().Contains(alertController1.TextFields[0].Text.ToLower())
+                                     && x.course_name.ToLower().Contains(alertController1.TextFields[1].Text.ToLower()));
             if (filteredResult != null)
             {
 				this.PerformSegue("viewRaceSegue", this);

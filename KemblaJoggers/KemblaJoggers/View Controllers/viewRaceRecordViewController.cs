@@ -23,8 +23,8 @@ namespace KemblaJoggers
         }
         public void SetTask(viewRaceRecordViewController d, RaceResultClass record)
         {
-            locationLabel.Text = record.location.locationName;
-            courseLabel.Text = record.currentCourse.CourseName;
+            locationLabel.Text = record.location_name;
+            courseLabel.Text = record.course_name;
         }
     }
 }

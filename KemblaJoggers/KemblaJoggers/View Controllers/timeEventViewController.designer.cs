@@ -28,6 +28,10 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel raceNameLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton startButton { get; set; }
 
         [Outlet]
@@ -53,6 +57,11 @@ namespace KemblaJoggers
             if (lapTimings != null) {
                 lapTimings.Dispose ();
                 lapTimings = null;
+            }
+
+            if (raceNameLabel != null) {
+                raceNameLabel.Dispose ();
+                raceNameLabel = null;
             }
 
             if (startButton != null) {

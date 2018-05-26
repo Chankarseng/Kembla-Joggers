@@ -570,6 +570,10 @@
 @class FIRPhoneAuthProvider;
 @class FIRUser;
 @class FIRUserProfileChangeRequest;
+@class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
+@class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
+@class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
+@class System_Net_Http_NSUrlSessionHandler_NSUrlSessionHandlerDelegate;
 @class Xamarin_Controls_ProgressLabel;
 @class Xamarin_Auth_NativeAuthSafariViewControllerDelegate;
 @class Xamarin_Auth_FormAuthenticatorController_FormDelegate;
@@ -581,8 +585,6 @@
 @class Xamarin_Auth_WebAuthenticatorController;
 @class Xamarin_Auth_FormAuthenticatorController_FieldCell;
 @class Xamarin_Auth_FormAuthenticatorController_FormDataSource;
-@class System_Net_Http_NSUrlSessionHandler_WrappedNSInputStream;
-@class System_Net_Http_NSUrlSessionHandler_NSUrlSessionHandlerDelegate;
 @class ZXing_Mobile_CaptureDelegate;
 @class ZXing_Mobile_AVCaptureScannerViewController;
 @class ZXing_Mobile_ZXingScannerViewController;
@@ -590,8 +592,6 @@
 @class ZXing_Mobile_ZXingDefaultOverlayView;
 @class ZXing_Mobile_ZXingScannerView_OutputRecorder;
 @class ZXing_Mobile_ZXingScannerView;
-@class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
-@class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 
 @protocol UIPickerViewModel<UIPickerViewDataSource, UIPickerViewDelegate>
 @end
@@ -2831,6 +2831,7 @@
 	@property (nonatomic, assign) UIButton * doneButton;
 	@property (nonatomic, assign) UIButton * lapButton;
 	@property (nonatomic, assign) UITableView * lapTimings;
+	@property (nonatomic, assign) UILabel * raceNameLabel;
 	@property (nonatomic, assign) UIButton * startButton;
 	@property (nonatomic, assign) UILabel * timerLabel;
 	-(void) release;
@@ -2843,6 +2844,8 @@
 	-(void) setLapButton:(UIButton *)p0;
 	-(UITableView *) lapTimings;
 	-(void) setLapTimings:(UITableView *)p0;
+	-(UILabel *) raceNameLabel;
+	-(void) setRaceNameLabel:(UILabel *)p0;
 	-(UIButton *) startButton;
 	-(void) setStartButton:(UIButton *)p0;
 	-(UILabel *) timerLabel;
@@ -4405,6 +4408,20 @@
 	-(void) setPhotoURL:(NSURL *)p0;
 @end
 
+@interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(int) xamarinGetGCHandle;
+	-(void) xamarinSetGCHandle: (int) gchandle;
+	+(Class) layerClass;
+	-(void) layoutSubviews;
+	-(void) willMoveToWindow:(UIWindow *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) initWithCoder:(NSCoder *)p0;
+	-(id) initWithFrame:(CGRect)p0;
+@end
+
 @interface Xamarin_Auth_NativeAuthSafariViewControllerDelegate : NSObject<SFSafariViewControllerDelegate> {
 }
 	-(void) release;
@@ -4499,20 +4516,6 @@
 	-(void) xamarinSetGCHandle: (int) gchandle;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
-@end
-
-@interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
-}
-	-(void) release;
-	-(id) retain;
-	-(int) xamarinGetGCHandle;
-	-(void) xamarinSetGCHandle: (int) gchandle;
-	+(Class) layerClass;
-	-(void) layoutSubviews;
-	-(void) willMoveToWindow:(UIWindow *)p0;
-	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) initWithCoder:(NSCoder *)p0;
-	-(id) initWithFrame:(CGRect)p0;
 @end
 
 

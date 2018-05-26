@@ -20,10 +20,6 @@ namespace KemblaJoggers
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField dateTextField { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView locationTableView { get; set; }
 
         [Outlet]
@@ -39,11 +35,6 @@ namespace KemblaJoggers
             if (courseTableView != null) {
                 courseTableView.Dispose ();
                 courseTableView = null;
-            }
-
-            if (dateTextField != null) {
-                dateTextField.Dispose ();
-                dateTextField = null;
             }
 
             if (locationTableView != null) {

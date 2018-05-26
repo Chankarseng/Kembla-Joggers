@@ -41,6 +41,9 @@ namespace KemblaJoggers
 
         public static DatabaseReference CourseNode { get; set; }
         public static DatabaseReference ContactNode { get; set; }
+        public static DatabaseReference LocationNode { get; set; }
+        public static DatabaseReference RaceResultNode { get; set; }
+        public static DatabaseReference RecordNode { get; set; }
 
         public static Auth auth; // For authentication for login and register and such
         #endregion
@@ -57,7 +60,9 @@ namespace KemblaJoggers
 
             CourseNode = Database.DefaultInstance.GetRootReference().GetChild("courses");
             ContactNode = Database.DefaultInstance.GetRootReference().GetChild("contacts");
-
+            LocationNode = Database.DefaultInstance.GetRootReference().GetChild("location");
+            RaceResultNode = Database.DefaultInstance.GetRootReference().GetChild("raceresults");
+            RecordNode = Database.DefaultInstance.GetRootReference().GetChild("record");
             auth = Auth.DefaultInstance;
         }
 

@@ -2564,6 +2564,7 @@
                         <outlet property="startButton" destination="60583" id="name-outlet-60583"/>
                         <outlet property="lapTimings" destination="61057" id="name-outlet-61057"/>
                         <outlet property="doneButton" destination="116976" id="name-outlet-116976"/>
+                        <outlet property="raceNameLabel" destination="61765" id="name-outlet-61765"/>
                     </connections>
                     <navigationItem id="116975" key="navigationItem">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="116977">
@@ -3247,29 +3248,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="124360" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Time">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="124630" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Choose Location">
                                 <rect key="frame" x="0.0" y="64" width="510" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20" weight="semibold"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="124362" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" borderStyle="roundedRect" textAlignment="center" placeholder="Date">
-                                <rect key="frame" x="0.0" y="107" width="510" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="124630" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Choose Location">
-                                <rect key="frame" x="0.0" y="150" width="510" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20" weight="semibold"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="124631" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="200" width="510" height="568"/>
+                                <rect key="frame" x="0.0" y="115" width="510" height="653"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -3297,7 +3284,6 @@
                     <connections>
                         <outlet property="locationTableView" destination="124631" id="name-outlet-124631"/>
                         <outlet property="courseTableView" destination="124356" id="name-outlet-124356"/>
-                        <outlet property="dateTextField" destination="124362" id="name-outlet-124362"/>
                         <segue id="145553" destination="60516" kind="show" identifier="toTimeSegue"/>
                         <outlet property="timeEventButton" destination="145874" id="name-outlet-145874"/>
                     </connections>

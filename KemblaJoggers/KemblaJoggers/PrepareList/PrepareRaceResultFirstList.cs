@@ -19,8 +19,8 @@ namespace KemblaJoggers
             {
                 raceid = "1234",
                 date = DateTime.UtcNow,
-                location = AppData.offlineLocationList[0],
-                currentCourse = AppData.offlineLocationList[0].courses[0],
+                location_name = "Wilandra",
+                course_name = "4x100 relay",
                 raceContacts = AppData.offlineContactList,
                 raceTimings = temp
             });

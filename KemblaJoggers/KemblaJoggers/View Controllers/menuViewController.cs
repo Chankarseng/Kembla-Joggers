@@ -34,10 +34,11 @@ namespace KemblaJoggers
             updateImage();
             this.NavigationController.SetNavigationBarHidden(false, false);
             this.NavigationItem.HidesBackButton = true;
-            PrepareContactFirstList.Prepare();
+            /*PrepareContactFirstList.Prepare();
             PrepareCourseFirstList.Prepare();
             PrepareLocationFirstList.Prepare();
             PrepareRaceResultFirstList.Prepare();
+            PrepareRaceRecordFirstList.Prepare();*/
 		}
 
         void updateImage()

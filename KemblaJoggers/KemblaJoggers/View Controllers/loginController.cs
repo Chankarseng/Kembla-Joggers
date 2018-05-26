@@ -5,6 +5,7 @@ using Xamarin.Auth;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Globalization;
+using KemblaJoggers.Classes;
 
 namespace KemblaJoggers
 {
@@ -28,7 +29,11 @@ namespace KemblaJoggers
             image = UIImage.FromBundle("Background");
             updateImage();
             AppData.GetInstance();
-
+            ReadWriteDisk.readContacts();
+            ReadWriteDisk.readCourses();
+            ReadWriteDisk.readLocation();
+            ReadWriteDisk.readRaceResults();
+            ReadWriteDisk.readRecord();
             //accounts = AccountStore.Create().FindAccountsForService("TidyHq");
 		}
 

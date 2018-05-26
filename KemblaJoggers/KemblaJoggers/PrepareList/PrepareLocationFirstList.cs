@@ -29,6 +29,7 @@ namespace KemblaJoggers
                 Units = "Meters",
                 Handicap = false,
                 HandicapBuffer = "-",
+                HandicapCutOff = "-",
                 IsRelay = false,
                 NumberOfLegs = 0,
             });
@@ -43,6 +44,7 @@ namespace KemblaJoggers
                 Units = "Meters",
                 Handicap = false,
                 HandicapBuffer = "-",
+                HandicapCutOff = "-",
                 IsRelay = false,
                 NumberOfLegs = 0,
             });
@@ -65,6 +67,7 @@ namespace KemblaJoggers
                 Units = "Meters",
                 Handicap = false,
                 HandicapBuffer = "-",
+                HandicapCutOff = "-",
                 IsRelay = false,
                 NumberOfLegs = 0,
             });
