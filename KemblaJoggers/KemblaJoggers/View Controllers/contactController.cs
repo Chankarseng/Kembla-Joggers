@@ -34,7 +34,9 @@ void HandlePredicate(ContactClass obj)
             changeColor(UIColor.Black);
             ViewDidLayoutSubviews();
             // Self
+            PrepareContactFirstList.Prepare();
             contactDs = new ContactDataSource(this);
+
             //contactDs = new ContactDataSource(AppData.offlineContactList);
             contactsTableView.Source = contactDs;
             contactSearchBar.TextChanged += (sender, e) =>  

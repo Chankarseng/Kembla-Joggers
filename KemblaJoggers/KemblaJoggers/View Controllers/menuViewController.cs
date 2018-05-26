@@ -10,7 +10,7 @@ using Firebase.Auth;
 using Firebase.Core;
 using Intents;
 using System.Diagnostics;
-
+using System.Threading.Tasks;
 
 namespace KemblaJoggers
 {
@@ -18,15 +18,20 @@ namespace KemblaJoggers
     {
         UIImage image;
 
-        public menuViewController (IntPtr handle) : base (handle)
+        public menuViewController(IntPtr handle) : base(handle)
         {
         }
 
-		public menuViewController()
-		{
-		}
+        public menuViewController()
+        {
+        }
+        public static async Task Read()
+        {
+            await readDataFromCloud.Read();
+        }
 
-		public override void ViewDidLoad()
+
+		public override async void ViewDidLoad()
 		{
             base.ViewDidLoad();
             this.NavigationController.NavigationBar.Translucent = true;
@@ -34,6 +39,7 @@ namespace KemblaJoggers
             updateImage();
             this.NavigationController.SetNavigationBarHidden(false, false);
             this.NavigationItem.HidesBackButton = true;
+            await Read();
             /*PrepareContactFirstList.Prepare();
             PrepareCourseFirstList.Prepare();
             PrepareLocationFirstList.Prepare();

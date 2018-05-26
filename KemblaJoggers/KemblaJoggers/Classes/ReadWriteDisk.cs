@@ -17,61 +17,96 @@ namespace KemblaJoggers
         public static void readContacts()
         {
             AppData.offlineContactList = new List<ContactClass>();
-            using (StreamReader file = File.OpenText(contactsPath))
+            if (!File.Exists(contactsPath))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                // Deserialize the data and cast it into the list
-                AppData.offlineContactList = (List<ContactClass>)serializer.Deserialize(file,
-                                                                                 typeof(List<ContactClass>));
+                PrepareContactFirstList.Prepare();
             }
+            else
+            {
+                using (StreamReader file = File.OpenText(contactsPath))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    // Deserialize the data and cast it into the list
+                    AppData.offlineContactList = (List<ContactClass>)serializer.Deserialize(file,
+                                                                                     typeof(List<ContactClass>));
+                }
+			}
         }
 
 
         public static void readCourses()
         {
             AppData.offlineCourseList = new List<CoursesClass>();
-            using (StreamReader file = File.OpenText(coursePath))
+            if (!File.Exists(coursePath))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                // Deserialize the data and cast it into the list
-                AppData.offlineCourseList = (List<CoursesClass>)serializer.Deserialize(file,
-                                                                                        typeof(List<CoursesClass>));
+                PrepareCourseFirstList.Prepare();
             }
+            else
+            {
+                using (StreamReader file = File.OpenText(coursePath))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    // Deserialize the data and cast it into the list
+                    AppData.offlineCourseList = (List<CoursesClass>)serializer.Deserialize(file,
+                                                                                            typeof(List<CoursesClass>));
+                }
+			}
         }
         public static void readLocation()
         {
             AppData.offlineLocationList = new List<LocationClass>();
-            using (StreamReader file = File.OpenText(locationPath))
+            if (!File.Exists(locationPath))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                // Deserialize the data and cast it into the list
-                AppData.offlineLocationList = (List<LocationClass>)serializer.Deserialize(file,
-                                                                                        typeof(List<LocationClass>));
+                PrepareLocationFirstList.Prepare();
             }
+            else
+            {
+                using (StreamReader file = File.OpenText(locationPath))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    // Deserialize the data and cast it into the list
+                    AppData.offlineLocationList = (List<LocationClass>)serializer.Deserialize(file,
+                                                                                            typeof(List<LocationClass>));
+                }
+			}
         }
         public static void readRaceResults()
         {
             AppData.offlineRaceResultList = new List<RaceResultClass>();
-            using (StreamReader file = File.OpenText(raceResultPath))
+            if (!File.Exists(raceResultPath))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                // Deserialize the data and cast it into the list
-                AppData.offlineRaceResultList = (List<RaceResultClass>)serializer.Deserialize(file,
-                                                                                       typeof(List<RaceResultClass>));
+                PrepareRaceResultFirstList.Prepare();
             }
+            else
+            {
+                using (StreamReader file = File.OpenText(raceResultPath))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    // Deserialize the data and cast it into the list
+                    AppData.offlineRaceResultList = (List<RaceResultClass>)serializer.Deserialize(file,
+                                                                                           typeof(List<RaceResultClass>));
+                }
+			}
         }
 		
         public static void readRecord()
 		{
             AppData.offlineRecordList = new List<RecordClass>();
-            using (StreamReader file = File.OpenText(recordPath))
+            if (!File.Exists(recordPath))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                // Deserialize the data and cast it into the list
-                AppData.offlineRecordList = (List<RecordClass>)serializer.Deserialize(file,
-                                                                                       typeof(List<RecordClass>));
+                PrepareRaceRecordFirstList.Prepare();
             }
-		}
+            else
+            {
+                using (StreamReader file = File.OpenText(recordPath))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    // Deserialize the data and cast it into the list
+                    AppData.offlineRecordList = (List<RecordClass>)serializer.Deserialize(file,
+                                                                                           typeof(List<RecordClass>));
+                }
+			}
+        }
 
         public static void writeContacts()
         {

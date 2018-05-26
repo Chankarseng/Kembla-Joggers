@@ -12,7 +12,7 @@ namespace KemblaJoggers.Classes
             {
                 ContactID = "1232131",
                 FirstName = "John",
-                LastName = "Malone",
+                LastName = "Sontag",
                 Age = 31,
                 Email = "test@gmail.com",
                 PhoneNumber = "434818232",
@@ -57,7 +57,7 @@ namespace KemblaJoggers.Classes
             });
             AppData.offlineContactList.Add(new ContactClass
             {
-                ContactID = "41515123",
+                ContactID = "41513844",
                 FirstName = "Rick",
                 LastName = "Marshall",
                 Age = 17,
