@@ -23,7 +23,7 @@ namespace KemblaJoggers
                 Uid = "123141",
                 CourseName = "4x100 relay",
                 LocationID = "123144233",
-                LocationName = "Kerryn McCann Athletics Track",
+                LocationName = "Wilandra Track",
                 SurfaceType = "Track",
                 Distance = 400,
                 Units = "Meters",
@@ -36,9 +36,9 @@ namespace KemblaJoggers
             AppData.offlineLocationList[0].courses.Add(new CoursesClass
             {
                 Uid = "123141",
-                CourseName = "4x100 relay",
+                CourseName = "400 meters",
                 LocationID = "123144233",
-                LocationName = "Kerryn McCann Athletics Track",
+                LocationName = "Wilandra Track",
                 SurfaceType = "Track",
                 Distance = 400,
                 Units = "Meters",

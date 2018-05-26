@@ -8,13 +8,7 @@ namespace KemblaJoggers
     {
         public static void Prepare(){
             AppData.offlineRaceResultList = new List<RaceResultClass>();
-
-            string[] temp = new string[10];
-            for (int i = 0; i < 10; i++)
-            {
-                temp[i] = "0" + i;
-            }
-
+            string[] temp = { "00:00:00:93","00:00:01:44","00:00:00:75","00:00:01:11","00:00:01:29" };
             AppData.offlineRaceResultList.Add(new RaceResultClass
             {
                 raceid = "1234",

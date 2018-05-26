@@ -129,12 +129,6 @@ void HandlePredicate(ContactClass obj)
                 currentContact.ClubName = contactVClubName.Text.ToString();
                 AppData.offlineContactList.Insert(itemIndex,currentContact);
                 contactsTableView.ReloadData();
-                saveDataToCloud.Save();
-                ReadWriteDisk.writeContacts();
-                ReadWriteDisk.writeCourses();
-                ReadWriteDisk.writeRecord();
-                ReadWriteDisk.writeLocation();
-                ReadWriteDisk.writeRaceResults();
             }
             //throw new NotImplementedException();
         }

@@ -20,7 +20,7 @@ namespace KemblaJoggers.Classes
                 Location = "Kerry McCann Athletics Track",
                 MemberNo = 0001,
                 OpenRecord = false,
-                Time = DateTime.UtcNow
+                Time = "00:00:30:01",
             });
 
             AppData.offlineRecordList.Add(new RecordClass
@@ -35,7 +35,7 @@ namespace KemblaJoggers.Classes
                 Location = "Kerry McCann Athletics Track",
                 MemberNo = 0001,
                 OpenRecord = false,
-                Time = DateTime.UtcNow
+                Time = "00:00:13:01",
             });
         }
     }

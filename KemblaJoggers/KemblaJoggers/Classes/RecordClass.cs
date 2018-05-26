@@ -13,6 +13,6 @@ namespace KemblaJoggers.Classes
         public string Location { get; set; }
         public int MemberNo { get; set; }
         public bool OpenRecord { get; set; }
-        public DateTime Time { get; set; }
+        public string Time { get; set; }
     }
 }

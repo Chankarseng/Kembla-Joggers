@@ -13,7 +13,7 @@ namespace KemblaJoggers
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            PrepareRaceRecordFirstList.Prepare();
+            //PrepareRaceRecordFirstList.Prepare();
             RecordDs = new SeriesRecordDataSource(this);
             //contactDs = new ContactDataSource(AppData.offlineContactList);
             seriesRecordTableView.Source = RecordDs;

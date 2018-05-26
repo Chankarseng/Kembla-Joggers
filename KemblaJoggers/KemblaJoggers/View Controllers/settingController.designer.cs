@@ -22,6 +22,14 @@ namespace KemblaJoggers
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView settingView { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton syncButton { get; set; }
+
+        [Action ("SyncButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void SyncButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (settingBackgroundImage != null) {
@@ -32,6 +40,11 @@ namespace KemblaJoggers
             if (settingView != null) {
                 settingView.Dispose ();
                 settingView = null;
+            }
+
+            if (syncButton != null) {
+                syncButton.Dispose ();
+                syncButton = null;
             }
         }
     }

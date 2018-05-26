@@ -153,12 +153,14 @@ namespace KemblaJoggers
 
         static void locationToDict()
         {
-            var allItemsDict = new NSMutableDictionary();
-            NSMutableDictionary anyListDataDict = new NSMutableDictionary();
-            foreach (LocationClass location in AppData.offlineLocationList)
+            for (int i = 0; i < AppData.offlineLocationList.Count; i++)
             {
-                foreach (CoursesClass item in location.courses)
+                var allItemsDict = new NSMutableDictionary();
+                NSMutableDictionary anyListDataDict = new NSMutableDictionary();
+                LocationClass location = AppData.offlineLocationList[i];
+                for (int j = 0; j < location.courses.Count; j++)
                 {
+                    CoursesClass item = location.courses[j];
                     NSMutableDictionary eachItemDict = new NSMutableDictionary();
                     eachItemDict.SetValueForKey((NSString)item.Uid,
                                                 (NSString)"uid");
@@ -195,8 +197,9 @@ namespace KemblaJoggers
 
                     allItemsDict.SetValueForKey(eachItemDict,
                                                 (NSString)(item.CourseName));
-
                 }
+                    
+
 
                 object[] locationKeys = { "location_id", "location_name", "location_X", "location_Y" };
                 object[] locationValues = { location.locationID, location.locationName, location.posX, location.posY };
@@ -208,7 +211,7 @@ namespace KemblaJoggers
                 anyListDataDict.SetValueForKey(allItemsDict, (NSString)location.locationName);
                 allItemsDict.SetValueForKey(locationDict, (NSString)"location_info");
 
-                AppData.LocationNode.GetChild("location")
+                AppData.LocationNode.GetChild(location.locationName)
                        .SetValue<NSDictionary>(anyListDataDict);
             }
 
@@ -331,7 +334,7 @@ namespace KemblaJoggers
                                             (NSString)"member_no");
                 eachItemDict.SetValueForKey((NSString)(item.OpenRecord.ToString()),
                                             (NSString)"openrecord");
-                eachItemDict.SetValueForKey((NSString)(item.Time.Hour + ":" + item.Time.Minute + ":"+ item.Time.Second),
+                eachItemDict.SetValueForKey((NSString)(item.Time),
                                             (NSString)"time");
 
                 allItemsDict.SetValueForKey(eachItemDict,

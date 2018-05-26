@@ -22,6 +22,12 @@ namespace KemblaJoggers
         {
             AppData.index = AppData.i;
             AppData.currentRaceLapTime = AppData.lapTime;
+            string[] time = new string[AppData.index];
+            for (int i = 0; i < AppData.index; i++)
+            {
+                time[i] = AppData.currentRaceLapTime[i];
+            }
+            Console.WriteLine(time.Length);
             AppData.offlineRaceResultList.Add(new RaceResultClass
             {
                 raceid = new Random().Next(0,217431234).ToString(),
@@ -29,7 +35,7 @@ namespace KemblaJoggers
                 location_name = AppData._curLoc.locationName,
                 course_name = AppData._curCourse.CourseName,
                 raceContacts = AppData.offlineContactList,
-                raceTimings = AppData.currentRaceLapTime
+                raceTimings = time
             });
             UIAlertView alertView = new UIAlertView();
             alertView.Title = "Done";

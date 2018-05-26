@@ -13,6 +13,7 @@ namespace KemblaJoggers
         public courseManagementChooseViewController(IntPtr handle) : base(handle)
         {
         }
+        bool addCourse;
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -35,7 +36,7 @@ namespace KemblaJoggers
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
             base.PrepareForSegue(segue, sender);
-            if (AppData.chooseCourse == false)
+            if (AppData.chooseCourse == false && addCourse == false)
             {
                 NSIndexPath senderIndexPath = (NSIndexPath)sender;
                 var itemsViewCtrl = segue.DestinationViewController as courseManagementViewController;
@@ -45,7 +46,7 @@ namespace KemblaJoggers
 
         partial void AddLocationButton_TouchUpInside(UIButton sender)
         {
-            //PerformSegue("toLocationSegue", this);
+            addCourse = true;
         }
     }
 }

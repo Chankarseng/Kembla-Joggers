@@ -16,7 +16,7 @@ namespace KemblaJoggers
             positionLabel.Text = record.Line.ToString();
             ageGroupLabel.Text = record.AgeGroup;
             nameLabel.Text = record.FirstName + " " + record.LastName;
-            timeLabel.Text = record.Time.ToShortTimeString();
+            timeLabel.Text = record.Time;
             dateLabel.Text = record.Date.ToShortDateString();
         }
     }

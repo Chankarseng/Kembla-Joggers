@@ -46,6 +46,7 @@ namespace KemblaJoggers
         public static DatabaseReference RecordNode { get; set; }
 
         public static Auth auth; // For authentication for login and register and such
+        public static bool online = false;
         #endregion
 
 

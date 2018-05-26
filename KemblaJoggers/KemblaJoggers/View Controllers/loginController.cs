@@ -22,6 +22,7 @@ namespace KemblaJoggers
             CultureInfo cultureInfo = new CultureInfo("en-AU");
             CultureInfo.CurrentCulture = cultureInfo;
             base.ViewDidLoad();
+            AppData.online = false;
             if (NavigationController != null)
             {
 				this.NavigationController.SetNavigationBarHidden(true, true);
@@ -57,13 +58,14 @@ namespace KemblaJoggers
                 if (response != null)
                 {
                     string userJson = response.GetResponseText();
-                    Console.WriteLine(userJson);
+                    /*Console.WriteLine(userJson);
                     UIAlertView alert = new UIAlertView();
                     alert.Title = "Display";
                     alert.AddButton("OK");
                     alert.Message = userJson; //get back the value
                     alert.Show();
-
+                    */
+                    AppData.online = true;
                 }
 
                 // delete previous TidyHq login authorizaitons details
